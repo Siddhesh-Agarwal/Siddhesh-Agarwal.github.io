@@ -143,7 +143,7 @@ footer ul {
 
 footer ul li {
     display: inline-block;
-    margin-right: 8px;
+    padding: 5px;
 }
 
 footer ul li a {
