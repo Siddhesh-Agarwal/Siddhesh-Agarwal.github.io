@@ -117,27 +117,18 @@ hr {
 
 /* Footer */
 footer {
-    padding: 6px 18px 6px 18px;
     font-size: 18px;
     line-height: 27px;
+    width: 80vw;
     height: auto;
+    padding: 6px 18px 6px 18px;
     margin-inline: 10%;
     margin-bottom: 64px;
     margin-top: 32px;
     border-radius: 24px;
     border: 1px solid #444C56;
-    /*
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    */
-    display: flex;
+    display: inline-block;
     align-items: center;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     color: #F0F0F0;
 }
 
@@ -148,15 +139,16 @@ footer p {
 footer ul {
     float: right;
     list-style: none;
+    margin-right: 10px;
 }
 
-footer li {
+footer ul li {
     display: inline-block;
     margin-right: 0;
     margin-left: 8px;
 }
 
-footer li a {
+footer ul li a {
     color: #F0F0F0;
     text-decoration: none;
 }
@@ -178,18 +170,22 @@ footer li a {
 @media (max-width: 800px) {
     h1 {
         font-size: 28px;
+        line-height: 42px;
     }
 
     h2 {
         font-size: 24px;
+        line-height: 36px;
     }
 
     h3 {
         font-size: 20px;
+        line-height: 30px;
     }
 
     p {
         font-size: 16px;
+        line-height: 24px;
     }
 
     .container {
@@ -221,5 +217,9 @@ footer li a {
 
     footer {
         margin-inline: 10px;
+        max-width: 85vw;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 4px 12px 4px 12px;
     }
 }
