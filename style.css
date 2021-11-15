@@ -139,13 +139,11 @@ footer p {
 footer ul {
     float: right;
     list-style: none;
-    margin-right: 10px;
 }
 
 footer ul li {
     display: inline-block;
-    margin-right: 0;
-    margin-left: 8px;
+    margin-right: 8px;
 }
 
 footer ul li a {
