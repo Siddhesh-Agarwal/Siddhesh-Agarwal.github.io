@@ -3,152 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Python Basics">
+    <meta name="description" content="Portfolio Website of Siddhesh Agarwal">
     <meta name="keywords" content="Siddhesh Agarwal">
     <meta name="author" content="Siddhesh Agarwal">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1C2128">
-    <meta name="HandheldFriendly" content="true">
     <title>Siddhesh Agarwal</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/68057995">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
-    <!-- Header -->
-    <header>
-        <h1 align="center">Hello, I am <u>Siddhesh Agarwal</u>👋🏼</h1> 
-        <h2 align="center">and I am a <red>CSE student</red> from India.</h2>
+    <!-- Vertical Navbar -->
+    <header class="text-gray-600 body-font border-b-2">
+        <div class="navbar navbar-fixed-top p-5 md:flex-col">
+            <a class="mr-5 hover:text-gray-900 hover:font-bold" href="https://dev.to/siddhesh_agarwal" target="_blank">Blog</a>
+            <a class="mr-5 hover:text-gray-900 hover:font-bold" href="./projects/index.html">Projects</a>
+            <a class="mr-5 hover:text-gray-900 hover:font-bold" href="./contact/index.html">Contact</a>
+        </div>
     </header>
-    <hr>
+    <!-- End of Vertical Navbar -->
 
     <!-- Main Content -->
-    <div class="container">
-        <h3>I am familiar with <blue>Python</blue></h3>
-        <p>Check out some of my projects here:</p>
-        <div class="row">
-            <!-- Matmath -->
-            <div class="card">
-                <div class="text">
-                    <a href="https://github.com/Siddhesh-Agarwal/matmath" rel="noopener noreferrer nofollow" target="_blank">Matmath</a>
-                    <p>A Python library for matrices and vectors.</p>
+    <main class="container mx-auto px-5 py-24">
+        <div class="flex flex-wrap -m-4">
+            <div class="w-full md:w-1/2 p-4">
+                <div class="h-full flex flex-col justify-center items-center">
+                    <img class="rounded-full w-64 border-2" src="https://avatars.githubusercontent.com/u/68057995" alt="Siddhesh Agarwal's pic">
+                    <h1 class="text-2xl font-bold text-center">Siddhesh Agarwal</h1>
+                    <p class="text-center text-gray-600">CSE Student</p>
                 </div>
             </div>
-
-            <!-- Python Projects -->
-            <div class="card">
-                <img src="./img/PythonProjects.jpg" alt="Cover pic">
-                <div class="text">
-                    <a href="https://github.com/Siddhesh-Agarwal/Python-Projects" rel="noopener noreferrer nofollow" target="_blank">Python Projects</a>
-                    <p>A collection of small projects made in Python.</p>
-                </div>
-            </div>
-
-            <!-- Sierra -->
-            <div class="card">
-                <img src="./img/sierra.png" alt="Cover pic">
-                <div class="text">
-                    <a href="https://github.com/BrainStormYourWayIn/sierra" rel="noopener noreferrer nofollow" target="_blank">Sierra</a>
-                    <p>A Python library to write HTML and CSS in pure Python using the DOM API.</p>
-                </div>
+            <div class="w-full md:w-1/2 p-4 pr-16">
+                <p class="text-base text-justify">Hello, I am a Computer Science Engineering student. I am interested in <b>Science, Technology, Engineering and Mathematics (STEM)</b>. My Hobbies are <b>programming, photography and travelling</b>.</p>
+                <br>
+                <p class="text-base text-justify">
+                    I am a <b>self-taught programmer</b> and I am always trying to learn new things. I am a <b>self-motivated</b> person and I am always looking for new challenges. I am a <b>team player</b> and I am always ready to learn new things.
+                </p>
+                <br>
+                <p class="text-base text-justify">
+                    I like <b>Python Programming</b>, <b>Web Development</b> and <b>Open-source</b> among many other things. I know HTML, CSS, Bootstrap, and TailwindCSS for web development. I also know Python, flask, NumPy, and Pandas.
+                </p>
+                <br>
+                <p class="text-base text-justify">
+                    I have also created 2 python libraries till now. One is <a class="text-blue-500 hover:text-blue-800 hover:underline" href="https://pypi.org/project/matmath" target="_blank">matmath</a> and the other is <a class="text-blue-500 hover:text-blue-700 hover:underline" href="https://pypi.org/project/sierra" target="_blank">sierra</a>.
+                </p>
             </div>
         </div>
-        <p>I have also completed a few courses along with <u>certification</u> on Python.</p>
-        <div class="row">
-            <!-- Python for Beginners -->
-            <div class="card">
-                <img src="./img/AutomateTheBoringStuff.jpg" alt="Cover pic">
-                <div class="text">
-                    <a href="https://www.udemy.com/course/automate" rel="noopener noreferrer nofollow" target="_blank">Automate the Boring Stuff with Python</a>
-                    <p>A practical programming course for office workers, academics, and administrators who want to improve their productivity.</p>
-                </div>
-            </div>
-
-            <!-- Python for Machine Learning -->
-            <div class="card">
-                <img src="./img/DataAnalysis.jpg" alt="Cover pic">
-                <div class="text">
-                    <a href="https://www.freecodecamp.org/learn/data-analysis-with-python2" rel="noopener noreferrer nofollow" target="_blank">Data Analysis with Python</a>
-                    <p>How to read data from sources like CSVs and SQL, and how to use libraries like Numpy, Pandas, Matplotlib, and Seaborn to process and visualize data.</p>
-                </div>
-            </div>
-
-            <!-- Python for Data Science -->
-            <div class="card">
-                <img src="./img/DataAnalyticsA-Z.jpg" alt="Cover pic">
-                <div class="text">
-                    <a href="https://www.udemy.com/course/dataanalyticsa-zwithPython" rel="noopener noreferrer nofollow" target="_blank">Data Analytics A-Z with Python</a>
-                    <p>A course to Learn Python for Data Science.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Python for Data Science -->
-            <div class="card">
-                <img src="img/PythonLearnByProjects&Quizzes.jpg" alt="Cover pic">
-                <div class="text">
-                    <a href="https://www.udemy.com/course/the-complete-Python-for-beginner-master-Python-from-scratch" rel="noopener noreferrer nofollow" target="_blank">Python Learn by Python Projects & Python Quizzes</a>
-                    <p>Python full course Python quizzes, Python projects in games, data analysis & Python scripting for all Python 3 developers</p>
-                </div>
-            </div>
-
-            <!-- Python for Scientific Computing -->
-            <div class="card">
-                <img src="img/ScientificComputing.jpg" alt="Cover pic">
-                <div class="text">
-                    <a href="https://www.freecodecamp.org/learn/scientific-computing-with-Python" rel="noopener noreferrer nofollow" target="_blank">Scientific Computing with Python</a>
-                    <p>Learn the basics of scientific computing with Python.</p>
-                </div>
-            </div>
-
-            <!-- Software development in Python: A practical approach -->
-            <div class="card">
-                <img src="img/SoftwareDevelopment.jpg" alt="Cover pic">
-                <div class="text">
-                    <a href="https://www.udemy.com/course/software-development-in-Python-a-practical-approach" rel="noopener noreferrer nofollow" target="_blank">Software development in Python: A practical approach</a>
-                    <p>Build with the new Qml 3 | Learn how to build a Python bundled app (.exe, .dmg, .sh, etc) and a wheel (.whl)</p>
-                </div>
-            </div>
-        </div>
-
-        <h3>Apart from the above, I am familiar with <orange>HTML/CSS (along with tailwind CSS)</orange></h3>
-        <p>Check out some of my projects here:</p>
-        <div class="row">
-            <!-- Portfolio website -->
-            <div class="card">
-                <div class="text">
-                    <a href="#">Portfolio Website</a>
-                    <p>A portfolio website made using HTML/CSS.</p>
-                </div>
-            </div>
-
-            <!-- Python Algorithms -->
-            <div class="card">
-                <div class="text">
-                    <a href="https://siddhesh-agarwal.github.io/Python-Algorithms" rel="noopener noreferrer nofollow" target="_blank">Python Algorithms</a>
-                    <p>A collection of different data structures and algorithms implemented in Python.</p>
-                </div>
-            </div>
-
-            <!-- Sierra Documentation -->
-            <div class="card">
-                <div class="text">
-                    <a href="https://brainstormyourwayin.github.io/sierra.github.io" rel="noopener noreferrer nofollow" target="_blank">Sierra Documentation</a>
-                    <p>A documentation website for Sierra.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>Siddhesh Agarwal</p>
-        <ul>
-            <li><a href="mailto:siddhesh.agarwal@gmail.com" rel="noopener noreferrer nofollow" target="_blank"><span><i class="fas fa-envelope"></i></span></a></li>
-            <li><a href="https://github.com/Siddhesh-Agarwal" rel="noopener noreferrer nofollow" target="_blank"><span><i class="fab fa-github"></i></span></a></li>
-            <li><a href="https://www.linkedin.com/in/siddhesh-agarwal-1150b1226/" rel="noopener noreferrer nofollow" target="_blank"><span><i class="fab fa-linkedin"></i></span></a></li>
-        </ul>
-    </footer>
+    </main>
 </body>
 </html>
