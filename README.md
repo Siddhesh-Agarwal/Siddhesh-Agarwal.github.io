@@ -1,2 +1,2 @@
 # Siddhesh-Agarwal.github.io
-My portfolio website. Theme inspired by GitHub.
+My portfolio website. Minimalistic and responsive design.
