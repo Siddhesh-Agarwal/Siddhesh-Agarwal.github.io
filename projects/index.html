@@ -1,93 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Siddhesh Agarwal">
+    <meta name="description" content="Portfolio website for Siddhesh Agarwal">
+    <meta name="keywords" content="Siddhesh Agarwal, Siddhesh">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddhesh Agarwal | Projects</title>
-    <link rel="icon" href="img/projects.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta property="og:title" content="Siddhesh Agarwal">
+    <meta property="og:description" content="Portfolio website for Siddhesh Agarwal">
+    <meta property="og:image" content="img/projects.png">
+    <meta property="og:url" content="https://siddhesh-agarwal.github.io/">
+
+    <meta property="twitter:title" content="Siddhesh Agarwal">
+    <meta property="twitter:description" content="Portfolio website for Siddhesh Agarwal">
+    <meta property="twitter:image" content="img/projects.png">
+    <meta property="twitter:url" content="https://siddhesh-agarwal.github.io/">
+
+    <title>Siddhesh | Projects</title>
+    <link rel="apple-touch-icon" href="img/projects.png">
+    <link rel="icon" type="image/png" href="img/projects.png">
+    <script src="https://cdn.tailwindcss.com/3.0.24"></script>
+    <script src="https://kit.fontawesome.com/2f31918fd1.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-white">
-    <!-- Vertical navbar -->
-    <header class="text-gray-600 body-font border-b-2">
-        <div class="navbar navbar-fixed-top p-5 md:flex-col">
-            <a class="mr-5 hover:text-gray-900 hover:font-bold" href="https://siddhesh-agarwal.github.io/">Home</a>
-            <a class="mr-5 hover:text-gray-900 hover:font-bold" href="https://dev.to/siddhesh_agarwal" target="_blank" rel="noopener noreferrer">Blog</a>
-            <a class="mr-5 hover:text-gray-900 hover:font-bold" href="https://siddhesh-agarwal.github.io/contact/">Contact</a>
+
+<!--  Portfolio website for Siddhesh Agarwal-->
+<body class="bg-white dark:bg-[#202b38]">
+    <!-- Header begins -->
+    <header
+        class="bg-slate-400 dark:bg-[#161f27] text-gray-600 dark:text-gray-400 body-font shadow-md dark:shadow-none">
+        <div class="flex-row font-medium items-center text-gray-900 py-1 px-4">
+            <div class="flex justify-between items-center my-2">
+                <div class="block">
+                    <a href="../" class="text-gray-900 dark:text-white hover:opacity-75 hover:underline px-2 text-xl">
+                        Home
+                    </a>
+                    <a href="../about/"
+                        class="text-gray-900 dark:text-white hover:opacity-75 hover:underline px-2 text-xl">
+                        About
+                    </a>
+                    <a href="../blogs/"
+                        class="text-gray-900 dark:text-white hover:opacity-75 hover:underline px-2 text-xl">
+                        Blogs
+                    </a>
+                </div>
+                <div class="block">
+                    <a href="https://github.com/Siddhesh-Agarwal" target="_blank" rel="noopener noreferrer"
+                        class="items-end justify-end">
+                        <i class="fa-brands fa-github px-2 text-2xl dark:text-white hover:text-[#333333]"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/siddhesh-agarwal-1150b1226/" target="_blank"
+                        rel="noopener noreferrer" class="items-end justify-end">
+                        <i class="fa-brands fa-linkedin px-2 text-2xl dark:text-white hover:text-[#0077b5]"></i>
+                    </a>
+                    <a href="https://siddhesh2003.hashnode.dev/" target="_blank" rel="noopener noreferrer"
+                        class="items-end justify-end">
+                        <i class="fa-brands fa-hashnode px-2 text-2xl dark:text-white hover:text-[#2962ff]"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
+    <!-- Header Ends -->
 
     <!-- main content -->
-    <main class="container mx-auto px-8 py-12">
+    <main class="container mx-auto px-4 pt-4 pb-12">
         <div class="flex flex-wrap">
+            <!-- Description begins -->
             <div class="w-full p-6">
-                <p class="text-4xl underline mb-2">Projects</p>
-                <p class="text-gray-600 text-lg">I have worked on a few projects. Click on the project to see its code.</p>
-                <p class="text-gray-600 text-lg"><b>Note:</b> All repositories are available on <a class="text-blue-500 hover:text-blue-700 hover:underline" href="https://github.com/Siddhesh-Agarwal?tab=repositories" target="_blank">GitHub</a>.</p>
+                <p class="text-4xl underline mb-2 text-gray-900 dark:text-gray-100">Projects</p>
+                <p class="text-gray-700 dark:text-gray-300 text-lg">
+                    I have worked on a few projects. Click on the project to see its code.
+                </p>
+                <p class="text-gray-700 dark:text-gray-300 text-lg"><b>Note:</b> All repositories are available on <a
+                        class="text-blue-500 hover:text-blue-700 hover:underline"
+                        href="https://github.com/Siddhesh-Agarwal?tab=repositories" target="_blank">GitHub</a>.</p>
             </div>
+            <!-- Description Ends -->
+
             <!-- Project links -->
-            <div class="w-full max-w-[420px] md:w-[330px] py-5 px-8 rounded-lg border-2 shadow-xl m-1.5 text-gray-600 hover:text-gray-900">
-                <header class="bg-gray-100 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">matmath</header>
-                <p class="w-full text-justify text-gray-500">An open-source python library for matrix and vector operations. Made in python 3 <b>without any dependancy</b>. Creates a beautiful representation of matrices and vectors (print to check).</p>
-                <br>
-                <div class="text-center">
-                    <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50" href="https://github.com/Siddhesh-Agarwal/matmath" target="_blank" rel="noopener noreferrer">
-                        GitHub
-                    </a>
+            <div class="flex flex-row flex-wrap justify-center">
+                <div
+                    class="w-full flex flex-col justify-between max-w-[420px] md:w-[320px] py-5 px-8 rounded-lg border shadow-md hover:shadow-xl m-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 hover:dark:text-gray-200">
+                    <header class="bg-gray-100 dark:bg-gray-800 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">
+                        matmath
+                    </header>
+                    <p class="w-full text-justify text-gray-500">
+                        An open-source python library for matrix and vector operations. Made in python 3 <b>without any
+                            dependency</b>. Creates a beautiful representation of matrices and vectors (print to check).
+                    </p>
+                    <br>
+                    <div class="text-center hover:scale-105">
+                        <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50"
+                            href="https://github.com/Siddhesh-Agarwal/matmath" target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="w-full max-w-[420px] md:w-[330px] py-5 px-8 rounded-lg border-2 shadow-xl m-1.5 text-gray-600 hover:text-gray-900">
-                <header class="bg-gray-100 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">Sierra</header>
-                <p class="w-full text-justify text-gray-500">Sierra is a Python library to write HTML and CSS in pure Python using the DOM API. It is a <b>very simple</b> and <b>easy-to-use</b> library. It allows the user to take advantage of Python's powerful functionalities with ease.</p>
-                <br>
-                <div class="text-center">
-                    <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50" href="https://github.com/BrainStormYourWayIn/sierra" target="_blank" rel="noopener noreferrer">
-                        GitHub
-                    </a>
+                <div
+                    class="w-full flex flex-col justify-between max-w-[420px] md:w-[320px] py-5 px-8 rounded-lg border shadow-md hover:shadow-xl m-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 hover:dark:text-gray-200">
+                    <header class="bg-gray-100 dark:bg-gray-800 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">
+                        sierra
+                    </header>
+                    <p class="w-full text-justify text-gray-500">
+                        Sierra is a Python library to write HTML and CSS in pure Python using the DOM API. It is a
+                        <b>very simple</b> and <b>easy-to-use</b> library. It allows the user to take advantage of
+                        Python's powerful functionalities with ease.
+                    </p>
+                    <br>
+                    <div class="text-center hover:scale-105">
+                        <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50"
+                            href="https://github.com/BrainStormYourWayIn/sierra" target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="w-full max-w-[420px] md:w-[330px] py-5 px-8 rounded-lg border-2 shadow-xl m-1.5 text-gray-600 hover:text-gray-900">
-                <header class="bg-gray-100 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">Sierra docs.</header>
-                <p>The documentation of the Sierra library.</p>
-                <br>
-                <div class="text-center">
-                    <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50" href="https://siddhesh-agarwal.github.io/sierra.github.io/" target="_blank" rel="noopener noreferrer">
-                        GitHub
-                    </a>
+                <div
+                    class="w-full flex flex-col justify-between max-w-[420px] md:w-[320px] py-5 px-8 rounded-lg border shadow-md hover:shadow-xl m-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 hover:dark:text-gray-200">
+                    <header class="bg-gray-100 dark:bg-gray-800 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">
+                        Python Projects
+                    </header>
+                    <p class="w-full text-justify text-gray-500">A collection of different Python projects based on
+                        streamlit and Tkinter.</p>
+                    <br>
+                    <div class="text-center hover:scale-105">
+                        <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50"
+                            href="https://github.com/Siddhesh-Agarwal/Python-Projects" target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="w-full max-w-[420px] md:w-[330px] py-5 px-8 rounded-lg border-2 shadow-xl m-1.5 text-gray-600 hover:text-gray-900">
-                <header class="bg-gray-100 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">Python Projects</header>
-                <p class="w-full text-justify text-gray-500">A collection of different Python projects based on streamlit and tKinter.</p>
-                <br>
-                <div class="text-center">
-                    <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50" href="https://github.com/Siddhesh-Agarwal/Python-Projects" target="_blank" rel="noopener noreferrer">
-                        GitHub
-                    </a>
+                <div
+                    class="w-full flex flex-col justify-between max-w-[420px] md:w-[320px] py-5 px-8 rounded-lg border shadow-md hover:shadow-xl m-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 hover:dark:text-gray-200">
+                    <header class="bg-gray-100 dark:bg-gray-800 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">
+                        cheatsheets
+                    </header>
+                    <p class="w-full text-justify text-gray-500">
+                        A collection of handmade cheatsheets for various programming languages.
+                    </p>
+                    <br>
+                    <div class="text-center hover:scale-105">
+                        <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50"
+                            href="https://github.com/Siddhesh-Agarwal/Cheatsheets" target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="w-full max-w-[420px] md:w-[330px] py-5 px-8 rounded-lg border-2 shadow-xl m-1.5 text-gray-600 hover:text-gray-900">
-                <header class="bg-gray-100 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">Cheatsheets</header>
-                <p class="w-full text-justify text-gray-500">A collection of handmade cheatsheets for various programming languages.</p>
-                <br>
-                <div class="text-center ">
-                    <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50" href="https://siddhesh-agarwal.github.io/Cheatsheets" target="_blank" rel="noopener noreferrer">
-                        GitHub
-                    </a>
+                <div
+                    class="w-full flex flex-col justify-between max-w-[420px] md:w-[320px] py-5 px-8 rounded-lg border shadow-md hover:shadow-xl m-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 hover:dark:text-gray-200">
+                    <header class="bg-gray-100 dark:bg-gray-800 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">
+                        Python Algorithms
+                    </header>
+                    <p class="w-full text-justify text-gray-500">
+                        A collection of Data Structures and Algorithms implemented in Python 3.
+                    </p>
+                    <br>
+                    <div class="text-center hover:scale-105">
+                        <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50"
+                            href="https://github.com/Siddhesh-Agarwal/Python-Algorithms/" target="_blank">
+                            GitHub
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="w-full max-w-[420px] md:w-[330px] py-5 px-8 rounded-lg border-2 shadow-xl m-1.5 text-gray-600 hover:text-gray-900">
-                <header class="bg-gray-100 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">Python Algorithms</header>
-                <p class="w-full text-justify text-gray-500">A collection of Data Structures and Algorithms implemented in Python 3.</p>
-                <br>
-                <div class="text-center">
-                    <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50" href="https://siddhesh-agarwal.github.io/Python-Algorithms/" target="_blank">
-                        GitHub
-                    </a>
+                <div
+                    class="w-full flex flex-col justify-between max-w-[420px] md:w-[320px] py-5 px-8 rounded-lg border shadow-md hover:shadow-xl m-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 hover:dark:text-gray-200">
+                    <header class="bg-gray-100 dark:bg-gray-800 rounded-t-lg font-bold text-2xl py-3 px-6 text-center">
+                        ProLeafic
+                    </header>
+                    <p class="w-full text-justify text-gray-500">
+                        Submission for Hack@SKCET hackathon. A web application that give information about plant
+                        diseases and has a Convolutional Neural Network for plant disease identification.
+                    </p>
+                    <br>
+                    <div class="text-center hover:scale-105">
+                        <a class="mt-4 rounded px-4 py-2 bg-blue-500 text-blue-50"
+                            href="https://github.com/Siddhesh-Agarwal/ProLeafic" target="_blank">
+                            GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+    <!-- End page content -->
 </body>
 </html>
