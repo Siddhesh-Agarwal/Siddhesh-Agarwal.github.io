@@ -1,54 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Portfolio Website of Siddhesh Agarwal">
-    <meta name="keywords" content="Siddhesh Agarwal">
     <meta name="author" content="Siddhesh Agarwal">
+    <meta name="description" content="Portfolio website for Siddhesh Agarwal">
+    <meta name="keywords" content="Siddhesh Agarwal, Siddhesh">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddhesh Agarwal</title>
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/68057995">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white">
-    <!-- Vertical Navbar -->
-    <header class="text-gray-600 body-font border-b-2">
-        <div class="navbar navbar-fixed-top p-5 md:flex-col">
-            <a class="mr-5 hover:text-gray-900 hover:font-bold" href="https://dev.to/siddhesh_agarwal" target="_blank" rel="noopener noreferrer">Blog</a>
-            <a class="mr-5 hover:text-gray-900 hover:font-bold" href="projects/">Projects</a>
-            <a class="mr-5 hover:text-gray-900 hover:font-bold" href="contact/">Contact</a>
-        </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-5 py-24">
-        <div class="flex flex-wrap -m-4">
-            <div class="w-full md:w-1/2 p-4">
-                <div class="h-full flex flex-col justify-center items-center">
-                    <img class="rounded-full w-64 border-2" src="https://avatars.githubusercontent.com/u/68057995" alt="Siddhesh Agarwal's pic">
-                    <h1 class="text-2xl font-bold text-center">Siddhesh Agarwal</h1>
-                    <p class="text-center text-gray-600">CSE Student</p>
+    <meta property="og:title" content="Siddhesh Agarwal">
+    <meta property="og:description" content="Portfolio website for Siddhesh Agarwal">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/68057995">
+    <meta property="og:url" content="https://siddheshagarwal.github.io/">
+
+    <meta property="twitter:title" content="Siddhesh Agarwal">
+    <meta property="twitter:description" content="Portfolio website for Siddhesh Agarwal">
+    <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/68057995">
+    <meta property="twitter:url" content="https://siddheshagarwal.github.io/">
+
+    <title>Siddhesh Agarwal</title>
+    <link rel="apple-touch-icon" sizes="144x144" href="https://avatars.githubusercontent.com/u/68057995?s=144">
+    <link rel="icon" type="image/png" sizes="64x64" href="https://avatars.githubusercontent.com/u/68057995?s=64">
+    <script src="https://cdn.tailwindcss.com/3.0.24"></script>
+    <script src="https://kit.fontawesome.com/2f31918fd1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!--  Portfolio website for Siddhesh Agarwal-->
+
+<body>
+    <!-- Header begins -->
+    <header>
+        <div class="flex-row font-medium items-center text-gray-900 py-1 px-4">
+            <div class="flex justify-between items-center my-2">
+                <div class="block">
+                    <a href="about/"
+                        class="text-gray-900 dark:text-white hover:opacity-75 hover:underline px-2 text-xl">
+                        About
+                    </a>
+                    <a href="blogs/"
+                        class="text-gray-900 dark:text-white hover:opacity-75 hover:underline px-2 text-xl">
+                        Blogs
+                    </a>
+                    <a href="projects/"
+                        class="text-gray-900 dark:text-white hover:opacity-75 hover:underline px-2 text-xl">
+                        Projects
+                    </a>
+                </div>
+                <div class="block">
+                    <a href="https://github.com/Siddhesh-Agarwal" target="_blank" rel="noopener noreferrer"
+                        class="items-end justify-end">
+                        <i class="fa-brands fa-github px-2 text-2xl dark:text-white hover:text-[#333333]"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/siddhesh-agarwal-1150b1226/" target="_blank"
+                        rel="noopener noreferrer" class="items-end justify-end">
+                        <i class="fa-brands fa-linkedin px-2 text-2xl dark:text-white hover:text-[#0077b5]"></i>
+                    </a>
+                    <a href="https://dev.to/siddhesh_agarwal" target="_blank" rel="noopener noreferrer"
+                        class="items-end justify-end">
+                        <i class="fa-brands fa-hashnode px-2 text-2xl dark:text-white hover:text-[#2962ff]"></i>
+                    </a>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 p-4 md:pr-16">
-                <p class="text-base text-justify">
-                    Hello, I am a Computer Science Engineering student. I am interested in <b>Science, Technology, Engineering and Mathematics (STEM)</b>. My Hobbies are <b>programming, photography and reading books</b>.
-                </p>
-                <br>
-                <p class="text-base text-justify">
-                    I am a <b>self-taught programmer</b> and I am always trying to learn new things. I am a <b>self-motivated</b> person and I am always looking for new challenges. I am a <b>team player</b> and I am always ready to learn new things.
-                </p>
-                <br>
-                <p class="text-base text-justify">
-                    I like <b>Python Programming</b>, <b>Web Development</b> and <b>Open-source</b> among many other things. I know HTML, CSS, Bootstrap, and TailwindCSS for web development. I also know Python, flask, NumPy, and Pandas.
-                </p>
-                <br>
-                <p class="text-base text-justify">
-                    I have also created 2 python libraries till now. One is <a class="text-blue-500 hover:text-blue-800 hover:underline" href="https://pypi.org/project/matmath" target="_blank">matmath</a> and the other is <a class="text-blue-500 hover:text-blue-700 hover:underline" href="https://pypi.org/project/sierra" target="_blank">sierra</a>.
-                </p>
+        </div>
+    </header>
+    <!-- Header Ends -->
+
+    <!-- Main Content -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
+        <path fill="#0099ff" fill-opacity="0.7"
+            d="M0,96L48,85.3C96,75,192,53,288,69.3C384,85,480,139,576,138.7C672,139,768,85,864,90.7C960,96,1056,160,1152,170.7C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+        </path>
+    </svg>
+    <main class="flex flex-col justify-between">
+        <!-- create a div in the center of the page-->
+        <div class="shrink flex flex-row justify-center items-center max-h-[150px] m-0 p-0">
+            <div class="block mx-2">
+                <h1 class="text-gray-900 dark:text-gray-300 text-7xl font-bold">Hello there!</h1>
+                <h2 class="text-gray-900 dark:text-gray-300 text-6xl font-bold">I am Siddhesh.</h2>
+                <h3 class="text-gray-900 dark:text-gray-300 text-4xl">I am a <span
+                        class="font-mono">&lt;programmer&gt;👨‍💻</span></h3>
             </div>
         </div>
     </main>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#0099ff" fill-opacity="1"
+            d="M0,192L80,208C160,224,320,256,480,261.3C640,267,800,245,960,240C1120,235,1280,245,1360,250.7L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+        </path>
+    </svg>
+    <!-- Main content ends -->
 </body>
+
 </html>
