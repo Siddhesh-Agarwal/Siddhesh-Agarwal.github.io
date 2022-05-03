@@ -1,7 +1,8 @@
 # Portfolio website
+My personal portfolio website
 
-## Tech used
+## ⚙️ Tech used
 
-- [Tailwind CSS v3](https://tailwindcss.com/)
+- [TailwindCSS](https://tailwindcss.com/)
 - [Fontawesome](https://fontawesome.com/)
 - [Twemoji](https://twemoji.twitter.com/)
