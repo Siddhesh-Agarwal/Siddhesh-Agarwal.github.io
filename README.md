@@ -6,3 +6,5 @@ My personal portfolio website
 - [TailwindCSS](https://tailwindcss.com/)
 - [Fontawesome](https://fontawesome.com/)
 - [Twemoji](https://twemoji.twitter.com/)
+
+Special mention: [FlowCV](https://flowcv.com)
