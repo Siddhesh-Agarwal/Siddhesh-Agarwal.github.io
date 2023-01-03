@@ -10,7 +10,7 @@ function App() {
             <Navbar />
             <div className="min-vh-100 px-md-3 py-md-2">
                 {/* Header */}
-                <section className="container min-vh-100" id="header">
+                <section className="container min-vh-100" id="intro">
                     <Intro />
                 </section>
 

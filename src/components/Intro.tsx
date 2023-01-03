@@ -46,10 +46,62 @@ function SocialLinks() {
 }
 
 function Tools() {
+    const links = [
+        {
+            name: "Python",
+            icon: <SiPython />,
+        },
+        {
+            name: "CSS",
+            icon: <SiCss3 />,
+        },
+        {
+            name: "HTML",
+            icon: <SiHtml5 />,
+        },
+        {
+            name: "JavaScript",
+            icon: <SiJavascript />,
+        },
+        {
+            name: "TypeScript",
+            icon: <SiTypescript />,
+        },
+        {
+            name: "React",
+            icon: <SiReact />,
+        },
+        {
+            name: "MongoDB",
+            icon: <SiMongodb />,
+        },
+        {
+            name: "MySQL",
+            icon: <SiMysql />,
+        },
+        {
+            name: "C",
+            icon: <SiC />,
+        },
+        {
+            name: "C++",
+            icon: <SiCplusplus />,
+        },
+        {
+            name: "Java",
+            icon: <SiJava />,
+        },
+    ]
     return (
-        <span className="text-primary">
-            <SiPython /> <SiCss3 /> <SiHtml5 /> <SiJavascript /> <SiTypescript /> <SiReact /> <SiMongodb /> <SiMysql /> <SiC /> <SiCplusplus /> <SiJava />
-        </span>
+        <div className="text-primary">
+            {
+                links.map((link) => (
+                    <span className="mx-2" title={link.name}>
+                        {link.icon}
+                    </span>
+                ))
+            }
+        </div>
     )
 }
 
@@ -58,7 +110,7 @@ function Intro() {
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <h1 className="display-1 text-center">Hello, I'm <span className="text-primary text-decoration-underline">Siddhesh</span></h1>
+                    <h1 className="display-1 text-center">Hello, I'm <span className="text-primary">Siddhesh</span></h1>
                     <h2 className="display-3 text-center">I'm a <span className="text-primary text-decoration-underline">Full Stack Developer</span></h2>
                 </div>
             </div>
