@@ -1,6 +1,22 @@
 import React from 'react';
-import { FaEnvelope, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { SiC, SiCplusplus, SiCss3, SiHtml5, SiJava, SiJavascript, SiMongodb, SiMysql, SiPython, SiReact, SiTypescript } from 'react-icons/si';
+import {
+    FaEnvelope,
+    FaLinkedin,
+    FaTwitter
+} from 'react-icons/fa';
+import {
+    SiC,
+    SiCplusplus,
+    SiCss3,
+    SiHtml5,
+    SiJava,
+    SiJavascript,
+    SiMongodb,
+    SiMysql,
+    SiPython,
+    SiReact,
+    SiTypescript
+} from 'react-icons/si';
 
 const socialLinks = [
     {
@@ -30,7 +46,7 @@ function SocialLinks() {
                             <a
                                 href={link.link}
                                 rel="noreferrer noopener" target="_blank"
-                                className="btn btn-primary mx-2"
+                                className="btn btn-primary mx-2 my-1"
                             >
                                 {link.icon}
                                 <p className="d-inline mx-2">
@@ -87,10 +103,10 @@ function Tools() {
             name: "C++",
             icon: <SiCplusplus />,
         },
-        {
-            name: "Java",
-            icon: <SiJava />,
-        },
+        // {
+        //     name: "Java",
+        //     icon: <SiJava />,
+        // },
     ]
     return (
         <div className="text-primary">
@@ -107,11 +123,11 @@ function Tools() {
 
 function Intro() {
     return (
-        <div className="container">
+        <div className="container py-4">
             <div className="row">
                 <div className="col-12">
-                    <h1 className="display-1 text-center">Hello, I'm <span className="text-primary">Siddhesh</span></h1>
-                    <h2 className="display-3 text-center">I'm a <span className="text-primary text-decoration-underline">Full Stack Developer</span></h2>
+                    <h1 className="display-1 text-center">Hello, I'm <span className="text-primary fw-bolder">Siddhesh</span></h1>
+                    <h2 className="display-3 text-center">I'm a <span className="text-primary">Full Stack Developer</span></h2>
                 </div>
             </div>
             {/* List things proficient in  */}
@@ -122,7 +138,7 @@ function Intro() {
                 </div>
             </div>
             {/* Ways to contact me */}
-            <div className="row mt-5">
+            <div className="row mt-3 mt-lg-5">
                 <div className="col-12 text-center">
                     <h3 className="display-6 mb-3">You can contact me on</h3>
                     <SocialLinks />

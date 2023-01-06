@@ -50,7 +50,7 @@ function ProjectCard(props: ProjectData) {
     // place the text and content on top od card and the button at the bottom
     return (
         <div
-            className="card my-3 mx-2"
+            className="card my-md-3 mx-md-2 mx-auto my-2"
             style={{ maxWidth: "18rem", backgroundColor: "#f8f9fa" }}>
             <div className="card-body px-1 py-2 d-flex flex-column justify-content-between">
                 <div className="d-block mb-3">
@@ -62,7 +62,11 @@ function ProjectCard(props: ProjectData) {
                     </p>
                 </div>
 
-                <a href={props.link} className="btn btn-primary d-block">
+                <a
+                    href={props.link}
+                    target="_blank" rel="noreferrer noopener"
+                    className="btn btn-primary d-block"
+                >
                     <FaGithub />
                     <p className="d-inline mx-2">
                         GitHub
@@ -75,7 +79,7 @@ function ProjectCard(props: ProjectData) {
 
 function Projects() {
     return (
-        <div className='mt-5'>
+        <div className='my-5'>
             <h2 className="text-dark">
                 Projects
             </h2>

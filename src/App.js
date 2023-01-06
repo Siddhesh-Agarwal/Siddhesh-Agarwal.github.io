@@ -8,7 +8,7 @@ function App() {
     return (
         <>
             <Navbar />
-            <div className="min-vh-100 px-md-3 py-md-2">
+            <div className="container-fluid">
                 {/* Header */}
                 <section className="container min-vh-100" id="intro">
                     <Intro />

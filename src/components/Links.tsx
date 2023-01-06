@@ -73,31 +73,33 @@ function Links() {
     // below it write CSE Student
     // list of links in a row as circles
     return (
-        <div className="bg-white p-4 rounded-3" style={{maxWidth: "45rem", minHeight: "16rem"}}>
+        <div className="bg-white py-4 px-2 rounded-3" style={{ maxWidth: "45rem", minHeight: "16rem" }}>
             <div className="row">
                 <div className="col-12">
                     <h1 className="text-center">
                         Siddhesh Agarwal
                     </h1>
-                    <h3 className="text-center">
+                    <h3 className="text-center mt-3 mt-md-1">
                         CSE Student
                     </h3>
                 </div>
             </div>
-            <div className="row mt-4">
+            <div className="row mt-md-4 mt-3">
                 <div className="col-12 text-center">
                     {
-                        socialLinks.map((link) => {
-                            return (
-                                <a
-                                    href={link.link}
-                                    rel="noreferrer noopener" target="_blank"
-                                    className="btn m-2 border rounded-circle border-dark fs-5"
-                                >
-                                    {link.icon}
-                                </a>
-                            )
-                        })
+                        socialLinks.map(
+                            (link) => {
+                                return (
+                                    <a
+                                        href={link.link}
+                                        rel="noreferrer noopener" target="_blank"
+                                        className="btn m-2 border rounded-circle border-dark fs-5"
+                                    >
+                                        {link.icon}
+                                    </a>
+                                )
+                            }
+                        )
                     }
                 </div>
             </div>
