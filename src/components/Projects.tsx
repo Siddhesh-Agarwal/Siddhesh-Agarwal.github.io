@@ -47,7 +47,6 @@ type ProjectData = {
 }
 
 function ProjectCard(props: ProjectData) {
-    // place the text and content on top od card and the button at the bottom
     return (
         <div
             className="card my-md-3 mx-md-2 mx-auto my-2"

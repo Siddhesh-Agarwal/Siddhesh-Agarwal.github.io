@@ -69,19 +69,16 @@ const socialLinks = [
 ]
 
 function Links() {
-    // Put a white box with a heading saying Siddhesh Agarwal
-    // below it write CSE Student
-    // list of links in a row as circles
     return (
         <div className="bg-white py-4 px-2 rounded-3" style={{ maxWidth: "45rem", minHeight: "16rem" }}>
             <div className="row">
                 <div className="col-12">
-                    <h1 className="text-center">
+                    <h1 className="display-6 text-center">
                         Siddhesh Agarwal
                     </h1>
-                    <h3 className="text-center mt-3 mt-md-1">
+                    <h2 className="text-center h2 mt-2">
                         CSE Student
-                    </h3>
+                    </h2>
                 </div>
             </div>
             <div className="row mt-md-4 mt-3">

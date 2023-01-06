@@ -109,15 +109,15 @@ function Tools() {
         // },
     ]
     return (
-        <div className="text-primary">
+        <span className="text-primary">
             {
                 links.map((link) => (
-                    <span className="mx-2" title={link.name}>
+                    <span className="mx-2 my-1" title={link.name}>
                         {link.icon}
                     </span>
                 ))
             }
-        </div>
+        </span>
     )
 }
 
@@ -133,14 +133,18 @@ function Intro() {
             {/* List things proficient in  */}
             <div className="row mt-5">
                 <div className="col-12 text-center">
-                    <h3 className="display-6">I'm proficient in: <Tools />
+                    <h3 className="display-6">
+                        <p className="mb-3">
+                            I'm proficient in:
+                        </p>
+                        <Tools />
                     </h3>
                 </div>
             </div>
             {/* Ways to contact me */}
             <div className="row mt-3 mt-lg-5">
                 <div className="col-12 text-center">
-                    <h3 className="display-6 mb-3">You can contact me on</h3>
+                    <h3 className="display-6 mb-3">You can contact me on:</h3>
                     <SocialLinks />
                 </div>
             </div>
