@@ -9,7 +9,7 @@ import {
     SiCplusplus,
     SiCss3,
     SiHtml5,
-    SiJava,
+    // SiJava,
     SiJavascript,
     SiMongodb,
     SiMysql,
