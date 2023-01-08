@@ -6,9 +6,9 @@ import Projects from "./components/Projects.tsx";
 
 function App() {
     return (
-        <>
+        <div className="container-fluid p-0">
             <Navbar />
-            <div className="container-fluid">
+            <div className="container-fluid p-0">
                 {/* Header */}
                 <section className="container min-vh-100" id="intro">
                     <Intro />
@@ -24,7 +24,7 @@ function App() {
                     <Projects />
                 </section>
             </div>
-        </>
+        </div>
     );
 }
 
