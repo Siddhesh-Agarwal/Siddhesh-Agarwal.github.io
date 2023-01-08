@@ -5,14 +5,14 @@ import {
     FaKaggle,
     FaDev,
     FaTwitter,
-    FaHackerrank
+    FaHackerrank,
+    FaCloudDownloadAlt
 } from 'react-icons/fa';
-
 import {
     SiHashnode,
     SiLeetcode,
     SiStackoverflow,
-    SiHackerearth
+    SiHackerearth,
 } from 'react-icons/si';
 
 const socialLinks = [
@@ -70,7 +70,10 @@ const socialLinks = [
 
 function Links() {
     return (
-        <div className="bg-white py-4 px-2 rounded-3" style={{ maxWidth: "45rem", minHeight: "16rem" }}>
+        <div
+            className="bg-white py-5 px-2 rounded-3 border shadow"
+            style={{ maxWidth: "45rem", minHeight: "16rem" }}
+        >
             <div className="row">
                 <div className="col-12">
                     <h1 className="display-6 text-center">
@@ -90,7 +93,7 @@ function Links() {
                                     <a
                                         href={link.link}
                                         rel="noreferrer noopener" target="_blank"
-                                        className="btn m-2 border rounded-circle border-dark fs-5"
+                                        className="btn m-2 border rounded-circle border-dark fs-5 shadow-sm"
                                     >
                                         {link.icon}
                                     </a>
@@ -98,6 +101,18 @@ function Links() {
                             }
                         )
                     }
+                </div>
+            </div>
+            <div className="row mt-md-4 mt-3">
+                <div className="col-12 text-center">
+                    <a
+                        href={require("../assets/Siddhesh_Agarwal-Resume.pdf")}
+                        download="Siddhesh_Agarwal-Resume.pdf"
+                        rel="noreferrer noopener" target="_blank"
+                        className="btn btn-success m-2 border shadow-sm fs-5"
+                    >
+                        <FaCloudDownloadAlt className='mx-1' /> Download Resume
+                    </a>
                 </div>
             </div>
         </div>

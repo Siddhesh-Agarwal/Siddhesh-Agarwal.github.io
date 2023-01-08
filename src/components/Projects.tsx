@@ -49,7 +49,7 @@ type ProjectData = {
 function ProjectCard(props: ProjectData) {
     return (
         <div
-            className="card my-md-3 mx-md-2 mx-auto my-2"
+            className="card my-md-3 mx-md-2 mx-auto my-2 shadow-sm"
             style={{ maxWidth: "18rem", backgroundColor: "#f8f9fa" }}>
             <div className="card-body px-1 py-2 d-flex flex-column justify-content-between">
                 <div className="d-block mb-3">
