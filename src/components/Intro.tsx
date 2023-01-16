@@ -17,6 +17,7 @@ import {
     SiReact,
     SiTypescript
 } from 'react-icons/si';
+import Typewriter from 'typewriter-effect';
 
 const socialLinks = [
     {
@@ -121,13 +122,35 @@ function Tools() {
     )
 }
 
+function Roles() {
+    return (
+        <span>
+            <Typewriter
+                options={{
+                    strings: [
+                        "Programmer",
+                        "ML Engineer",
+                        "DevOps Engineer",
+                        "Pythonista",
+                        "Web Developer",
+                        "Software Engineer",
+                        "Student",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                }}
+            />
+        </span>
+    )
+}
+
 function Intro() {
     return (
         <div className="container py-4">
             <div className="row">
                 <div className="col-12">
                     <h1 className="display-1 text-center">Hello, I'm <span className="text-primary fw-bolder">Siddhesh</span></h1>
-                    <h2 className="display-3 text-center">I'm a <span className="text-primary">Full Stack Developer</span></h2>
+                    <h2 className="display-3 text-center">I'm a <span className="text-primary"><Roles/></span></h2>
                 </div>
             </div>
             {/* List things proficient in  */}
