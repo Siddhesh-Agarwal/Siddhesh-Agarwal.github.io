@@ -123,24 +123,47 @@ function Tools() {
 }
 
 function Roles() {
+    const delay = 1000;
     return (
-        <span>
-            <Typewriter
-                options={{
-                    strings: [
-                        "Programmer",
-                        "ML Engineer",
-                        "DevOps Engineer",
-                        "Pythonista",
-                        "Web Developer",
-                        "Software Engineer",
-                        "Student",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                }}
-            />
-        </span>
+        <Typewriter
+            onInit={
+                (typewriter) => {
+                    typewriter.typeString("I'm a ")
+                        .pauseFor(delay / 2)
+                        .typeString("<span class='text-primary'>Web Developer</span>")
+                        .pauseFor(delay)
+                        .deleteChars(13)
+                        .pauseFor(delay / 4)
+                        .typeString("<span class='text-primary'>Full Stack Developer</span>")
+                        .pauseFor(delay)
+                        .deleteChars(20)
+                        .pauseFor(delay / 4)
+                        .typeString("<span class='text-primary'>ML Engineer</span>")
+                        .pauseFor(delay)
+                        .deleteChars(11)
+                        .pauseFor(delay / 4)
+                        .typeString("<span class='text-primary'>Data Scientist</span>")
+                        .pauseFor(delay)
+                        .deleteChars(15)
+                        .pauseFor(delay / 4)
+                        .typeString("<span class='text-primary'>DevOPs Engineer</span>")
+                        .pauseFor(delay)
+                        .deleteChars(16)
+                        .pauseFor(delay / 4)
+                        .typeString("<span class='text-primary'>Cloud Architect</span>")
+                        .pauseFor(delay)
+                        .deleteChars(16)
+                        .start();
+                }
+            }
+            options={{
+                autoStart: true,
+                loop: true,
+                delay: 50,
+                
+                deleteSpeed: 20,
+            }}
+        />
     )
 }
 
@@ -150,7 +173,7 @@ function Intro() {
             <div className="row">
                 <div className="col-12">
                     <h1 className="display-1 text-center">Hello, I'm <span className="text-primary fw-bolder">Siddhesh</span></h1>
-                    <h2 className="display-3 text-center">I'm a <span className="text-primary"><Roles/></span></h2>
+                    <h2 className="display-3 text-center"><Roles /></h2>
                 </div>
             </div>
             {/* List things proficient in  */}
