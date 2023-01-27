@@ -14,6 +14,7 @@ import {
     SiStackoverflow,
     SiHackerearth,
 } from 'react-icons/si';
+import { motion } from 'framer-motion';
 
 const socialLinks = [
     {
@@ -68,11 +69,31 @@ const socialLinks = [
     },
 ]
 
-function Links() {
+
+export default function Links() {
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    }
+
+    const item = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1 }
+    }
+
     return (
-        <div
+        <motion.div
             className="bg-white py-5 px-2 rounded-3 border shadow"
             style={{ maxWidth: "45rem", minHeight: "16rem" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}
         >
             <div className="row">
                 <div className="col-12">
@@ -84,39 +105,51 @@ function Links() {
                     </h2>
                 </div>
             </div>
+            {/* Animation to display social links one by one */}
             <div className="row mt-md-4 mt-3">
-                <div className="col-12 text-center">
+                <motion.div
+                    className="col-12 text-center"
+                    variants={container}
+                    initial="hidden"
+                    animate="show"
+                >
                     {
+                        // Do not render until the animation is complete
+
                         socialLinks.map(
                             (link) => {
                                 return (
-                                    <a
+                                    <motion.a
                                         href={link.link}
                                         rel="noreferrer noopener" target="_blank"
                                         className="btn m-2 border rounded-circle border-dark fs-5 shadow-sm"
+                                        variants={item}
+                                        title={link.name}
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
                                     >
                                         {link.icon}
-                                    </a>
+                                    </motion.a>
                                 )
                             }
                         )
                     }
-                </div>
+                </motion.div>
             </div>
             <div className="row mt-md-4 mt-3">
                 <div className="col-12 text-center">
-                    <a
+                    <motion.a
                         href={require("../assets/Siddhesh_Agarwal-Resume.pdf")}
                         download="Siddhesh_Agarwal-Resume.pdf"
                         rel="noreferrer noopener" target="_blank"
                         className="btn btn-success m-2 border shadow-sm fs-5"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
                     >
                         <FaCloudDownloadAlt className='mx-1' /> Download Resume
-                    </a>
+                    </motion.a>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
-
-export default Links;

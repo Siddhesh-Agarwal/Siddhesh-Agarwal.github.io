@@ -3,28 +3,45 @@ import Navbar from "./components/Navbar.tsx";
 import Intro from "./components/Intro.tsx";
 import Links from "./components/Links.tsx";
 import Projects from "./components/Projects.tsx";
+import { motion } from "framer-motion";
+
 
 function App() {
     return (
-        <div className="container-fluid p-0">
+        <motion.div className="container-fluid p-0">
             <Navbar />
-            <div className="container-fluid p-0">
-                {/* Header */}
-                <section className="container min-vh-100" id="intro">
+            <motion.div className="container-fluid p-0">
+                {/* Header - Fade in animation */}
+                <motion.section
+                    className="container min-vh-100" id="intro"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
                     <Intro />
-                </section>
+                </motion.section>
 
-                {/* Links */}
-                <section className="container-fluid vh-100 bg-primary d-grid align-content-center justify-content-center" id="links">
+                {/* Links - Fade in animation */}
+                <motion.section
+                    className="container-fluid vh-100 bg-primary d-grid align-content-center justify-content-center" id="links"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
                     <Links />
-                </section>
+                </motion.section>
 
-                {/* Projects */}
-                <section className="container min-vh-100" id="projects">
+                {/* Projects - Fade in on scroll */}
+                <motion.section
+                    className="container min-vh-100" id="projects"
+                    onViewportLeave={{ opacity: 0 }}
+                    onViewportEnter={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
                     <Projects />
-                </section>
-            </div>
-        </div>
+                </motion.section>
+            </motion.div>
+        </motion.div>
     );
 }
 

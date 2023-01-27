@@ -9,7 +9,7 @@ import {
     SiCplusplus,
     SiCss3,
     SiHtml5,
-    // SiJava,
+    SiJava,
     SiJavascript,
     SiMongodb,
     SiMysql,
@@ -18,42 +18,45 @@ import {
     SiTypescript
 } from 'react-icons/si';
 import Typewriter from 'typewriter-effect';
+import { motion } from 'framer-motion';
 
-const socialLinks = [
-    {
-        name: "LinkedIn",
-        icon: <FaLinkedin />,
-        link: "https://www.linkedin.com/in/siddhesh-agarwal"
-    },
-    {
-        name: "Twitter",
-        icon: <FaTwitter />,
-        link: "https://www.twitter.com/siddhesh0205"
-    },
-    {
-        name: "Email",
-        icon: <FaEnvelope />,
-        link: "mailto:siddhesh.agarwal@gmail.com",
-    },
-]
 
 function SocialLinks() {
+    const socialLinks = [
+        {
+            name: "LinkedIn",
+            icon: <FaLinkedin />,
+            link: "https://www.linkedin.com/in/siddhesh-agarwal"
+        },
+        {
+            name: "Twitter",
+            icon: <FaTwitter />,
+            link: "https://www.twitter.com/siddhesh0205"
+        },
+        {
+            name: "Email",
+            icon: <FaEnvelope />,
+            link: "mailto:siddhesh.agarwal@gmail.com",
+        },
+    ]
     return (
         <div className="row">
             <div className="col-12">
                 {
                     socialLinks.map((link) => {
                         return (
-                            <a
+                            <motion.a
                                 href={link.link}
                                 rel="noreferrer noopener" target="_blank"
                                 className="btn btn-primary mx-2 my-1"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
                             >
                                 {link.icon}
                                 <p className="d-inline mx-2">
                                     {link.name}
                                 </p>
-                            </a>
+                            </motion.a>
                         )
                     })
                 }
@@ -61,6 +64,7 @@ function SocialLinks() {
         </div>
     )
 }
+
 
 function Tools() {
     const links = [
@@ -104,70 +108,79 @@ function Tools() {
             name: "C++",
             icon: <SiCplusplus />,
         },
-        // {
-        //     name: "Java",
-        //     icon: <SiJava />,
-        // },
+        {
+            name: "Java",
+            icon: <SiJava />,
+        },
     ]
     return (
-        <span className="text-primary">
+        <div className="row d-flex justify-content-center" style={{ display: "flex", justifyContent: "center", width: "100%" }}>
             {
-                links.map((link) => (
-                    <span className="mx-2 my-1" title={link.name}>
-                        {link.icon}
-                    </span>
-                ))
+                links.map(
+                    (link) => {
+                        return (
+                            <motion.div
+                                className="m-1 text-primary fw-bolder d-inline-block"
+                                style={{ display: "inline-block", width: "fit-content" }}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                {link.icon}
+                            </motion.div>
+                        )
+                    }
+                )
             }
-        </span>
+        </div>
     )
 }
+
 
 function Roles() {
     const delay = 1000;
     return (
-        <Typewriter
-            onInit={
-                (typewriter) => {
-                    typewriter.typeString("I'm a ")
-                        .pauseFor(delay / 2)
-                        .typeString("<span class='text-primary'>Web Developer</span>")
-                        .pauseFor(delay)
-                        .deleteChars(13)
-                        .pauseFor(delay / 4)
-                        .typeString("<span class='text-primary'>Full Stack Developer</span>")
-                        .pauseFor(delay)
-                        .deleteChars(20)
-                        .pauseFor(delay / 4)
-                        .typeString("<span class='text-primary'>ML Engineer</span>")
-                        .pauseFor(delay)
-                        .deleteChars(11)
-                        .pauseFor(delay / 4)
-                        .typeString("<span class='text-primary'>Data Scientist</span>")
-                        .pauseFor(delay)
-                        .deleteChars(15)
-                        .pauseFor(delay / 4)
-                        .typeString("<span class='text-primary'>DevOPs Engineer</span>")
-                        .pauseFor(delay)
-                        .deleteChars(16)
-                        .pauseFor(delay / 4)
-                        .typeString("<span class='text-primary'>Cloud Architect</span>")
-                        .pauseFor(delay)
-                        .deleteChars(16)
-                        .start();
+        <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: delay / 1000 }}
+            transition={{ delay: delay / 1000 }}
+
+        >
+            <Typewriter
+                onInit={
+                    (typewriter) => {
+                        typewriter
+                            .pauseFor(delay)
+                            .typeString("I'm a <span class='text-primary'>Web Developer</span>")
+                            .pauseFor(delay)
+                            .deleteChars(13)
+                            .pauseFor(delay / 4)
+                            .typeString("<span class='text-primary'>Full Stack Developer</span>")
+                            .pauseFor(delay)
+                            .deleteChars(20)
+                            .pauseFor(delay / 4)
+                            .typeString("<span class='text-primary'>ML Engineer</span>")
+                            .pauseFor(delay)
+                            .deleteChars(11)
+                            .pauseFor(delay / 4)
+                            .typeString("<span class='text-primary'>Data Scientist</span>")
+                            .pauseFor(delay)
+                            .deleteChars(15)
+                            .start();
+                    }
                 }
-            }
-            options={{
-                autoStart: true,
-                loop: true,
-                delay: 50,
-                
-                deleteSpeed: 20,
-            }}
-        />
+                options={{
+                    autoStart: true,
+                    loop: true,
+                    delay: 50,
+                    deleteSpeed: 20,
+                }}
+            />
+        </motion.span>
     )
 }
 
-function Intro() {
+
+export default function Intro() {
     return (
         <div className="container py-4">
             <div className="row">
@@ -197,5 +210,3 @@ function Intro() {
         </div>
     )
 }
-
-export default Intro;
