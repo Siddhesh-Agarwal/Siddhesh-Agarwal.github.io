@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "./components/Navbar.tsx";
 import Intro from "./components/Intro.tsx";
 import Links from "./components/Links.tsx";
-import Projects from "./components/Projects.tsx";
 import { motion } from "framer-motion";
 
 
