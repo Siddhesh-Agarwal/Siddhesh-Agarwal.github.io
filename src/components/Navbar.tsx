@@ -18,7 +18,7 @@ function Navbar() {
                                     <a className="nav-link active" href="#links">Links</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link active" href="#projects">Projects</a>
+                                    <a className="nav-link active" href="/projects/">Projects</a>
                                 </li>
                             </ul>
                         </div>

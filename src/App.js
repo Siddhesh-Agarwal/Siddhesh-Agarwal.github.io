@@ -30,16 +30,6 @@ function App() {
                 >
                     <Links />
                 </motion.section>
-
-                {/* Projects - Fade in on scroll */}
-                <motion.section
-                    className="container min-vh-100" id="projects"
-                    onViewportLeave={{ opacity: 0 }}
-                    onViewportEnter={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                >
-                    <Projects />
-                </motion.section>
             </motion.div>
         </motion.div>
     );
