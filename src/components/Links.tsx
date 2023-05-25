@@ -146,7 +146,10 @@ export default function Links() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
-                        <FaCloudDownloadAlt className='mx-1' /> Download Resume
+                        <FaCloudDownloadAlt />
+                        <p className="d-inline-block ms-2 mb-0">
+                            Download Resume
+                        </p>
                     </motion.a>
                 </div>
             </div>

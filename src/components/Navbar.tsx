@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Navbar() {
+export default function Navbar() {
     // create a Navbar using bootstrap
     // It contains 3 links: Intro, Links, Projects
     // The links should be in a row
     return (
-        <div className="container-fluid border-bottom shadow-sm" style={{ backgroundColor: "#f8f9fa"}}>
+        <div className="container-fluid border-bottom shadow-sm" style={{ backgroundColor: "#f8f9fa" }}>
             <div className="row">
                 <div className="col-12">
                     <nav className="navbar navbar-expand navbar-light bg-light">
@@ -28,5 +28,3 @@ function Navbar() {
         </div>
     )
 }
-
-export default Navbar;

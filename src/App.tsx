@@ -5,7 +5,7 @@ import Links from "./components/Links.tsx";
 import { motion } from "framer-motion";
 
 
-function App() {
+export default function App() {
     return (
         <motion.div className="container-fluid p-0">
             <Navbar />
@@ -34,4 +34,3 @@ function App() {
     );
 }
 
-export default App;
