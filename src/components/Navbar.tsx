@@ -1,30 +1,43 @@
-import React from 'react';
+import React from "react";
+import { HiMenu } from "react-icons/hi";
+import { FaGithub } from "react-icons/fa";
 
 export default function Navbar() {
-    // create a Navbar using bootstrap
-    // It contains 3 links: Intro, Links, Projects
-    // The links should be in a row
+    // Toggle menu for mobile
+    const [display, setDisplay] = React.useState<boolean>(false);
+    function toggleDisplay() {
+        setDisplay(!display);
+    }
     return (
-        <div className="container-fluid border-bottom shadow-sm" style={{ backgroundColor: "#f8f9fa" }}>
-            <div className="row">
-                <div className="col-12">
-                    <nav className="navbar navbar-expand navbar-light bg-light">
-                        <div className="container-fluid">
-                            <ul className="navbar-nav me-auto mb-0">
-                                <li className="nav-item">
-                                    <a className="nav-link active" href="#intro">Home</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link active" href="#links">Links</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link active" href="/projects/">Projects</a>
-                                </li>
-                            </ul>
+        <header className="bg-white shadow-sm dark:bg-gray-800">
+            <div className="container mx-auto px-6 py-3">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                    <div className="flex justify-between items-center">
+                        <div className="flex items-center">
+                            <a className="text-gray-800 dark:text-white text-xl font-bold md:text-2xl hover:text-gray-700 dark:hover:text-gray-300" href="#intro">
+                                Siddhesh Agarwal
+                            </a>
                         </div>
+                        <div className="flex md:hidden">
+                            <button type="button" className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none focus:text-gray-600 dark:focus:text-gray-300" aria-label="toggle menu" onClick={toggleDisplay}>
+                                <HiMenu />
+                            </button>
+                        </div>
+                    </div>
+                    {/* Toggle display for mobile */}
+                    <nav className={`${display ? "flex" : "hidden"} md:flex flex-col md:flex-row md:justify-end w-1/2 pt-4 md:pt-0`}>
+                        <a href="/projects/" className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+                            Projects
+                        </a>
+                        <a href="https://dev.to/siddhesh_agarwal" className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+                            Blog
+                        </a>
+                        <a href="https://github.com/Siddhesh-Agarwal" className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+                            <FaGithub className="inline-block text-lg" />
+                        </a>
                     </nav>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }

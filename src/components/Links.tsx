@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     FaLinkedinIn,
     FaGithub,
@@ -15,8 +14,15 @@ import {
     SiHackerearth,
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
+import resume from '../assets/Siddhesh_Agarwal-Resume.pdf';
 
-const socialLinks = [
+type SocialLink = {
+    name: string,
+    icon: JSX.Element,
+    link: string,
+}
+
+const socialLinks: SocialLink[] = [
     {
         name: "LinkedIn",
         icon: <FaLinkedinIn />,
@@ -28,6 +34,11 @@ const socialLinks = [
         link: "https://www.github.com/siddhesh-agarwal"
     },
     {
+        name: "Twitter",
+        icon: <FaTwitter />,
+        link: "https://www.twitter.com/siddhesh0205"
+    },
+    {
         name: "Kaggle",
         icon: <FaKaggle />,
         link: "https://www.kaggle.com/siddheshagarwal"
@@ -36,11 +47,6 @@ const socialLinks = [
         name: "Dev.to",
         icon: <FaDev />,
         link: "https://www.dev.to/siddhesh_agarwal"
-    },
-    {
-        name: "Twitter",
-        icon: <FaTwitter />,
-        link: "https://www.twitter.com/siddhesh0205"
     },
     {
         name: "Hackerrank",
@@ -69,7 +75,6 @@ const socialLinks = [
     },
 ]
 
-
 export default function Links() {
     const container = {
         hidden: { opacity: 0 },
@@ -87,9 +92,8 @@ export default function Links() {
     }
 
     return (
-        <motion.div
-            className="bg-white py-5 px-2 rounded-3 border shadow"
-            style={{ maxWidth: "45rem", minHeight: "16rem" }}
+        <motion.div className="bg-white py-5 px-3 md:px-8 md:rounded-lg shadow-lg hover:shadow-xl dark:bg-gray-800 dark:text-white"
+            style={{ maxWidth: "48rem", minHeight: "16rem" }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
@@ -97,61 +101,56 @@ export default function Links() {
         >
             <div className="row">
                 <div className="col-12">
-                    <h1 className="display-6 text-center">
+                    <h1 className="text-4xl text-center">
                         Siddhesh Agarwal
                     </h1>
-                    <h2 className="text-center h2 mt-2">
+                    <h2 className="text-2xl text-center mt-2 dark:text-gray-200">
                         CSE Student
                     </h2>
                 </div>
-            </div>
-            {/* Animation to display social links one by one */}
-            <div className="row mt-md-4 mt-3">
+                {/* Animation to display social links one by one */}
                 <motion.div
-                    className="col-12 text-center"
+                    className="text-center my-4"
                     variants={container}
                     initial="hidden"
                     animate="show"
                 >
-                    {
-                        // Do not render until the animation is complete
-
-                        socialLinks.map(
-                            (link) => {
-                                return (
-                                    <motion.a
-                                        href={link.link}
-                                        rel="noreferrer noopener" target="_blank"
-                                        className="btn m-2 border rounded-circle border-dark fs-5 shadow-sm"
-                                        variants={item}
-                                        title={link.name}
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.9 }}
-                                    >
-                                        {link.icon}
-                                    </motion.a>
-                                )
-                            }
-                        )
-                    }
+                    <div className="inline-flex flex-wrap justify-center">
+                        {
+                            socialLinks.map(
+                                (link, index) => {
+                                    return (
+                                        <motion.a
+                                            href={link.link}
+                                            rel="noreferrer noopener" target="_blank"
+                                            className="m-2 p-2 rounded-2xl border-2 shadow-sm bg-white text-lg dark:bg-gray-800 dark:text-white dark:border"
+                                            variants={item}
+                                            title={link.name}
+                                            whileHover={{ scale: 1.1 }}
+                                            whileTap={{ scale: 0.9 }}
+                                            key={index}
+                                        >
+                                            {link.icon}
+                                        </motion.a>
+                                    )
+                                }
+                            )
+                        }
+                    </div>
                 </motion.div>
             </div>
-            <div className="row mt-md-4 mt-3">
-                <div className="col-12 text-center">
-                    <motion.a
-                        href={require("../assets/Siddhesh_Agarwal-Resume.pdf")}
-                        download="Siddhesh_Agarwal-Resume.pdf"
-                        rel="noreferrer noopener" target="_blank"
-                        className="btn btn-success m-2 border shadow-sm fs-5"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                    >
-                        <FaCloudDownloadAlt />
-                        <p className="d-inline-block ms-2 mb-0">
-                            Download Resume
-                        </p>
-                    </motion.a>
-                </div>
+            {/* Button to Download resume */}
+            <div className="text-center mt-5">
+                <motion.a href={resume} download="Siddhesh_Agarwal-Resume.pdf"
+                    className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow hover:shadow-lg text-xl"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    <FaCloudDownloadAlt className="inline-block" />
+                    <p className="inline-block ml-2">
+                        Download Resume
+                    </p>
+                </motion.a>
             </div>
         </motion.div>
     )
