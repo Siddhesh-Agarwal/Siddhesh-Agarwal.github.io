@@ -173,7 +173,7 @@ function Tools() {
                     (link, index) => {
                         return (
                             <motion.div
-                                className="m-2 text-blue-500 font-semibold inline-block text-4xl"
+                                className="m-2 text-blue-500 font-semibold inline-block lg:text-4xl text-3xl"
                                 style={{ width: "fit-content" }}
                                 whileHover={{ scale: 1.2 }}
                                 whileTap={{ scale: 0.8 }}
@@ -198,7 +198,7 @@ function Roles() {
             initial={{ opacity: 0 }}
             animate={{ opacity: delay / 1000 }}
             transition={{ delay: delay / 1000 }}
-
+            className="text-4xl lg:text-6xl"
         >
             <Typewriter
                 onInit={
@@ -240,14 +240,14 @@ export default function Intro() {
         <div className="container py-4 dark:text-white">
             <div className="row">
                 <div className="col-12 text-center">
-                    <h1 className="text-8xl">Hello, I'm <span className="text-blue-500 font-bolder">Siddhesh</span></h1>
+                    <h1 className="text-6xl lg:text-8xl">Hello, I'm <span className="text-blue-500 font-bolder">Siddhesh</span></h1>
                     <h2 className="text-6xl"><Roles /></h2>
                 </div>
             </div>
             {/* List things proficient in  */}
             <div className="row my-10">
                 <div className="col-12 text-center">
-                    <h3 className="text-4xl w-full">
+                    <h3 className="text-3xl lg:text-4xl w-full">
                         <p className="mb-3">
                             I'm proficient in:
                         </p>
