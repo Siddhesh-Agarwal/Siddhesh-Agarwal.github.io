@@ -205,19 +205,19 @@ function Roles() {
                     (typewriter) => {
                         typewriter
                             .pauseFor(delay)
-                            .typeString("I'm a <span class='text-blue-400'>Web Developer</span>")
+                            .typeString("I'm a <span class='text-blue-500'>Web Developer</span>")
                             .pauseFor(delay)
                             .deleteChars(13)
                             .pauseFor(delay / 4)
-                            .typeString("<span class='text-blue-400'>Full Stack Developer</span>")
+                            .typeString("<span class='text-blue-500'>Full Stack Developer</span>")
                             .pauseFor(delay)
                             .deleteChars(20)
                             .pauseFor(delay / 4)
-                            .typeString("<span class='text-blue-400'>ML Engineer</span>")
+                            .typeString("<span class='text-blue-500'>ML Engineer</span>")
                             .pauseFor(delay)
                             .deleteChars(11)
                             .pauseFor(delay / 4)
-                            .typeString("<span class='text-blue-400'>Data Scientist</span>")
+                            .typeString("<span class='text-blue-500'>Data Scientist</span>")
                             .pauseFor(delay)
                             .deleteChars(15)
                             .start();
@@ -240,14 +240,14 @@ export default function Intro() {
         <div className="container py-4 dark:text-white">
             <div className="row">
                 <div className="col-12 text-center">
-                    <h1 className="text-6xl lg:text-8xl">Hello, I'm <span className="text-blue-500 font-bolder">Siddhesh</span></h1>
-                    <h2 className="text-6xl"><Roles /></h2>
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl">Hello, I'm <span className="text-blue-500 font-bolder">Siddhesh</span></h1>
+                    <h2 className="text-3xl md:text-6xl"><Roles /></h2>
                 </div>
             </div>
             {/* List things proficient in  */}
             <div className="row my-10">
                 <div className="col-12 text-center">
-                    <h3 className="text-3xl lg:text-4xl w-full">
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl w-full">
                         <p className="mb-3">
                             I'm proficient in:
                         </p>
@@ -258,7 +258,7 @@ export default function Intro() {
             {/* Ways to contact me */}
             <div className="row">
                 <div className="col-12 text-center">
-                    <h3 className="text-3xl mb-3">You can contact me on:</h3>
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl mb-3">You can contact me on:</h3>
                     <SocialLinks />
                 </div>
             </div>
