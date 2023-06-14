@@ -19,21 +19,28 @@ export default function Navbar() {
                             </a>
                         </div>
                         <div className="flex md:hidden">
-                            <button type="button" className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none focus:text-gray-600 dark:focus:text-gray-300" aria-label="toggle menu" onClick={toggleDisplay}>
+                            <button type="button" aria-label="toggle menu" onClick={toggleDisplay}
+                                className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none focus:text-gray-600 dark:focus:text-gray-300">
                                 <HiMenu />
                             </button>
                         </div>
                     </div>
                     {/* Toggle display for mobile */}
                     <nav className={`${display ? "flex" : "hidden"} md:flex flex-col md:flex-row md:justify-end w-1/2 pt-4 md:pt-0`}>
-                        <a href="/projects/" className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+                        <a href="/projects/" target="_blank" rel="noreferrer noopener"
+                            className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
                             Projects
                         </a>
-                        <a href="https://dev.to/siddhesh_agarwal" className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+                        <a href="https://dev.to/siddhesh_agarwal" target="_blank" rel="noreferrer noopener"
+                            className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
                             Blog
                         </a>
-                        <a href="https://github.com/Siddhesh-Agarwal" className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-                            <FaGithub className="inline-block text-lg" />
+                        <a href="https://github.com/Siddhesh-Agarwal" target="_blank" rel="noreferrer noopener"
+                            className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+                            <FaGithub className="hidden text-lg md:inline-block" />
+                            <p className="inline-block md:hidden">
+                                Github
+                            </p>
                         </a>
                     </nav>
                 </div>
