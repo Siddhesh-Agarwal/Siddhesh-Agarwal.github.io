@@ -75,7 +75,7 @@ const socialLinks: SocialLink[] = [
     },
 ]
 
-export default function Links() {
+export const Links: React.FC = () => {
     const container = {
         hidden: { opacity: 0 },
         show: {

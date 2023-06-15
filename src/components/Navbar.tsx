@@ -2,7 +2,7 @@ import React from "react";
 import { HiMenu } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 
-export default function Navbar() {
+export const Navbar: React.FC = () => {
     // Toggle menu for mobile
     const [display, setDisplay] = React.useState<boolean>(false);
     function toggleDisplay() {

@@ -23,19 +23,17 @@ import {
     SiDocker,
     SiFirebase,
     SiHeroku,
-    SiPhp
+    SiPhp,
+    SiTensorflow
 } from 'react-icons/si';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
+import { SocialLink } from '../types/SocialLink';
+import { ToolLink } from '../types/ToolLink';
+import React from 'react';
 
 
 function SocialLinks() {
-    type SocialLink = {
-        name: string,
-        icon: JSX.Element,
-        link: string,
-    }
-
     const socialLinks: SocialLink[] = [
         {
             name: "LinkedIn",
@@ -84,10 +82,14 @@ function SocialLinks() {
 
 
 function Tools() {
-    const links = [
+    const links: ToolLink[] = [
         {
             name: "Python",
             icon: <SiPython />,
+        },
+        {
+            name: "TensorFlow",
+            icon: <SiTensorflow />
         },
         {
             name: "CSS",
@@ -235,7 +237,7 @@ function Roles() {
 }
 
 
-export default function Intro() {
+export const Intro: React.FC = () => {
     return (
         <div className="container py-4 dark:text-white">
             <div className="row">

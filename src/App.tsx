@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import Navbar from "./components/Navbar.tsx";
-import Intro from "./components/Intro.tsx";
-import Links from "./components/Links.tsx";
+import { Navbar } from "./components/Navbar";
+import { Intro } from "./components/Intro";
+import { Links } from "./components/Links";
 
 
 export default function App() {
