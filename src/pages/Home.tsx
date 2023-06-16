@@ -1,10 +1,9 @@
-import { motion } from "framer-motion";
-import { Navbar } from "./components/Navbar";
-import { Intro } from "./components/Intro";
-import { Links } from "./components/Links";
+import { motion } from "framer-motion"
+import { Navbar } from "../components/Navbar"
+import { Intro } from "../components/Intro"
+import { Links } from "../components/Links"
 
-
-export default function App() {
+export default function Home() {
     return (
         <motion.div className="container-fluid p-0 min-w-screen overflow-x-hidden">
             <Navbar />
@@ -32,6 +31,5 @@ export default function App() {
                 </motion.section>
             </motion.div>
         </motion.div>
-    );
+    )
 }
-
