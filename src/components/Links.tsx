@@ -15,12 +15,7 @@ import {
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import resume from '../assets/Siddhesh_Agarwal-Resume.pdf';
-
-type SocialLink = {
-    name: string,
-    icon: JSX.Element,
-    link: string,
-}
+import { SocialLink } from '../types/SocialLink';
 
 const socialLinks: SocialLink[] = [
     {

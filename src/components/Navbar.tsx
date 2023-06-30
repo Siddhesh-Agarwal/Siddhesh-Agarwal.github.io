@@ -27,13 +27,13 @@ export const Navbar: React.FC = () => {
                     </div>
                     {/* Toggle display for mobile */}
                     <nav className={`${display ? "flex" : "hidden"} md:flex flex-col md:flex-row md:justify-end w-1/2 pt-4 md:pt-0`}>
+                        <a href="http://blog.siddhesh.tech" target="_blank" rel="noreferrer noopener"
+                            className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+                            Blog
+                        </a>
                         <a href="/projects/" target="_blank" rel="noreferrer noopener"
                             className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
                             Projects
-                        </a>
-                        <a href="https://dev.to/siddhesh_agarwal" target="_blank" rel="noreferrer noopener"
-                            className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-                            Blog
                         </a>
                         <a href="https://github.com/Siddhesh-Agarwal" target="_blank" rel="noreferrer noopener"
                             className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">

@@ -1,8 +1,5 @@
-export type SocialLinkExtended = {
+export type SocialLink = {
     name: string,
     icon: JSX.Element,
-    link: string,
-    description: string
+    link: string
 }
-
-export type SocialLink = Omit<SocialLinkExtended, 'description'>;

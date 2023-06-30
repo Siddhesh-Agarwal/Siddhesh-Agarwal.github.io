@@ -1,4 +1,4 @@
 export type ToolLink = {
     name: string,
-    icon: JSX.Element,
+    icon: JSX.Element
 }
