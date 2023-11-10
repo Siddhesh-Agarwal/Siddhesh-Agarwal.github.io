@@ -5,26 +5,26 @@ import {
     FaTwitter
 } from 'react-icons/fa';
 import {
+    SiAmazonaws,
     SiC,
     SiCplusplus,
-    SiCss3,
+    SiDocker,
+    SiFastapi,
     SiGit,
-    SiHtml5,
-    SiJavascript,
+    SiGnubash,
+    SiLaravel,
     SiLinux,
     SiMongodb,
     SiMysql,
+    SiNextdotjs,
+    SiPhp, 
     SiPython,
-    SiReact,
+    SiScikitlearn,
+    SiStreamlit,
+    SiTailwindcss,
+    SiTensorflow,
     SiTypescript,
-    SiNodedotjs,
-    SiExpress,
-    SiAmazonaws,
-    SiDocker,
-    SiFirebase,
-    SiHeroku,
-    SiPhp,
-    SiTensorflow
+    SiVercel,
 } from 'react-icons/si';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
@@ -88,36 +88,32 @@ function Tools() {
             icon: <SiPython />,
         },
         {
+            name: "FastAPI",
+            icon: <SiFastapi />,
+        },
+        {
+            name: "Streamlit",
+            icon: <SiStreamlit />,
+        },
+        {
+            name: "Scikit Learn",
+            icon: <SiScikitlearn />,
+        },
+        {
             name: "TensorFlow",
             icon: <SiTensorflow />
-        },
-        {
-            name: "CSS",
-            icon: <SiCss3 />,
-        },
-        {
-            name: "HTML",
-            icon: <SiHtml5 />,
-        },
-        {
-            name: "JavaScript",
-            icon: <SiJavascript />,
         },
         {
             name: "TypeScript",
             icon: <SiTypescript />,
         },
         {
-            name: "Express.js",
-            icon: <SiExpress />,
+            name: "Tailwind CSS",
+            icon: <SiTailwindcss />,
         },
         {
-            name: "React",
-            icon: <SiReact />,
-        },
-        {
-            name: "Node.js",
-            icon: <SiNodedotjs />,
+            name: "Next.js",
+            icon: <SiNextdotjs />,
         },
         {
             name: "MySQL",
@@ -130,6 +126,10 @@ function Tools() {
         {
             name: "PHP",
             icon: <SiPhp />,
+        },
+        {
+            name: "Laravel",
+            icon: <SiLaravel />,
         },
         {
             name: "C",
@@ -156,18 +156,20 @@ function Tools() {
             icon: <SiLinux />,
         },
         {
+            name: "GNU Bash",
+            icon: <SiGnubash />,
+        },
+        {
             name: "AWS",
             icon: <SiAmazonaws />,
         },
         {
-            name: "Firebase",
-            icon: <SiFirebase />,
+            name: "Vercel",
+            icon: <SiVercel />,
         },
-        {
-            name: "Heroku",
-            icon: <SiHeroku />,
-        }
     ]
+
+    // Create a list of icons with names that appear on hover
     return (
         <div className="inline-flex justify-center w-full flex-wrap px-4">
             {
@@ -175,9 +177,8 @@ function Tools() {
                     (link, index) => {
                         return (
                             <motion.div
-                                className="m-2 text-blue-500 font-semibold inline-block lg:text-4xl text-3xl"
-                                style={{ width: "fit-content" }}
-                                whileHover={{ scale: 1.2 }}
+                                className="m-2 text-blue-500 font-semibold inline-block lg:text-4xl text-3xl w-fit"
+                                whileHover={{ scale: 1.25 }}
                                 whileTap={{ scale: 0.8 }}
                                 key={index}
                                 title={link.name}

@@ -3,6 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "www.siddhesh.tech",
+  "engineStrict": true,
+  "author": {
+    "name": "Siddhesh Agarwal",
+    "email": "Siddhesh.Agarwal@gmail.com",
+    "url": "https://www.siddhesh.tech/"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
