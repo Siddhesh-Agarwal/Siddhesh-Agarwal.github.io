@@ -1,36 +1,38 @@
+import React from 'react'; // 6.9 k (gzipped: 2.7k)
 import {
     FaEnvelope,
     FaGithub,
     FaLinkedin,
     FaTwitter
-} from 'react-icons/fa';
+} from 'react-icons/fa'; // 5.3 k (gzipped: 2.5k)
 import {
     SiAmazonaws,
     SiC,
     SiCplusplus,
+    SiDjango,
     SiDocker,
     SiFastapi,
     SiGit,
     SiGnubash,
+    SiHaskell,
     SiLaravel,
     SiLinux,
     SiMongodb,
     SiMysql,
     SiNextdotjs,
-    SiPhp, 
+    SiPhp,
     SiPython,
     SiScikitlearn,
-    SiStreamlit,
+    SiScipy,
     SiTailwindcss,
     SiTensorflow,
     SiTypescript,
-    SiVercel,
-} from 'react-icons/si';
-import Typewriter from 'typewriter-effect';
-import { motion } from 'framer-motion';
+} from 'react-icons/si'; // 36.9 k (gzipped: 15.6k)
+import Typewriter from 'typewriter-effect'; // 30.3 k (gzipped: 9.5k)
+import { motion } from 'framer-motion'; // 97.7 k (gzipped: 32k)
+
 import { SocialLink } from '../types/SocialLink';
 import { ToolLink } from '../types/ToolLink';
-import React from 'react';
 
 
 function SocialLinks() {
@@ -92,8 +94,12 @@ function Tools() {
             icon: <SiFastapi />,
         },
         {
-            name: "Streamlit",
-            icon: <SiStreamlit />,
+            name: "Django",
+            icon: <SiDjango />,
+        },
+        {
+            name: "SciPy",
+            icon: <SiScipy />,
         },
         {
             name: "Scikit Learn",
@@ -101,7 +107,23 @@ function Tools() {
         },
         {
             name: "TensorFlow",
-            icon: <SiTensorflow />
+            icon: <SiTensorflow />,
+        },
+        {
+            name: "C",
+            icon: <SiC />,
+        },
+        {
+            name: "C++",
+            icon: <SiCplusplus />,
+        },
+        {
+            name: "MySQL",
+            icon: <SiMysql />,
+        },
+        {
+            name: "MongoDB",
+            icon: <SiMongodb />,
         },
         {
             name: "TypeScript",
@@ -116,14 +138,6 @@ function Tools() {
             icon: <SiNextdotjs />,
         },
         {
-            name: "MySQL",
-            icon: <SiMysql />,
-        },
-        {
-            name: "MongoDB",
-            icon: <SiMongodb />,
-        },
-        {
             name: "PHP",
             icon: <SiPhp />,
         },
@@ -132,16 +146,8 @@ function Tools() {
             icon: <SiLaravel />,
         },
         {
-            name: "C",
-            icon: <SiC />,
-        },
-        {
-            name: "C++",
-            icon: <SiCplusplus />,
-        },
-        {
-            name: "Docker",
-            icon: <SiDocker />,
+            name: "Haskell",
+            icon: <SiHaskell />,
         },
         {
             name: "Git",
@@ -160,12 +166,12 @@ function Tools() {
             icon: <SiGnubash />,
         },
         {
-            name: "AWS",
-            icon: <SiAmazonaws />,
+            name: "Docker",
+            icon: <SiDocker />,
         },
         {
-            name: "Vercel",
-            icon: <SiVercel />,
+            name: "AWS",
+            icon: <SiAmazonaws />,
         },
     ]
 
@@ -177,7 +183,7 @@ function Tools() {
                     (link, index) => {
                         return (
                             <motion.div
-                                className="m-2 text-blue-500 font-semibold inline-block lg:text-4xl text-3xl w-fit"
+                                className="m-2 text-blue-500 font-semibold inline-block lg:text-4xl text-3xl w-fit cursor-pointer"
                                 whileHover={{ scale: 1.25 }}
                                 whileTap={{ scale: 0.8 }}
                                 key={index}
@@ -201,28 +207,29 @@ function Roles() {
             initial={{ opacity: 0 }}
             animate={{ opacity: delay / 1000 }}
             transition={{ delay: delay / 1000 }}
-            className="text-4xl lg:text-6xl"
+            className="text-4xl lg:text-6xl flex text-center justify-center"
         >
             <Typewriter
                 onInit={
                     (typewriter) => {
                         typewriter
                             .pauseFor(delay)
-                            .typeString("I'm a <span class='text-blue-500'>Web Developer</span>")
+                            .typeString("<span class='text-blue-500 inline-flex'>Backend Developer</span>")
                             .pauseFor(delay)
-                            .deleteChars(13)
+                            .deleteChars(18)
                             .pauseFor(delay / 4)
-                            .typeString("<span class='text-blue-500'>Full Stack Developer</span>")
-                            .pauseFor(delay)
-                            .deleteChars(20)
-                            .pauseFor(delay / 4)
-                            .typeString("<span class='text-blue-500'>ML Engineer</span>")
+                            .typeString("<span class='text-blue-500 inline-flex'>ML Engineer</span>")
                             .pauseFor(delay)
                             .deleteChars(11)
                             .pauseFor(delay / 4)
-                            .typeString("<span class='text-blue-500'>Data Scientist</span>")
+                            .typeString("<span class='text-blue-500 inline-flex'>Data Scientist</span>")
                             .pauseFor(delay)
                             .deleteChars(15)
+                            .pauseFor(delay / 4)
+                            .typeString("<span class='text-blue-500 inline-flex'>DevOps Developer</span>")
+                            .pauseFor(delay)
+                            .deleteChars(18)
+                            .pauseFor(delay / 4)
                             .start();
                     }
                 }
