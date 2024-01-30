@@ -219,21 +219,17 @@ function Roles() {
                     (typewriter) => {
                         typewriter
                             .pauseFor(delay)
-                            .typeString("<span class='text-blue-500 inline-flex'>Backend Developer</span>")
+                            .typeString("<span class='text-blue-500 inline-flex'>Full Stack Developer</span>")
                             .pauseFor(delay)
-                            .deleteChars(18)
+                            .deleteChars(20)
                             .pauseFor(delay / 4)
                             .typeString("<span class='text-blue-500 inline-flex'>ML Engineer</span>")
                             .pauseFor(delay)
                             .deleteChars(11)
                             .pauseFor(delay / 4)
-                            .typeString("<span class='text-blue-500 inline-flex'>Data Scientist</span>")
-                            .pauseFor(delay)
-                            .deleteChars(15)
-                            .pauseFor(delay / 4)
                             .typeString("<span class='text-blue-500 inline-flex'>DevOps Developer</span>")
                             .pauseFor(delay)
-                            .deleteChars(18)
+                            .deleteChars(16)
                             .pauseFor(delay / 4)
                             .start();
                     }
