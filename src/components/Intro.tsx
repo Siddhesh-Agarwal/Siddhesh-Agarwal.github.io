@@ -20,6 +20,7 @@ import {
     SiMongodb,
     SiMysql,
     SiNextdotjs,
+    SiNeovim,
     SiPhp,
     SiPython,
     SiScikitlearn,
@@ -173,6 +174,10 @@ function Tools() {
             name: "AWS",
             icon: <SiAmazonaws />,
         },
+        {
+            name: "Neovim",
+            icon: <SiNeovim />,
+        }
     ]
 
     // Create a list of icons with names that appear on hover
