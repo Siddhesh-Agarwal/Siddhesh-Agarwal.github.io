@@ -25,6 +25,7 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
                     {/* Image */}
                     {
                         props.image &&
+                        // eslint-disable-next-line @next/next/no-img-element
                         <img
                             src={props.image}
                             alt={props.title}

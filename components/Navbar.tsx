@@ -1,6 +1,7 @@
 import React from "react";
 import { HiMenu } from "react-icons/hi";
-import { FaGithub } from "react-icons/fa";
+import { FaDev, FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 export const Navbar: React.FC = () => {
     // Toggle menu for mobile
@@ -14,9 +15,9 @@ export const Navbar: React.FC = () => {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                     <div className="flex justify-between items-center">
                         <div className="flex items-center">
-                            <a className="text-gray-800 dark:text-white text-xl font-bold md:text-2xl hover:text-gray-700 dark:hover:text-gray-300" href="#intro">
+                            <Link className="text-gray-800 dark:text-white text-xl font-bold md:text-2xl hover:text-gray-700 dark:hover:text-gray-300" href="#intro">
                                 Siddhesh Agarwal
-                            </a>
+                            </Link>
                         </div>
                         <div className="flex md:hidden">
                             <button type="button" aria-label="toggle menu" onClick={toggleDisplay}
@@ -27,21 +28,23 @@ export const Navbar: React.FC = () => {
                     </div>
                     {/* Toggle display for mobile */}
                     <nav className={`${display ? "flex" : "hidden"} md:flex flex-col md:flex-row md:justify-end w-1/2 pt-4 md:pt-0`}>
-                        <a href="http://blog.siddhesh.tech" target="_blank" rel="noreferrer noopener"
+                        <Link href="https://blog.siddhesh.tech/" target="_blank"
                             className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-                            Blog
-                        </a>
-                        <a href="/projects/" target="_blank" rel="noreferrer noopener"
+                            <FaDev className="hidden text-lg md:inline-block" />
+                            <p className="inline-block md:hidden">
+                                dev.to
+                            </p>
+                        </Link>
+                        <Link href="/projects/" prefetch={true}
                             className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
                             Projects
-                        </a>
-                        <a href="https://github.com/Siddhesh-Agarwal" target="_blank" rel="noreferrer noopener"
-                            className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+                        </Link>
+                        <Link href="https://github.com/Siddhesh-Agarwal" target="_blank">
                             <FaGithub className="hidden text-lg md:inline-block" />
                             <p className="inline-block md:hidden">
                                 Github
                             </p>
-                        </a>
+                        </Link>
                     </nav>
                 </div>
             </div>

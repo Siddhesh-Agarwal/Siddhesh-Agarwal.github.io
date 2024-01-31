@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Siddhesh Agarwal",
   description: "Portfolio of Siddhesh Agarwal",
+  metadataBase: new URL('https://siddhesh.tech/'),
   authors: {
     name: "Siddhesh Agarwal",
     url: "https://siddhesh.tech/"
@@ -17,14 +18,14 @@ export const metadata: Metadata = {
     creator: "Siddhesh Agarwal",
     creatorId: "@Siddhesh0205",
     card: "summary_large_image",
-    images: "https://github.com/Siddhesh-Agarwal.png",
+    images: "/profile.jpeg",
   },
   openGraph: {
     title: "Siddhesh Agarwal",
     description: "Portfolio of Siddhesh Agarwal",
     countryName: "India",
     url: "https://siddhesh.tech",
-    images: "https://github.com/Siddhesh-Agarwal.png",
+    images: "/profile.jpeg",
   },
   keywords: ["Siddhesh", "Agarwal", "Portfolio", "Siddhesh Agarwal", "Siddhesh Agarwal Portfolio"],
   generator: "Next.js",

@@ -250,7 +250,7 @@ export const Intro: React.FC = () => {
         <div className="container py-4 dark:text-white">
             <div className="row">
                 <div className="col-12 text-center">
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl">Hello, I'm <span className="text-blue-500 font-bolder">Siddhesh</span></h1>
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl">Hello, I&apos;m <span className="text-blue-500 font-bolder">Siddhesh</span></h1>
                     <h2 className="text-3xl md:text-6xl"><Roles /></h2>
                 </div>
             </div>
@@ -259,7 +259,7 @@ export const Intro: React.FC = () => {
                 <div className="col-12 text-center">
                     <h3 className="text-2xl md:text-3xl lg:text-4xl w-full">
                         <p className="mb-3">
-                            I'm proficient in:
+                            I&apos;m proficient in:
                         </p>
                         <Tools />
                     </h3>
