@@ -1,6 +1,6 @@
 import { FaGithub, FaGlobe, FaStar } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-import { ProjectData } from '../types/ProjectData'
+import { ProjectData } from '@/types/ProjectData'
 
 export default function ProjectCard({ key, props }: { key: number, props: ProjectData }) {
     // Use TailwindCSS to style the project card

@@ -1,5 +1,6 @@
-import ProjectCard from '../components/ProjectCard'
-import { ProjectData } from '../types/ProjectData'
+"use client";
+import ProjectCard from '@/components/ProjectCard'
+import { ProjectData } from '@/types/ProjectData'
 
 const ReactProjects: ProjectData[] = [
     {

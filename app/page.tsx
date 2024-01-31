@@ -1,7 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
-import { Links } from "../components/Links";
-import { Intro } from "../components/Intro";
-import { Navbar } from "../components/Navbar";
+import { Links } from "@/components/Links";
+import { Intro } from "@/components/Intro";
+import { Navbar } from "@/components/Navbar";
 
 export default function HomePage() {
     return (
@@ -33,3 +34,4 @@ export default function HomePage() {
         </motion.div>
     )
 }
+

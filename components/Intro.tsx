@@ -31,9 +31,8 @@ import {
 } from 'react-icons/si'; // 36.9 k (gzipped: 15.6k)
 import Typewriter from 'typewriter-effect'; // 30.3 k (gzipped: 9.5k)
 import { motion } from 'framer-motion'; // 97.7 k (gzipped: 32k)
-
-import { SocialLink } from '../types/SocialLink';
-import { ToolLink } from '../types/ToolLink';
+import { SocialLink } from '@/types/SocialLink';
+import { ToolLink } from '@/types/ToolLink';
 
 
 function SocialLinks() {

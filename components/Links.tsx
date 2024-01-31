@@ -14,8 +14,7 @@ import {
     SiHackerearth,
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
-import resume from '../assets/Siddhesh_Agarwal-Resume.pdf';
-import { SocialLink } from '../types/SocialLink';
+import { SocialLink } from '@/types/SocialLink';
 
 const socialLinks: SocialLink[] = [
     {
@@ -136,7 +135,7 @@ export const Links: React.FC = () => {
             </div>
             {/* Button to Download resume */}
             <div className="text-center mt-5">
-                <motion.a href={resume} download="Siddhesh_Agarwal-Resume.pdf"
+                <motion.a href="/Siddhesh_Agarwal-Resume.pdf" download
                     className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow hover:shadow-lg text-xl"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}

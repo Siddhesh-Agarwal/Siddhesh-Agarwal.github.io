@@ -4,7 +4,7 @@ import {
     FaLinkedin,
     FaEnvelope,
 } from "react-icons/fa";
-import { SocialLink } from "../types/SocialLink";
+import { SocialLink } from "@/types/SocialLink";
 
 const Links: SocialLink[] = [
     {
