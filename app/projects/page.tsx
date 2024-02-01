@@ -17,16 +17,16 @@ const ReactProjects: ProjectData[] = [
         description: "Pokemon Mu is an app that generates a random Pokemon Card",
         image: "https://raw.githubusercontent.com/Siddhesh-Agarwal/pokemon/43d063e05fb48bd3252d87286041cca36b9e25a7/Seviper.jpeg",
         githubURL: "https://github.com/Siddhesh-Agarwal/pokemon",
-        liveURL: "https://pokemon-mu-pied.vercel.app/",
+        liveURL: "https://pokemon.siddhesh.tech/",
         tags: ["React", "TypeScript", "Tailwind"],
         featured: true
     },
     {
         title: "Pomofocus clone",
-        description: "A clone of the Pomofocus.com website. Helps you focus on your work by using the Pomodoro Technique",
+        description: "A clone of the Pomofocus.io website. Helps you focus on your work by using the Pomodoro Technique",
         image: "https://user-images.githubusercontent.com/68057995/220324659-6ef5e3ac-6831-42e1-8190-f7936a111850.png",
         githubURL: "https://github.com/Siddhesh-Agarwal/Pomofocus-Clone",
-        liveURL: "https://Siddhesh-Agarwal.github.io/Pomofocus-Clone",
+        liveURL: "https://pomofocus.siddhesh.tech/",
         tags: ["React", "JavaScript", "SCSS"],
         featured: true
     },
