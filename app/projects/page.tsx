@@ -136,6 +136,21 @@ const PythonProjects: ProjectData[] = [
     },
 ]
 
+const MiscellaneousProjects: ProjectData[] = [
+    {
+        title: "Lab Management System",
+        description: "A project to manage lab resources and student allocation in SKCET Labs",
+        githubURL: "https://github.com/lab-management-system",
+        tags: ["PHP", "Laravel", "React", "Python"]
+    },
+    {
+        title: "Neural Network in C",
+        description: "Implementation of sigmoid and relu layer along with various types of regressions in plain C",
+        githubURL: "https://github.com/Siddhesh-Agarwal/Neural-Network-in-C",
+        tags: ["Deep Learning", "C"]
+    }
+]
+
 export default function ProjectsPage() {
     return (
         <div className="container px-4 md:px-8 lg:px-12 min-w-full bg-white dark:bg-gray-900 py-6 md:pb-12">
@@ -163,6 +178,20 @@ export default function ProjectsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {
                         PythonProjects.map(
+                            (project: ProjectData, index: number) => (
+                                <ProjectCard props={project} key={index} />
+                            )
+                        )
+                    }
+                </div>
+            </section>
+            <section id="miscellaneous">
+                <h2 className="text-2xl font-bold m-6 underline dark:text-gray-100">
+                Miscellaneous
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {
+                        MiscellaneousProjects.map(
                             (project: ProjectData, index: number) => (
                                 <ProjectCard props={project} key={index} />
                             )
