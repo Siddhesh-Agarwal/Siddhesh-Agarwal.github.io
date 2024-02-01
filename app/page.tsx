@@ -7,7 +7,6 @@ import { Navbar } from "@/components/Navbar";
 export default function HomePage() {
     return (
         <motion.div className="container-fluid p-0 min-w-screen overflow-x-hidden">
-            <Navbar />
             <motion.div className="container-fluid p-0">
                 {/* Header - Fade in animation */}
                 <motion.section

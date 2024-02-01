@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -41,7 +42,10 @@ export default function RootLayout({
       <head>
           <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} dark:bg-gray-900`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

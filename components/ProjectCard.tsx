@@ -6,14 +6,14 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
     // Use TailwindCSS to style the project card
     return (
         <motion.div
-            className="bg-whiteflex flex-row flex-wrap justify-center shadow-md rounded-lg overflow-hidden border border-gray-200 hover:shadow-xl min-h-72"
+            className="flex-row flex-wrap justify-center shadow-md dark:shadow-none rounded-lg overflow-hidden border border-gray-200 dark:border-gray-900 hover:shadow-xl dark:hover:shadow-none min-h-72"
             key={key}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
         >
 
             {/* Space between Both divs */}
-            <div className='pb-3 md:pb-6 h-full flex flex-col justify-around dark:bg-gray-800/75 relative'>
+            <div className='pb-3 md:pb-6 h-full flex flex-col justify-around dark:bg-gray-800/50 relative'>
                 <div className='inline-block'>
                     {
                         props?.featured &&
@@ -35,7 +35,7 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
                     }
                     {/* Title */}
                     <div className="px-3 py-4">
-                        <h1 className="text-gray-900 dark:text-gray-100 font-bold text-2xl tracking-wide">{props.title}</h1>
+                        <h1 className="text-gray-900 dark:text-gray-100 font-semibold underline text-2xl tracking-wide">{props.title}</h1>
                     </div>
 
                     {/* Tags */}
