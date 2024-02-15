@@ -1,6 +1,7 @@
 import { FaGithub, FaGlobe, FaStar } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { ProjectData } from '@/types/ProjectData'
+import Link from 'next/link'
 
 export default function ProjectCard({ key, props }: { key: number, props: ProjectData }) {
     // Use TailwindCSS to style the project card
@@ -59,29 +60,27 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
                 <div className="px-3 w-full flex flex-wrap mt-4 justify-start gap-2">
                     {
                         props.githubURL &&
-                        <motion.a
-                            href={props.githubURL}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            className="bg-gray-900 hover:bg-black text-white rounded mr-1 py-1 px-2"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            <FaGithub className="inline-block mr-1" /> GitHub
-                        </motion.a>
+                        <Link href={props.githubURL} rel="noreferrer noopener" target="_blank" passHref>
+                            <motion.a
+                                className="bg-gray-900 hover:bg-black text-white rounded mr-1 py-1 px-2"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <FaGithub className="inline-block mr-1" /> GitHub
+                            </motion.a>
+                        </Link>
                     }
                     {
                         props.liveURL &&
-                        <motion.a
-                            href={props.liveURL}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            className="bg-green-600 hover:bg-green-700 text-white rounded ml-1 py-1 px-2"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            <FaGlobe className="inline-block mr-1" /> Live
-                        </motion.a>
+                        <Link href={props.liveURL} rel="noreferrer noopener" target="_blank" passHref>
+                            <motion.a
+                                className="bg-green-600 hover:bg-green-700 text-white rounded ml-1 py-1 px-2"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <FaGlobe className="inline-block mr-1" /> Live
+                            </motion.a>
+                        </Link>
                     }
                 </div>
             </div>

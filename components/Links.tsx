@@ -15,6 +15,7 @@ import {
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { SocialLink } from '@/types/SocialLink';
+import Link from 'next/link';
 
 const socialLinks: SocialLink[] = [
     {
@@ -114,18 +115,22 @@ export const Links: React.FC = () => {
                             socialLinks.map(
                                 (link, index) => {
                                     return (
-                                        <motion.a
+                                        <Link
                                             href={link.link}
                                             rel="noreferrer noopener" target="_blank"
-                                            className="m-2 p-2 rounded-2xl border-2 shadow-sm bg-white text-lg dark:bg-gray-800 dark:text-white dark:border"
-                                            variants={item}
-                                            title={link.name}
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }}
                                             key={index}
+                                            passHref
                                         >
-                                            {link.icon}
-                                        </motion.a>
+                                            <motion.a
+                                                className="m-2 p-2 rounded-2xl border-2 shadow-sm bg-white text-lg dark:bg-gray-800 dark:text-white dark:border"
+                                                variants={item}
+                                                title={link.name}
+                                                whileHover={{ scale: 1.1 }}
+                                                whileTap={{ scale: 0.9 }}
+                                            >
+                                                {link.icon}
+                                            </motion.a>
+                                        </Link>
                                     )
                                 }
                             )

@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { Links } from "@/components/Links";
 import { Intro } from "@/components/Intro";
-import { Navbar } from "@/components/Navbar";
 
 export default function HomePage() {
     return (

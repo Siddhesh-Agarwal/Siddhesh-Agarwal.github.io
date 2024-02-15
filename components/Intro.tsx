@@ -33,6 +33,7 @@ import Typewriter from 'typewriter-effect'; // 30.3 k (gzipped: 9.5k)
 import { motion } from 'framer-motion'; // 97.7 k (gzipped: 32k)
 import { SocialLink } from '@/types/SocialLink';
 import { ToolLink } from '@/types/ToolLink';
+import Link from 'next/link';
 
 
 function SocialLinks() {
@@ -61,19 +62,23 @@ function SocialLinks() {
                 {
                     socialLinks.map((link, index) => {
                         return (
-                            <motion.a
+                            <Link
                                 href={link.link}
-                                rel="noreferrer noopener" target="_blank"
-                                className="m-1 bg-blue-500 rounded px-2 py-1 text-white text-lg"
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
                                 key={index}
+                                rel="noreferrer noopener" target="_blank"
+                                passHref
                             >
-                                {link.icon}
-                                <p className="inline-block mx-2">
-                                    {link.name}
-                                </p>
-                            </motion.a>
+                                <motion.a
+                                    className="m-1 bg-blue-500 rounded px-2 py-1 text-white text-lg"
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                >
+                                    {link.icon}
+                                    <p className="inline-block mx-2">
+                                        {link.name}
+                                    </p>
+                                </motion.a>
+                            </Link>
                         )
                     })
                 }
