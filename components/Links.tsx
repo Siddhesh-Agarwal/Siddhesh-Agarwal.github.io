@@ -21,32 +21,32 @@ const socialLinks: SocialLink[] = [
     {
         name: "LinkedIn",
         icon: <FaLinkedinIn />,
-        link: "https://www.linkedin.com/in/siddhesh-agarwal"
+        link: "https://www.linkedin.com/in/siddhesh-agarwal/"
     },
     {
         name: "Github",
         icon: <FaGithub />,
-        link: "https://www.github.com/siddhesh-agarwal"
+        link: "https://www.github.com/siddhesh-agarwal/"
     },
     {
         name: "Twitter",
         icon: <FaTwitter />,
-        link: "https://www.twitter.com/siddhesh0205"
+        link: "https://www.twitter.com/siddhesh0205/"
     },
     {
         name: "Kaggle",
         icon: <FaKaggle />,
-        link: "https://www.kaggle.com/siddheshagarwal"
+        link: "https://www.kaggle.com/siddheshagarwal/"
     },
     {
         name: "Dev.to",
         icon: <FaDev />,
-        link: "https://www.dev.to/siddhesh_agarwal"
+        link: "https://www.dev.to/siddhesh_agarwal/"
     },
     {
         name: "Hackerrank",
         icon: <FaHackerrank />,
-        link: "https://www.hackerrank.com/Siddhesh_Agarwal"
+        link: "https://www.hackerrank.com/Siddhesh_Agarwal/"
     },
     {
         name: "Hashnode",
@@ -61,12 +61,12 @@ const socialLinks: SocialLink[] = [
     {
         name: "Stackoverflow",
         icon: <SiStackoverflow />,
-        link: "https://stackoverflow.com/users/14257886/siddhesh-agarwal"
+        link: "https://stackoverflow.com/users/14257886/siddhesh-agarwal/"
     },
     {
         name: "Hackerearth",
         icon: <SiHackerearth />,
-        link: "https://www.hackerearth.com/@siddhesh.agarwal"
+        link: "https://www.hackerearth.com/@siddhesh.agarwal/"
     },
 ]
 
@@ -96,10 +96,10 @@ export const Links: React.FC = () => {
         >
             <div className="row">
                 <div className="col-12">
-                    <h1 className="text-4xl text-center">
+                    <h1 className="text-3xl text-center">
                         Siddhesh Agarwal
                     </h1>
-                    <h2 className="text-2xl text-center mt-2 dark:text-gray-200">
+                    <h2 className="text-xl text-center mt-2 dark:text-gray-200">
                         CSE Student
                     </h2>
                 </div>
@@ -121,7 +121,7 @@ export const Links: React.FC = () => {
                                             key={index}
                                             passHref
                                         >
-                                            <motion.a
+                                            <motion.div
                                                 className="m-2 p-2 rounded-2xl border-2 shadow-sm bg-white text-lg dark:bg-gray-800 dark:text-white dark:border"
                                                 variants={item}
                                                 title={link.name}
@@ -129,7 +129,7 @@ export const Links: React.FC = () => {
                                                 whileTap={{ scale: 0.9 }}
                                             >
                                                 {link.icon}
-                                            </motion.a>
+                                            </motion.div>
                                         </Link>
                                     )
                                 }

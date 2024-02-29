@@ -6,7 +6,6 @@ import {
     FaTwitter
 } from 'react-icons/fa'; // 5.3 k (gzipped: 2.5k)
 import {
-    SiAmazonaws,
     SiC,
     SiCplusplus,
     SiDjango,
@@ -22,12 +21,15 @@ import {
     SiNextdotjs,
     SiNeovim,
     SiPhp,
+    SiPowershell,
     SiPython,
+    SiRedis,
     SiScikitlearn,
     SiScipy,
     SiTailwindcss,
     SiTensorflow,
     SiTypescript,
+    SiVercel,
 } from 'react-icons/si'; // 36.9 k (gzipped: 15.6k)
 import Typewriter from 'typewriter-effect'; // 30.3 k (gzipped: 9.5k)
 import { motion } from 'framer-motion'; // 97.7 k (gzipped: 32k)
@@ -68,7 +70,7 @@ function SocialLinks() {
                                 rel="noreferrer noopener" target="_blank"
                                 passHref
                             >
-                                <motion.a
+                                <motion.div
                                     className="m-1 bg-blue-500 rounded px-2 py-1 text-white text-lg"
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
@@ -77,7 +79,7 @@ function SocialLinks() {
                                     <p className="inline-block mx-2">
                                         {link.name}
                                     </p>
-                                </motion.a>
+                                </motion.div>
                             </Link>
                         )
                     })
@@ -131,6 +133,10 @@ function Tools() {
             icon: <SiMongodb />,
         },
         {
+            name: "Redis",
+            icon: <SiRedis />
+        },
+        {
             name: "TypeScript",
             icon: <SiTypescript />,
         },
@@ -171,12 +177,16 @@ function Tools() {
             icon: <SiGnubash />,
         },
         {
+            name: "Powershell",
+            icon: <SiPowershell />,
+        },
+        {
             name: "Docker",
             icon: <SiDocker />,
         },
         {
             name: "AWS",
-            icon: <SiAmazonaws />,
+            icon: <SiVercel />,
         },
         {
             name: "Neovim",
@@ -192,7 +202,7 @@ function Tools() {
                     (link, index) => {
                         return (
                             <motion.div
-                                className="m-2 text-blue-500 font-semibold inline-block lg:text-4xl text-3xl w-fit cursor-pointer"
+                                className="m-2 text-blue-500 font-semibold inline-block text-xl md:text-2xl lg:text-3xl w-fit cursor-pointer"
                                 whileHover={{ scale: 1.25 }}
                                 whileTap={{ scale: 0.8 }}
                                 key={index}
@@ -252,11 +262,11 @@ function Roles() {
 
 export const Intro: React.FC = () => {
     return (
-        <div className="container py-4 dark:text-white">
+        <div className="container py-4 dark:text-white max-w-3xl w-max">
             <div className="row">
                 <div className="col-12 text-center">
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl">Hello, I&apos;m <span className="text-blue-500 font-bolder">Siddhesh</span></h1>
-                    <h2 className="text-3xl md:text-6xl"><Roles /></h2>
+                    <h1 className="text-3xl md:text-4xl lg:text-7xl font-normal">Hello, I&apos;m <span className="text-blue-500 font-bolder">Siddhesh</span></h1>
+                    <h2 className="text-2xl md:text-3xl lg:text-5xl font-sans"><Roles /></h2>
                 </div>
             </div>
             {/* List things proficient in  */}

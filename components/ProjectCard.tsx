@@ -61,25 +61,25 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
                     {
                         props.githubURL &&
                         <Link href={props.githubURL} rel="noreferrer noopener" target="_blank" passHref>
-                            <motion.a
+                            <motion.div
                                 className="bg-gray-900 hover:bg-black text-white rounded mr-1 py-1 px-2"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 <FaGithub className="inline-block mr-1" /> GitHub
-                            </motion.a>
+                            </motion.div>
                         </Link>
                     }
                     {
                         props.liveURL &&
                         <Link href={props.liveURL} rel="noreferrer noopener" target="_blank" passHref>
-                            <motion.a
+                            <motion.div
                                 className="bg-green-600 hover:bg-green-700 text-white rounded ml-1 py-1 px-2"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 <FaGlobe className="inline-block mr-1" /> Live
-                            </motion.a>
+                            </motion.div>
                         </Link>
                     }
                 </div>

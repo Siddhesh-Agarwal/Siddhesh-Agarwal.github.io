@@ -1,35 +1,20 @@
 "use client";
-import { motion } from "framer-motion";
 import { Links } from "@/components/Links";
 import { Intro } from "@/components/Intro";
 
 export default function HomePage() {
     return (
-        <motion.div className="container-fluid p-0 min-w-screen overflow-x-hidden">
-            <motion.div className="container-fluid p-0">
-                {/* Header - Fade in animation */}
-                <motion.section
-                    className="container-fluid h-screen w-screen dark:bg-gray-900 grid place-items-center"
-                    id="intro"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                >
-                    <Intro />
-                </motion.section>
+        <main className="container-fluid p-0 min-h-screen w-full overflow-x-hidden">
+            {/* Header - Fade in animation */}
+            <section className="container-fluid h-screen w-scree grid place-items-center dark:bg-gray-900">
+                <Intro />
+            </section>
 
-                {/* Links - Fade in animation */}
-                <motion.section
-                    className="container-fluid h-screen w-screen bg-blue-600 grid place-items-center"
-                    id="links"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                >
-                    <Links />
-                </motion.section>
-            </motion.div>
-        </motion.div>
+            {/* Links - Fade in animation */}
+            <section className="container-fluid h-screen w-screen bg-blue-600 grid place-items-center">
+                <Links />
+            </section>
+        </main>
     )
 }
 
