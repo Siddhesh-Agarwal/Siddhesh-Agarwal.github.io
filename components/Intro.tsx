@@ -1,58 +1,59 @@
-import React from 'react'; // 6.9 k (gzipped: 2.7k)
-import {
-    FaEnvelope,
-    FaGithub,
-    FaLinkedin,
-    FaTwitter
-} from 'react-icons/fa'; // 5.3 k (gzipped: 2.5k)
 import {
     SiC,
     SiCplusplus,
+    SiCss3,
     SiDjango,
     SiDocker,
     SiFastapi,
+    SiFlask,
     SiGit,
+    SiGithub,
     SiGnubash,
-    SiHaskell,
+    SiGmail,
+    SiHtml5,
+    SiJavascript,
     SiLaravel,
     SiLinux,
     SiMongodb,
     SiMysql,
     SiNextdotjs,
-    SiNeovim,
     SiPhp,
+    SiPostgresql,
     SiPowershell,
     SiPython,
     SiRedis,
     SiScikitlearn,
     SiScipy,
+    SiStreamlit,
     SiTailwindcss,
     SiTensorflow,
+    SiTwitter,
     SiTypescript,
     SiVercel,
-} from 'react-icons/si'; // 36.9 k (gzipped: 15.6k)
-import Typewriter from 'typewriter-effect'; // 30.3 k (gzipped: 9.5k)
-import { motion } from 'framer-motion'; // 97.7 k (gzipped: 32k)
+    SiLinkedin,
+} from 'react-icons/si';
+import Typewriter from 'typewriter-effect';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { SocialLink } from '@/types/SocialLink';
 import { ToolLink } from '@/types/ToolLink';
-import Link from 'next/link';
 
 
 function SocialLinks() {
     const socialLinks: SocialLink[] = [
         {
             name: "LinkedIn",
-            icon: <FaLinkedin className="inline-block" />,
+            icon: <SiLinkedin className="inline-block" />,
             link: "https://www.linkedin.com/in/siddhesh-agarwal"
         },
         {
             name: "Twitter",
-            icon: <FaTwitter className="inline-block" />,
+            icon: <SiTwitter className="inline-block" />,
             link: "https://www.twitter.com/siddhesh0205"
         },
         {
             name: "Email",
-            icon: <FaEnvelope className="inline-block" />,
+            icon: <SiGmail className="inline-block" />,
             link: "mailto:siddhesh.agarwal@gmail.com",
         },
     ]
@@ -101,6 +102,10 @@ function Tools() {
             icon: <SiFastapi />,
         },
         {
+            name: "Flask",
+            icon: <SiFlask />,
+        },
+        {
             name: "Django",
             icon: <SiDjango />,
         },
@@ -117,6 +122,10 @@ function Tools() {
             icon: <SiTensorflow />,
         },
         {
+            name: "Streamlit",
+            icon: <SiStreamlit />,
+        },
+        {
             name: "C",
             icon: <SiC />,
         },
@@ -129,6 +138,10 @@ function Tools() {
             icon: <SiMysql />,
         },
         {
+            name: "PostgreSQL",
+            icon: <SiPostgresql />,
+        },
+        {
             name: "MongoDB",
             icon: <SiMongodb />,
         },
@@ -137,8 +150,20 @@ function Tools() {
             icon: <SiRedis />
         },
         {
+            name: "JavaScript",
+            icon: <SiJavascript />,
+        },
+        {
             name: "TypeScript",
             icon: <SiTypescript />,
+        },
+        {
+            name: "HTML 5",
+            icon: <SiHtml5 />,
+        },
+        {
+            name: "CSS 3",
+            icon: <SiCss3 />,
         },
         {
             name: "Tailwind CSS",
@@ -157,16 +182,12 @@ function Tools() {
             icon: <SiLaravel />,
         },
         {
-            name: "Haskell",
-            icon: <SiHaskell />,
-        },
-        {
             name: "Git",
             icon: <SiGit />,
         },
         {
             name: "GitHub",
-            icon: <FaGithub />,
+            icon: <SiGithub />,
         },
         {
             name: "Linux",
@@ -185,21 +206,17 @@ function Tools() {
             icon: <SiDocker />,
         },
         {
-            name: "AWS",
+            name: "Vercel",
             icon: <SiVercel />,
         },
-        {
-            name: "Neovim",
-            icon: <SiNeovim />,
-        }
     ]
 
     // Create a list of icons with names that appear on hover
     return (
-        <div className="inline-flex justify-center w-full flex-wrap px-4">
+        <div className="inline-flex justify-center w-full md:max-w-xl lg:max-w-3xl flex-wrap px-4">
             {
                 links.map(
-                    (link, index) => {
+                    (link: ToolLink, index: number) => {
                         return (
                             <motion.div
                                 className="m-2 text-blue-500 font-semibold inline-block text-xl md:text-2xl lg:text-3xl w-fit cursor-pointer"
@@ -262,26 +279,24 @@ function Roles() {
 
 export const Intro: React.FC = () => {
     return (
-        <div className="container py-4 dark:text-white max-w-3xl w-max">
-            <div className="row">
+        <div className="container py-4 dark:text-white max-w-3xl">
+            <div className="my-5">
                 <div className="col-12 text-center">
                     <h1 className="text-3xl md:text-4xl lg:text-7xl font-normal">Hello, I&apos;m <span className="text-blue-500 font-bolder">Siddhesh</span></h1>
                     <h2 className="text-2xl md:text-3xl lg:text-5xl font-sans"><Roles /></h2>
                 </div>
             </div>
             {/* List things proficient in  */}
-            <div className="row my-10">
-                <div className="col-12 text-center">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl w-full">
-                        <p className="mb-3">
-                            I&apos;m proficient in:
-                        </p>
-                        <Tools />
+            <div className="my-5">
+                <div className="text-center">
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl w-full mb-3">
+                        I&apos;m proficient in:
                     </h3>
+                    <Tools />
                 </div>
             </div>
             {/* Ways to contact me */}
-            <div className="row">
+            <div className="my-5">
                 <div className="col-12 text-center">
                     <h3 className="text-2xl md:text-3xl lg:text-4xl mb-3">You can contact me on:</h3>
                     <SocialLinks />
