@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://siddhesh.tech",
     images: "https://github.com/siddhesh-agarwal.png",
   },
-  keywords: ["Siddhesh", "Agarwal", "Portfolio", "Siddhesh Agarwal", "Siddhesh Agarwal Portfolio"],
+  keywords: ["Siddhesh", "Agarwal", "Siddhesh Agarwal", "Siddhesh Agarwal Portfolio"],
   generator: "Next.js",
 };
 
