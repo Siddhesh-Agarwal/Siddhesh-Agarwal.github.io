@@ -140,7 +140,7 @@ export const Links: React.FC = () => {
             </div>
             {/* Button to Download resume */}
             <div className="text-center mt-5">
-                <motion.a href="/Siddhesh_Agarwal-Resume.pdf" download
+                <motion.a href="https://app.flowcv.com/api/public/download_resume?token=t7wq4scpcr" download
                     className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow hover:shadow-lg text-xl"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
