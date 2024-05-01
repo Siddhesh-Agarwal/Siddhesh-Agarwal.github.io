@@ -38,6 +38,124 @@ import { motion } from 'framer-motion';
 import { SocialLink } from '@/types/SocialLink';
 import { ToolLink } from '@/types/ToolLink';
 
+const links: ToolLink[] = [
+    {
+        name: "Python",
+        icon: <SiPython />,
+    },
+    {
+        name: "FastAPI",
+        icon: <SiFastapi />,
+    },
+    {
+        name: "Flask",
+        icon: <SiFlask />,
+    },
+    {
+        name: "Django",
+        icon: <SiDjango />,
+    },
+    {
+        name: "SciPy",
+        icon: <SiScipy />,
+    },
+    {
+        name: "Scikit Learn",
+        icon: <SiScikitlearn />,
+    },
+    {
+        name: "TensorFlow",
+        icon: <SiTensorflow />,
+    },
+    {
+        name: "Streamlit",
+        icon: <SiStreamlit />,
+    },
+    {
+        name: "C",
+        icon: <SiC />,
+    },
+    {
+        name: "C++",
+        icon: <SiCplusplus />,
+    },
+    {
+        name: "MySQL",
+        icon: <SiMysql />,
+    },
+    {
+        name: "PostgreSQL",
+        icon: <SiPostgresql />,
+    },
+    {
+        name: "MongoDB",
+        icon: <SiMongodb />,
+    },
+    {
+        name: "Redis",
+        icon: <SiRedis />
+    },
+    {
+        name: "JavaScript",
+        icon: <SiJavascript />,
+    },
+    {
+        name: "TypeScript",
+        icon: <SiTypescript />,
+    },
+    {
+        name: "HTML 5",
+        icon: <SiHtml5 />,
+    },
+    {
+        name: "CSS 3",
+        icon: <SiCss3 />,
+    },
+    {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss />,
+    },
+    {
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+    },
+    {
+        name: "PHP",
+        icon: <SiPhp />,
+    },
+    {
+        name: "Laravel",
+        icon: <SiLaravel />,
+    },
+    {
+        name: "Git",
+        icon: <SiGit />,
+    },
+    {
+        name: "GitHub",
+        icon: <SiGithub />,
+    },
+    {
+        name: "Linux",
+        icon: <SiLinux />,
+    },
+    {
+        name: "GNU Bash",
+        icon: <SiGnubash />,
+    },
+    {
+        name: "Powershell",
+        icon: <SiPowershell />,
+    },
+    {
+        name: "Docker",
+        icon: <SiDocker />,
+    },
+    {
+        name: "Vercel",
+        icon: <SiVercel />,
+    },
+]
 
 function SocialLinks() {
     const socialLinks: SocialLink[] = [
@@ -72,7 +190,7 @@ function SocialLinks() {
                                 passHref
                             >
                                 <motion.div
-                                    className="m-1 bg-blue-500 rounded px-2 py-1 text-white text-lg"
+                                    className="m-1 bg-blue-500 rounded px-2 py-1 text-white text-md md:text-lg"
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
@@ -92,125 +210,6 @@ function SocialLinks() {
 
 
 function Tools() {
-    const links: ToolLink[] = [
-        {
-            name: "Python",
-            icon: <SiPython />,
-        },
-        {
-            name: "FastAPI",
-            icon: <SiFastapi />,
-        },
-        {
-            name: "Flask",
-            icon: <SiFlask />,
-        },
-        {
-            name: "Django",
-            icon: <SiDjango />,
-        },
-        {
-            name: "SciPy",
-            icon: <SiScipy />,
-        },
-        {
-            name: "Scikit Learn",
-            icon: <SiScikitlearn />,
-        },
-        {
-            name: "TensorFlow",
-            icon: <SiTensorflow />,
-        },
-        {
-            name: "Streamlit",
-            icon: <SiStreamlit />,
-        },
-        {
-            name: "C",
-            icon: <SiC />,
-        },
-        {
-            name: "C++",
-            icon: <SiCplusplus />,
-        },
-        {
-            name: "MySQL",
-            icon: <SiMysql />,
-        },
-        {
-            name: "PostgreSQL",
-            icon: <SiPostgresql />,
-        },
-        {
-            name: "MongoDB",
-            icon: <SiMongodb />,
-        },
-        {
-            name: "Redis",
-            icon: <SiRedis />
-        },
-        {
-            name: "JavaScript",
-            icon: <SiJavascript />,
-        },
-        {
-            name: "TypeScript",
-            icon: <SiTypescript />,
-        },
-        {
-            name: "HTML 5",
-            icon: <SiHtml5 />,
-        },
-        {
-            name: "CSS 3",
-            icon: <SiCss3 />,
-        },
-        {
-            name: "Tailwind CSS",
-            icon: <SiTailwindcss />,
-        },
-        {
-            name: "Next.js",
-            icon: <SiNextdotjs />,
-        },
-        {
-            name: "PHP",
-            icon: <SiPhp />,
-        },
-        {
-            name: "Laravel",
-            icon: <SiLaravel />,
-        },
-        {
-            name: "Git",
-            icon: <SiGit />,
-        },
-        {
-            name: "GitHub",
-            icon: <SiGithub />,
-        },
-        {
-            name: "Linux",
-            icon: <SiLinux />,
-        },
-        {
-            name: "GNU Bash",
-            icon: <SiGnubash />,
-        },
-        {
-            name: "Powershell",
-            icon: <SiPowershell />,
-        },
-        {
-            name: "Docker",
-            icon: <SiDocker />,
-        },
-        {
-            name: "Vercel",
-            icon: <SiVercel />,
-        },
-    ]
-
     // Create a list of icons with names that appear on hover
     return (
         <div className="inline-flex justify-center w-full md:max-w-xl lg:max-w-3xl flex-wrap px-4">
@@ -237,39 +236,39 @@ function Tools() {
 
 
 function Roles() {
-    const delay = 1000;
+    const DELAY = 1000;
     return (
         <motion.span
             initial={{ opacity: 0 }}
-            animate={{ opacity: delay / 1000 }}
-            transition={{ delay: delay / 1000 }}
-            className="text-4xl lg:text-6xl flex text-center justify-center"
+            animate={{ opacity: DELAY / 1000 }}
+            transition={{ delay: DELAY / 1000 }}
+            className="text-4xl lg:text-6xl text-blue-500 inline-flex text-center justify-center"
         >
             <Typewriter
                 onInit={
                     (typewriter) => {
                         typewriter
-                            .pauseFor(delay)
-                            .typeString("<span class='text-blue-500 inline-flex'>Full Stack Developer</span>")
-                            .pauseFor(delay)
+                            .pauseFor(DELAY)
+                            .typeString("Full Stack Developer")
+                            .pauseFor(DELAY)
                             .deleteChars(20)
-                            .pauseFor(delay / 4)
-                            .typeString("<span class='text-blue-500 inline-flex'>ML Engineer</span>")
-                            .pauseFor(delay)
+                            .pauseFor(DELAY / 4)
+                            .typeString("ML Engineer")
+                            .pauseFor(DELAY)
                             .deleteChars(11)
-                            .pauseFor(delay / 4)
-                            .typeString("<span class='text-blue-500 inline-flex'>DevOps Developer</span>")
-                            .pauseFor(delay)
+                            .pauseFor(DELAY / 4)
+                            .typeString("DevOps Developer")
+                            .pauseFor(DELAY)
                             .deleteChars(16)
-                            .pauseFor(delay / 4)
+                            .pauseFor(DELAY / 4)
                             .start();
                     }
                 }
                 options={{
                     autoStart: true,
                     loop: true,
-                    delay: 50,
-                    deleteSpeed: 20,
+                    delay: 0,
+                    deleteSpeed: 25,
                 }}
             />
         </motion.span>
@@ -283,7 +282,9 @@ export const Intro: React.FC = () => {
             <div className="my-5">
                 <div className="col-12 text-center">
                     <h1 className="text-3xl md:text-4xl lg:text-7xl font-normal">Hello, I&apos;m <span className="text-blue-500 font-bolder">Siddhesh</span></h1>
-                    <h2 className="text-2xl md:text-3xl lg:text-5xl font-sans"><Roles /></h2>
+                    <h2 className="text-2xl md:text-3xl lg:text-5xl font-sans">
+                        <Roles />
+                    </h2>
                 </div>
             </div>
             {/* List things proficient in  */}
