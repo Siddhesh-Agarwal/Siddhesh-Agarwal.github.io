@@ -21,6 +21,7 @@ import {
     SiPostgresql,
     SiPowershell,
     SiPython,
+    SiPytorch,
     SiRedis,
     SiScikitlearn,
     SiScipy,
@@ -66,6 +67,10 @@ const links: ToolLink[] = [
     {
         name: "TensorFlow",
         icon: <SiTensorflow />,
+    },
+    {
+        name: "PyTorch",
+        icon: <SiPytorch />,
     },
     {
         name: "Streamlit",
@@ -157,26 +162,25 @@ const links: ToolLink[] = [
     },
 ]
 
-function SocialLinks() {
-    const socialLinks: SocialLink[] = [
-        {
-            name: "LinkedIn",
-            icon: <SiLinkedin className="inline-block" />,
-            link: "https://www.linkedin.com/in/siddhesh-agarwal"
-        },
-        {
-            name: "Twitter",
-            icon: <SiTwitter className="inline-block" />,
-            link: "https://www.twitter.com/siddhesh0205"
-        },
-        {
-            name: "Email",
-            icon: <SiGmail className="inline-block" />,
-            link: "mailto:siddhesh.agarwal@gmail.com",
-        },
-    ]
+const socialLinks: SocialLink[] = [
+    {
+        name: "LinkedIn",
+        icon: <SiLinkedin className="inline-block" />,
+        link: "https://www.linkedin.com/in/siddhesh-agarwal/"
+    },
+    {
+        name: "Twitter",
+        icon: <SiTwitter className="inline-block" />,
+        link: "https://www.twitter.com/siddhesh0205/"
+    },
+    {
+        name: "Email",
+        icon: <SiGmail className="inline-block" />,
+        link: "mailto:siddhesh.agarwal@gmail.com",
+    },
+]
 
-    // Use Tailwind for styling purposes
+function SocialLinks() {
     return (
         <div className="row-auto">
             <div className="col-span-12 flex flex-wrap justify-center">
@@ -210,7 +214,6 @@ function SocialLinks() {
 
 
 function Tools() {
-    // Create a list of icons with names that appear on hover
     return (
         <div className="inline-flex justify-center w-full md:max-w-xl lg:max-w-3xl flex-wrap px-4">
             {
@@ -236,7 +239,7 @@ function Tools() {
 
 
 function Roles() {
-    const DELAY = 1000;
+    const DELAY = 1500;
     return (
         <motion.span
             initial={{ opacity: 0 }}
@@ -248,27 +251,23 @@ function Roles() {
                 onInit={
                     (typewriter) => {
                         typewriter
-                            .pauseFor(DELAY)
                             .typeString("Full Stack Developer")
                             .pauseFor(DELAY)
-                            .deleteChars(20)
+                            .deleteAll()
                             .pauseFor(DELAY / 4)
                             .typeString("ML Engineer")
                             .pauseFor(DELAY)
-                            .deleteChars(11)
+                            .deleteAll()
                             .pauseFor(DELAY / 4)
-                            .typeString("DevOps Developer")
-                            .pauseFor(DELAY)
-                            .deleteChars(16)
-                            .pauseFor(DELAY / 4)
-                            .start();
+                            .start()
                     }
                 }
                 options={{
                     autoStart: true,
                     loop: true,
-                    delay: 0,
-                    deleteSpeed: 25,
+                    delay: 20,
+                    deleteSpeed: 10,
+                    cursor: "_",
                 }}
             />
         </motion.span>
@@ -287,6 +286,7 @@ export const Intro: React.FC = () => {
                     </h2>
                 </div>
             </div>
+
             {/* List things proficient in  */}
             <div className="my-5">
                 <div className="text-center">
@@ -296,6 +296,7 @@ export const Intro: React.FC = () => {
                     <Tools />
                 </div>
             </div>
+
             {/* Ways to contact me */}
             <div className="my-5">
                 <div className="col-12 text-center">

@@ -115,6 +115,13 @@ const AIProjects: ProjectData[] = [
         featured: true,
     },
     {
+        title: "Strains RAG",
+        description: "An RAG Model based on StrainsDB. The Database for the project was provided by Kenneth Reitz.",
+        githubURL: "https://github.com/Siddhesh-Agarwal/straindb-rag",
+        tags: ["Python", "Streamlit", "LangChain.py", "GenAI"],
+        featured: true,
+    },
+    {
         title: "ChatSKCET",
         description: "Chatbot for SKCET",
         githubURL: "https://github.com/Siddhesh-Agarwal/ChatSKCET",
