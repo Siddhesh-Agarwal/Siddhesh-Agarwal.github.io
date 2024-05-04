@@ -1,10 +1,4 @@
 import {
-    FaLinkedinIn,
-    FaGithub,
-    FaKaggle,
-    FaDev,
-    FaTwitter,
-    FaHackerrank,
     FaCloudDownloadAlt
 } from 'react-icons/fa';
 import {
@@ -12,6 +6,12 @@ import {
     SiLeetcode,
     SiStackoverflow,
     SiHackerearth,
+    SiLinkedin,
+    SiGithub,
+    SiTwitter,
+    SiKaggle,
+    SiHackerrank,
+    SiDevdotto,
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { SocialLink } from '@/types/SocialLink';
@@ -20,32 +20,32 @@ import Link from 'next/link';
 const socialLinks: SocialLink[] = [
     {
         name: "LinkedIn",
-        icon: <FaLinkedinIn />,
+        icon: <SiLinkedin />,
         link: "https://www.linkedin.com/in/siddhesh-agarwal/"
     },
     {
         name: "Github",
-        icon: <FaGithub />,
+        icon: <SiGithub />,
         link: "https://www.github.com/siddhesh-agarwal/"
     },
     {
         name: "Twitter",
-        icon: <FaTwitter />,
+        icon: <SiTwitter />,
         link: "https://www.twitter.com/siddhesh0205/"
     },
     {
         name: "Kaggle",
-        icon: <FaKaggle />,
+        icon: <SiKaggle />,
         link: "https://www.kaggle.com/siddheshagarwal/"
     },
     {
         name: "Dev.to",
-        icon: <FaDev />,
+        icon: <SiDevdotto />,
         link: "https://www.dev.to/siddhesh_agarwal/"
     },
     {
         name: "Hackerrank",
-        icon: <FaHackerrank />,
+        icon: <SiHackerrank />,
         link: "https://www.hackerrank.com/Siddhesh_Agarwal/"
     },
     {

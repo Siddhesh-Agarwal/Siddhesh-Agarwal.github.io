@@ -1,7 +1,8 @@
 import {
+    SiApachespark,
+    SiBootstrap,
     SiC,
     SiCplusplus,
-    SiCss3,
     SiDjango,
     SiDocker,
     SiFastapi,
@@ -10,9 +11,9 @@ import {
     SiGithub,
     SiGnubash,
     SiGmail,
-    SiHtml5,
     SiJavascript,
     SiLaravel,
+    SiLinkedin,
     SiLinux,
     SiMongodb,
     SiMysql,
@@ -25,13 +26,13 @@ import {
     SiRedis,
     SiScikitlearn,
     SiScipy,
+    SiShadcnui,
     SiStreamlit,
     SiTailwindcss,
     SiTensorflow,
     SiTwitter,
     SiTypescript,
     SiVercel,
-    SiLinkedin,
 } from 'react-icons/si';
 import Typewriter from 'typewriter-effect';
 import Link from 'next/link';
@@ -101,6 +102,10 @@ const links: ToolLink[] = [
         icon: <SiRedis />
     },
     {
+        name: "Apache Spark",
+        icon: <SiApachespark />,
+    },
+    {
         name: "JavaScript",
         icon: <SiJavascript />,
     },
@@ -109,16 +114,16 @@ const links: ToolLink[] = [
         icon: <SiTypescript />,
     },
     {
-        name: "HTML 5",
-        icon: <SiHtml5 />,
-    },
-    {
-        name: "CSS 3",
-        icon: <SiCss3 />,
+        name: "Bootstrap",
+        icon: <SiBootstrap />,
     },
     {
         name: "Tailwind CSS",
         icon: <SiTailwindcss />,
+    },
+    {
+        name: "ShadCN UI",
+        icon: <SiShadcnui />,
     },
     {
         name: "Next.js",

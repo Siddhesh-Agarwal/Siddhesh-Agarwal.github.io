@@ -7,18 +7,18 @@ export const Navbar: React.FC = () => {
             <div className="container mx-auto px-4 md:px-6 py-2 md:py-3">
                 <div className="flex flex-row justify-around md:justify-end items-center">
                     <nav className="flex flex-row justify-end">
-                        <Link href="https://blog.siddhesh.tech/" target="_blank"
-                            className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-                            <FaHashnode className="text-lg inline-block" />
-                            <p className="inline-block ml-2">
-                                Blogs
-                            </p>
-                        </Link>
                         <Link href="/projects/" prefetch={true}
                             className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
                             <FaFlaskVial className="text-lg inline-block" />
                             <p className="inline-block ml-2">
                                 Projects
+                            </p>
+                        </Link>
+                        <Link href="https://siddhesh2003.hashnode.dev/" target="_blank"
+                            className="px-2 py-1 md:mx-2 text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+                            <FaHashnode className="text-lg inline-block" />
+                            <p className="inline-block ml-2">
+                                Blogs
                             </p>
                         </Link>
                         <Link href="https://github.com/Siddhesh-Agarwal" target="_blank"

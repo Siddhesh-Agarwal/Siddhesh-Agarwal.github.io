@@ -3,15 +3,16 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["cyrillic"] });
+const url = new URL("https://siddhesh-tech.vercel.app/");
 
 export const metadata: Metadata = {
   title: "Siddhesh Agarwal",
   description: "Portfolio of Siddhesh Agarwal",
-  metadataBase: new URL('https://siddhesh.tech/'),
+  metadataBase: url,
   authors: {
     name: "Siddhesh Agarwal",
-    url: "https://siddhesh.tech/"
+    url: url,
   },
   twitter: {
     title: "Siddhesh Agarwal",
@@ -25,10 +26,10 @@ export const metadata: Metadata = {
     title: "Siddhesh Agarwal",
     description: "Portfolio of Siddhesh Agarwal",
     countryName: "India",
-    url: "https://siddhesh.tech",
+    url: url,
     images: "https://github.com/siddhesh-agarwal.png",
   },
-  keywords: ["Siddhesh", "Agarwal", "Siddhesh Agarwal", "Siddhesh Agarwal Portfolio"],
+  keywords: ["Siddhesh", "Siddhesh Agarwal", "Siddhesh Agarwal Portfolio"],
   generator: "Next.js",
 };
 
@@ -40,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-          <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} dark:bg-gray-900`}>
         <Navbar />

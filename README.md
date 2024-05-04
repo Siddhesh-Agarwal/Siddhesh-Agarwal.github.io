@@ -1,6 +1,6 @@
 # Portfolio
 
-This is my portfolio website. hosted on [siddhesh.tech](https://siddhesh.tech)
+This is my portfolio website. hosted on [Vercel](https://siddhesh-tech.vercel.app/)
 
 ## Tech Stack
 
