@@ -2,16 +2,16 @@ import {
     FaCloudDownloadAlt
 } from "react-icons/fa";
 import {
-    SiHashnode,
-    SiLeetcode,
-    SiStackoverflow,
-    SiHackerearth,
-    SiLinkedin,
-    SiGithub,
-    SiTwitter,
-    SiKaggle,
-    SiHackerrank,
     SiDevdotto,
+    SiGithub,
+    SiHackerearth,
+    SiHackerrank,
+    SiHashnode,
+    SiKaggle,
+    SiLeetcode,
+    SiLinkedin,
+    SiStackoverflow,
+    SiX,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { SocialLink } from "@/types/SocialLink";
@@ -24,17 +24,17 @@ const socialLinks: SocialLink[] = [
         link: "https://www.dev.to/siddhesh_agarwal/"
     },
     {
-        name: "Github",
+        name: "GitHub",
         icon: <SiGithub />,
         link: "https://www.github.com/siddhesh-agarwal/"
     },
     {
-        name: "Hackerearth",
+        name: "HackerEarth",
         icon: <SiHackerearth />,
         link: "https://www.hackerearth.com/@siddhesh.agarwal/"
     },
     {
-        name: "Hackerrank",
+        name: "HackerRank",
         icon: <SiHackerrank />,
         link: "https://www.hackerrank.com/Siddhesh_Agarwal/"
     },
@@ -59,13 +59,13 @@ const socialLinks: SocialLink[] = [
         link: "https://www.linkedin.com/in/siddhesh-agarwal/"
     },
     {
-        name: "Stackoverflow",
+        name: "StackOverflow",
         icon: <SiStackoverflow />,
         link: "https://stackoverflow.com/users/14257886/siddhesh-agarwal/"
     },
     {
-        name: "Twitter",
-        icon: <SiTwitter />,
+        name: "X",
+        icon: <SiX />,
         link: "https://www.twitter.com/siddhesh0205/"
     },
 ]

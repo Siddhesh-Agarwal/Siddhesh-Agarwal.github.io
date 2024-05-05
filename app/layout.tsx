@@ -1,7 +1,7 @@
-import { Navbar, NewNavbar } from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["cyrillic"] });
@@ -51,7 +51,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NewNavbar />
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
