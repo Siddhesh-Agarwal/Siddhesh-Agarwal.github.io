@@ -1,6 +1,6 @@
 "use client";
-import ProjectCard from '@/components/ProjectCard'
-import { ProjectData } from '@/types/ProjectData'
+import ProjectCard from "@/components/ProjectCard"
+import { ProjectData } from "@/types/ProjectData"
 
 const ReactProjects: ProjectData[] = [
     {
@@ -145,13 +145,13 @@ const MiscellaneousProjects: ProjectData[] = [
     },
     {
         title: "Scientific Computing with Python",
-        description: `Projects for FreeCodeCamp's "Scientific Computing with Python" Certificate.`,
+        description: `Projects for FreeCodeCamp"s "Scientific Computing with Python" Certificate.`,
         githubURL: "https://github.com/Siddhesh-Agarwal/FreeCodeCamp-Python-Challenges/",
         tags: ["Python", "Scientific Computing", "FreeCodeCamp"],
     },
     {
         title: "Data Analysis with Python",
-        description: `Projects for FreeCodeCamp's "Data Analysis with Python" Certificate.`,
+        description: `Projects for FreeCodeCamp"s "Data Analysis with Python" Certificate.`,
         githubURL: "https://github.com/Siddhesh-Agarwal/Data-Analysis-with-Python/",
         tags: ["Python", "Data Analysis", "FreeCodeCamp"],
     },
@@ -188,7 +188,7 @@ export default function ProjectsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {
                         ReactProjects.map(
-                            (project, index) => (
+                            (project: ProjectData, index: number) => (
                                 <ProjectCard props={project} key={index} />
                             )
                         )

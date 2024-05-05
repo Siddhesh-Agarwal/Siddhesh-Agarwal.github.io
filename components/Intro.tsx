@@ -33,12 +33,12 @@ import {
     SiTwitter,
     SiTypescript,
     SiVercel,
-} from 'react-icons/si';
-import Typewriter from 'typewriter-effect';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { SocialLink } from '@/types/SocialLink';
-import { ToolLink } from '@/types/ToolLink';
+} from "react-icons/si";
+import Typewriter from "typewriter-effect";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { SocialLink } from "@/types/SocialLink";
+import { ToolLink } from "@/types/ToolLink";
 
 const links: ToolLink[] = [
     {

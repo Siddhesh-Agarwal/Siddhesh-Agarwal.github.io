@@ -1,6 +1,6 @@
 import {
     FaCloudDownloadAlt
-} from 'react-icons/fa';
+} from "react-icons/fa";
 import {
     SiHashnode,
     SiLeetcode,
@@ -12,10 +12,10 @@ import {
     SiKaggle,
     SiHackerrank,
     SiDevdotto,
-} from 'react-icons/si';
-import { motion } from 'framer-motion';
-import { SocialLink } from '@/types/SocialLink';
-import Link from 'next/link';
+} from "react-icons/si";
+import { motion } from "framer-motion";
+import { SocialLink } from "@/types/SocialLink";
+import Link from "next/link";
 
 const socialLinks: SocialLink[] = [
     {

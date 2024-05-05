@@ -1,7 +1,7 @@
-import { FaGithub, FaGlobe, FaStar } from 'react-icons/fa'
-import { motion } from 'framer-motion'
-import { ProjectData } from '@/types/ProjectData'
-import Link from 'next/link'
+import { FaGithub, FaGlobe, FaStar } from "react-icons/fa"
+import { motion } from "framer-motion"
+import { ProjectData } from "@/types/ProjectData"
+import Link from "next/link"
 
 export default function ProjectCard({ key, props }: { key: number, props: ProjectData }) {
     // Use TailwindCSS to style the project card
@@ -14,8 +14,8 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
         >
 
             {/* Space between Both divs */}
-            <div className='pb-3 md:pb-6 h-full flex flex-col justify-around dark:bg-gray-800/50 relative'>
-                <div className='inline-block'>
+            <div className="pb-3 md:pb-6 h-full flex flex-col justify-around dark:bg-gray-800/50 relative">
+                <div className="inline-block">
                     {
                         props?.featured &&
                         <span className="bg-emerald-500 text-white px-3 py-1 tracking-widest absolute text-sm right-0 top-0 rounded-bl uppercase">
@@ -42,8 +42,8 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
                     {/* Tags */}
                     <div className="px-3 flex flex-wrap">
                         {
-                            props.tags.sort().map(
-                                (tag, index) => (
+                            props.tags.toSorted().map(
+                                (tag: string, index: number) => (
                                     <span key={index} className="bg-blue-400 text-white rounded-lg text-sm my-1 mr-2 py-1 px-2">
                                         {tag}
                                     </span>
@@ -63,25 +63,27 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
                     {
                         props.githubURL &&
                         <Link href={props.githubURL} rel="noreferrer noopener" target="_blank" passHref>
-                            <motion.div
+                            <div
                                 className="bg-gray-900 hover:bg-black text-white rounded mr-1 py-1 px-2"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
                             >
-                                <FaGithub className="inline-block mr-1" /> GitHub
-                            </motion.div>
+                                <FaGithub className="inline-flex mr-1" />
+                                <span className="inline-flex">
+                                    GitHub
+                                </span>
+                            </div>
                         </Link>
                     }
                     {
                         props.liveURL &&
                         <Link href={props.liveURL} rel="noreferrer noopener" target="_blank" passHref>
-                            <motion.div
+                            <div
                                 className="bg-green-600 hover:bg-green-700 text-white rounded ml-1 py-1 px-2"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
                             >
-                                <FaGlobe className="inline-block mr-1" /> Live
-                            </motion.div>
+                                <FaGlobe className="inline-flex mr-1" />
+                                <span className="inline-flex">
+                                    Live
+                                </span>
+                            </div>
                         </Link>
                     }
                 </div>
