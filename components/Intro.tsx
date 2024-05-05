@@ -199,7 +199,7 @@ function SocialLinks() {
                                 passHref
                             >
                                 <motion.div
-                                    className="m-1 bg-blue-500 rounded px-2 py-1 text-white text-md md:text-lg"
+                                    className="m-1 bg-blue-600 dark:bg-blue-500 rounded px-2 py-1 text-white text-md md:text-lg"
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
@@ -226,7 +226,7 @@ function Tools() {
                     (link: ToolLink, index: number) => {
                         return (
                             <motion.div
-                                className="m-2 text-blue-500 font-semibold inline-block text-xl md:text-2xl lg:text-3xl w-fit cursor-pointer"
+                                className="m-2 text-blue-600 dark:text-blue-500 font-semibold inline-block text-lg md:text-xl lg:text-2xl w-fit cursor-pointer"
                                 whileHover={{ scale: 1.25 }}
                                 whileTap={{ scale: 0.8 }}
                                 key={index}
@@ -250,7 +250,7 @@ function Roles() {
             initial={{ opacity: 0 }}
             animate={{ opacity: DELAY / 1000 }}
             transition={{ delay: DELAY / 1000 }}
-            className="text-4xl lg:text-6xl text-blue-500 inline-flex text-center justify-center"
+            className="text-blue-600 dark:text-blue-500 inline-flex text-center justify-center"
         >
             <Typewriter
                 onInit={
@@ -285,8 +285,8 @@ export const Intro: React.FC = () => {
         <div className="container py-4 dark:text-white max-w-3xl">
             <div className="my-5">
                 <div className="col-12 text-center">
-                    <h1 className="text-3xl md:text-4xl lg:text-7xl font-normal">Hello, I&apos;m <span className="text-blue-500 font-bolder">Siddhesh</span></h1>
-                    <h2 className="text-2xl md:text-3xl lg:text-5xl font-sans">
+                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-normal">Hello, I&apos;m <span className="text-blue-600 dark:text-blue-500 font-bolder">Siddhesh</span></h1>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans">
                         <Roles />
                     </h2>
                 </div>

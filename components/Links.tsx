@@ -96,10 +96,10 @@ export const Links: React.FC = () => {
         >
             <div className="row">
                 <div className="col-12">
-                    <h1 className="text-3xl text-center">
+                    <h1 className="text-3xl text-center font-bold">
                         Siddhesh Agarwal
                     </h1>
-                    <h2 className="text-xl text-center mt-2 dark:text-gray-200">
+                    <h2 className="text-xl text-center mt-2 font-semibold dark:text-gray-200">
                         CSE Student
                     </h2>
                 </div>
@@ -112,19 +112,19 @@ export const Links: React.FC = () => {
                 >
                     <div className="inline-flex flex-wrap justify-center">
                         {
-                            socialLinks.map(
+                            socialLinks.toSorted((a, b) => a.name.localeCompare(b.name)).map(
                                 (link, index) => {
                                     return (
                                         <Link
                                             href={link.link}
                                             rel="noreferrer noopener" target="_blank"
                                             key={index}
+                                            title={link.name}
                                             passHref
                                         >
                                             <motion.div
-                                                className="m-2 p-2 rounded-2xl border-2 shadow-sm bg-white text-lg dark:bg-gray-800 dark:text-white dark:border"
+                                                className="m-2 p-2 rounded-2xl border border-black dark:border-gray-100 shadow-sm bg-white text-lg dark:bg-gray-800 dark:text-white"
                                                 variants={item}
-                                                title={link.name}
                                                 whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.9 }}
                                             >
@@ -141,7 +141,7 @@ export const Links: React.FC = () => {
             {/* Button to Download resume */}
             <div className="text-center mt-5">
                 <motion.a href="https://app.flowcv.com/api/public/download_resume?token=t7wq4scpcr" download
-                    className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow hover:shadow-lg text-xl"
+                    className="bg-green-600 dark:bg-green-500 hover:bg-green-500 dark:hover:bg-green-600 text-white font-bold py-2 px-4 rounded shadow hover:shadow-lg text-xl"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >

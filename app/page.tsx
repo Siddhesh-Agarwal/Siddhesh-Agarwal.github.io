@@ -11,7 +11,7 @@ export default function HomePage() {
             </section>
 
             {/* Links - Fade in animation */}
-            <section className="container-fluid h-screen w-screen bg-blue-600 grid place-items-center">
+            <section className="container-fluid h-screen w-screen bg-blue-700 dark:bg-blue-600 grid place-items-center">
                 <Links />
             </section>
         </main>

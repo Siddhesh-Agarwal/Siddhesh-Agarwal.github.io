@@ -1,6 +1,7 @@
-import { Navbar } from "@/components/Navbar";
+import { Navbar, NewNavbar } from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["cyrillic"] });
@@ -44,8 +45,15 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} dark:bg-gray-900`}>
-        <Navbar />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NewNavbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
