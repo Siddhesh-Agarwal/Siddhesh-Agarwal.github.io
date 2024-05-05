@@ -70,23 +70,17 @@ const PythonProjects: ProjectData[] = [
         tags: ["Python", "PyPI Package", "Cyber Security"],
     },
     {
+        title: "Project Byomkesh",
+        description: "A project to analyse tweets using Python and Streamlit",
+        githubURL: "https://github.com/Siddhesh-Agarwal/Project-Byomkesh/",
+        tags: ["Python", "Streamlit", "OSINT"],
+    },
+    {
         title: "Newsful News",
         description: "A simple news extractor that extracts the news from the given url and displays it in a simple UI. It can bypass the paywalls and ad blocks to extract the news.",
         githubURL: "https://github.com/Siddhesh-Agarwal/news-extractor/",
         liveURL: "https://newsful-news.onrender.com/",
         tags: ["Python", "Flask", "Web Scraping"],
-    },
-    {
-        title: "Scientific Computing with Python",
-        description: `Projects for FreeCodeCamp's "Scientific Computing with Python" Certificate.`,
-        githubURL: "https://github.com/Siddhesh-Agarwal/FreeCodeCamp-Python-Challenges/",
-        tags: ["Python", "Scientific Computing", "FreeCodeCamp"],
-    },
-    {
-        title: "Data Analysis with Python",
-        description: `Projects for FreeCodeCamp's "Data Analysis with Python" Certificate.`,
-        githubURL: "https://github.com/Siddhesh-Agarwal/Data-Analysis-with-Python/",
-        tags: ["Python", "Data Analysis", "FreeCodeCamp"],
     },
 ]
 
@@ -150,11 +144,17 @@ const MiscellaneousProjects: ProjectData[] = [
         tags: ["Python", "Streamlit", "Chroma", "VectorDB"],
     },
     {
-        title: "Project Byomkesh",
-        description: "A project to analyse tweets using Python and Streamlit",
-        githubURL: "https://github.com/Siddhesh-Agarwal/Project-Byomkesh/",
-        tags: ["Python", "Streamlit", "OSINT"],
-    }
+        title: "Scientific Computing with Python",
+        description: `Projects for FreeCodeCamp's "Scientific Computing with Python" Certificate.`,
+        githubURL: "https://github.com/Siddhesh-Agarwal/FreeCodeCamp-Python-Challenges/",
+        tags: ["Python", "Scientific Computing", "FreeCodeCamp"],
+    },
+    {
+        title: "Data Analysis with Python",
+        description: `Projects for FreeCodeCamp's "Data Analysis with Python" Certificate.`,
+        githubURL: "https://github.com/Siddhesh-Agarwal/Data-Analysis-with-Python/",
+        tags: ["Python", "Data Analysis", "FreeCodeCamp"],
+    },
 ]
 
 export default function ProjectsPage() {
