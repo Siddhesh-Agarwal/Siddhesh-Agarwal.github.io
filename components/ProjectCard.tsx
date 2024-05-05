@@ -42,7 +42,7 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
                     {/* Tags */}
                     <div className="px-3 flex flex-wrap">
                         {
-                            props.tags.toSorted().map(
+                            props.tags.map(
                                 (tag: string, index: number) => (
                                     <span key={index} className="bg-blue-400 text-white rounded-lg text-sm my-1 mr-2 py-1 px-2">
                                         {tag}

@@ -19,9 +19,9 @@ import Link from "next/link";
 
 const socialLinks: SocialLink[] = [
     {
-        name: "LinkedIn",
-        icon: <SiLinkedin />,
-        link: "https://www.linkedin.com/in/siddhesh-agarwal/"
+        name: "Dev.to",
+        icon: <SiDevdotto />,
+        link: "https://www.dev.to/siddhesh_agarwal/"
     },
     {
         name: "Github",
@@ -29,19 +29,9 @@ const socialLinks: SocialLink[] = [
         link: "https://www.github.com/siddhesh-agarwal/"
     },
     {
-        name: "Twitter",
-        icon: <SiTwitter />,
-        link: "https://www.twitter.com/siddhesh0205/"
-    },
-    {
-        name: "Kaggle",
-        icon: <SiKaggle />,
-        link: "https://www.kaggle.com/siddheshagarwal/"
-    },
-    {
-        name: "Dev.to",
-        icon: <SiDevdotto />,
-        link: "https://www.dev.to/siddhesh_agarwal/"
+        name: "Hackerearth",
+        icon: <SiHackerearth />,
+        link: "https://www.hackerearth.com/@siddhesh.agarwal/"
     },
     {
         name: "Hackerrank",
@@ -54,9 +44,19 @@ const socialLinks: SocialLink[] = [
         link: "https://siddhesh2003.hashnode.dev/"
     },
     {
+        name: "Kaggle",
+        icon: <SiKaggle />,
+        link: "https://www.kaggle.com/siddheshagarwal/"
+    },
+    {
         name: "Leetcode",
         icon: <SiLeetcode />,
         link: "https://leetcode.com/Siddhesh-Agarwal/"
+    },
+    {
+        name: "LinkedIn",
+        icon: <SiLinkedin />,
+        link: "https://www.linkedin.com/in/siddhesh-agarwal/"
     },
     {
         name: "Stackoverflow",
@@ -64,9 +64,9 @@ const socialLinks: SocialLink[] = [
         link: "https://stackoverflow.com/users/14257886/siddhesh-agarwal/"
     },
     {
-        name: "Hackerearth",
-        icon: <SiHackerearth />,
-        link: "https://www.hackerearth.com/@siddhesh.agarwal/"
+        name: "Twitter",
+        icon: <SiTwitter />,
+        link: "https://www.twitter.com/siddhesh0205/"
     },
 ]
 
@@ -112,7 +112,7 @@ export const Links: React.FC = () => {
                 >
                     <div className="inline-flex flex-wrap justify-center">
                         {
-                            socialLinks.toSorted((a, b) => a.name.localeCompare(b.name)).map(
+                            socialLinks.map(
                                 (link, index) => {
                                     return (
                                         <Link
