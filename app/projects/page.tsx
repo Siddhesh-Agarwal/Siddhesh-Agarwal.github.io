@@ -36,7 +36,7 @@ const PythonProjects: ProjectData[] = [
         description: "A Python library to perform matrix and Vector operations. Published on PyPI.",
         githubURL: "https://github.com/Siddhesh-Agarwal/matmath/",
         liveURL: "https://pypi.org/project/matmath/",
-        tags: ["Python", "PyPI Package", "maths"],
+        tags: ["Python", "PyPI Package", "Maths"],
         featured: true,
     },
     {
@@ -51,7 +51,7 @@ const PythonProjects: ProjectData[] = [
         description: "A Python API to get information about an IP address. Made using streamlit. Deployed on Streamlit Cloud.",
         githubURL: "https://github.com/Siddhesh-Agarwal/IP-DB/",
         liveURL: "https://ip-database.streamlit.app",
-        tags: ["Python", "streamlit"],
+        tags: ["Python", "Streamlit"],
         featured: true,
     },
     {
@@ -59,7 +59,7 @@ const PythonProjects: ProjectData[] = [
         description: "A Python library to write HTML and CSS in pure Python in a simple yet elegant manner using the DOM API. Take advantage of all of Python's powerful functionalities with Sierra. Published on PyPI.",
         githubURL: "https://github.com/BrainStormYourWayIn/sierra/",
         liveURL: "https://pypi.org/project/sierra/",
-        tags: ["Python", "PyPI Package", "web dev"],
+        tags: ["Python", "PyPI Package", "HTML", "CSS"],
         featured: true,
     },
     {
@@ -67,7 +67,7 @@ const PythonProjects: ProjectData[] = [
         description: "A Python library to encrypt and decrypt messages using emojis. Published on PyPI.",
         githubURL: "https://github.com/Siddhesh-Agarwal/Cryptmoji/",
         liveURL: "https://pypi.org/project/cryptmoji/",
-        tags: ["Python", "PyPI Package", "cyber security"],
+        tags: ["Python", "PyPI Package", "Cyber Security"],
     },
     {
         title: "Newsful News",
@@ -103,13 +103,14 @@ const AIProjects: ProjectData[] = [
         description: "Skin Cancer Detection using CNN",
         githubURL: "https://github.com/Siddhesh-Agarwal/Skin-Cancer-Detection/",
         liveURL: "https://skin-cancer-check.streamlit.app/",
-        tags: ["Python", "TensorFlow", "Streamlit"],
+        tags: ["Python", "TensorFlow", "Streamlit", "CNN"],
         featured: true,
     },
     {
         title: "Strains RAG",
-        description: "An RAG Model based on StrainsDB. The Database for the project was provided by Kenneth Reitz.",
+        description: "An RAG Model based on Kenneth Reitz's StrainsDB.",
         githubURL: "https://github.com/Siddhesh-Agarwal/straindb-rag/",
+        liveURL: "https://straindb.streamlit.app/",
         tags: ["Python", "Streamlit", "LangChain.py", "GenAI"],
         featured: true,
     },
@@ -117,13 +118,20 @@ const AIProjects: ProjectData[] = [
         title: "ChatSKCET",
         description: "Chatbot for SKCET",
         githubURL: "https://github.com/Siddhesh-Agarwal/ChatSKCET/",
-        tags: ["LangChain.py", "TypeScript", "Next", "GenAI"]
+        tags: ["LangChain.py", "TypeScript", "Next", "GenAI"],
+    },
+    {
+        title: "Dementia Detection",
+        description: "Dementia Detection using CNN",
+        githubURL: "https://github.com/Siddhesh-Agarwal/Dementia-Detection/",
+        liveURL: "https://dementia-detection.streamlit.app/",
+        tags: ["Python", "TensorFlow", "Streamlit", "CNN"],
     },
     {
         title: "Neural Network in C",
         description: "Implementation of sigmoid and relu layer along with various types of regressions in plain C",
         githubURL: "https://github.com/Siddhesh-Agarwal/Neural-Network-in-C/",
-        tags: ["Deep Learning", "C"],
+        tags: ["C", "Deep Learning", "Maths"],
     },
 ]
 
@@ -132,15 +140,21 @@ const MiscellaneousProjects: ProjectData[] = [
         title: "Lab Management System",
         description: "A project to manage lab resources and student allocation in SKCET Labs",
         githubURL: "https://github.com/lab-management-system/",
-        tags: ["PHP", "Laravel", "React", "Python"],
+        tags: ["PHP", "Laravel", "Blade", "Python"],
         featured: true,
     },
     {
         title: "URL-2-Chroma",
         description: "A streamlit app to generate chroma DB locally",
         githubURL: "https://github.com/Siddhesh-Agarwal/URL-2-Chroma/",
-        tags: ["Python", "Streamlit", "Chroma", "Vector DB"],
+        tags: ["Python", "Streamlit", "Chroma", "VectorDB"],
     },
+    {
+        title: "Project Byomkesh",
+        description: "A project to analyse tweets using Python and Streamlit",
+        githubURL: "https://github.com/Siddhesh-Agarwal/Project-Byomkesh/",
+        tags: ["Python", "Streamlit", "OSINT"],
+    }
 ]
 
 export default function ProjectsPage() {
