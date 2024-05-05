@@ -8,3 +8,4 @@ This is my portfolio website. hosted on [Vercel](https://siddhesh-tech.vercel.ap
 - TypeScript
 - Tailwind CSS
 - Framer Motion
+- ShadCN UI
