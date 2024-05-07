@@ -35,21 +35,25 @@ export default function Navbar() {
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem className="font-semibold">
-                    <Link href={"https://siddhesh2003.hashnode.dev/"} target="_blank" legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            <FaHashnode className="text-lg inline-block mr-2" />
-                            Blogs
-                        </NavigationMenuLink>
-                    </Link>
-                </NavigationMenuItem>
             </NavigationMenuList>
             <NavigationMenuList className="flex flex-row">
                 <NavigationMenuItem className="font-semibold">
+                    <Link href={"https://siddhesh2003.hashnode.dev/"} target="_blank" legacyBehavior passHref>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            <FaHashnode className="text-lg inline-block md:mr-2" />
+                            <span className="hidden md:inline-block">
+                                Hashnode
+                            </span>
+                        </NavigationMenuLink>
+                    </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem className="font-semibold">
                     <Link href={"https://github.com/Siddhesh-Agarwal/"} target="_blank" legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            <FaGithub className="text-lg inline-block mr-2" />
-                            Github
+                            <FaGithub className="text-lg inline-block md:mr-2" />
+                            <span className="hidden md:inline-block">
+                                Github
+                            </span>
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
