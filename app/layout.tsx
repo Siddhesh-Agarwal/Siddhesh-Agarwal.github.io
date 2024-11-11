@@ -5,32 +5,36 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["cyrillic"] });
-const url = new URL("https://siddhesh-tech.vercel.app/");
+const site_url = new URL("https://siddhesh-tech.vercel.app/");
+const site_title = "Siddhesh's Portfolio";
+const site_description = "Portfolio of Siddhesh Agarwal";
+const site_image = "https://github.com/siddhesh-agarwal.png";
+const site_author = "Siddhesh Agarwal";
 
 export const metadata: Metadata = {
-  title: "Siddhesh Agarwal",
-  description: "Portfolio of Siddhesh Agarwal",
-  metadataBase: url,
+  title: site_title,
+  description: site_description,
+  metadataBase: site_url,
   authors: {
-    name: "Siddhesh Agarwal",
-    url: url,
+    name: site_author,
+    url: site_url
   },
   twitter: {
-    title: "Siddhesh Agarwal",
-    description: "Portfolio of Siddhesh Agarwal",
-    creator: "Siddhesh Agarwal",
+    title: site_title,
+    description: site_description,
+    creator: site_author,
     creatorId: "@Siddhesh0205",
     card: "summary_large_image",
-    images: "https://github.com/siddhesh-agarwal.png",
+    images: site_image
   },
   openGraph: {
-    title: "Siddhesh Agarwal",
-    description: "Portfolio of Siddhesh Agarwal",
-    countryName: "India",
-    url: url,
-    images: "https://github.com/siddhesh-agarwal.png",
+    siteName: site_title,
+    title: site_title,
+    description: site_description,
+    url: site_url,
+    images: site_image,
   },
-  keywords: ["Siddhesh", "Siddhesh Agarwal", "Siddhesh Agarwal Portfolio"],
+  keywords: ["Siddhesh", "Siddhesh Agarwal", "Siddhesh Agarwal Portfolio", "Siddhesh Portfolio"],
   generator: "Next.js",
 };
 

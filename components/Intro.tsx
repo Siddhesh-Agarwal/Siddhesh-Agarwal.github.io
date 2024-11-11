@@ -33,154 +33,69 @@ import {
     SiTwitter,
     SiTypescript,
     SiVercel,
+    SiExpress,
+    SiNodedotjs,
+    SiReact,
 } from "react-icons/si";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { SocialLink } from "@/types/SocialLink";
 import { ToolLink } from "@/types/ToolLink";
+import Image from "next/image";
+import profilePic from "@/public/me-according-to-chatgpt.webp"
 
 const links: ToolLink[] = [
-    {
-        name: "Python",
-        icon: <SiPython />,
-    },
-    {
-        name: "FastAPI",
-        icon: <SiFastapi />,
-    },
-    {
-        name: "Flask",
-        icon: <SiFlask />,
-    },
-    {
-        name: "Django",
-        icon: <SiDjango />,
-    },
-    {
-        name: "SciPy",
-        icon: <SiScipy />,
-    },
-    {
-        name: "Scikit Learn",
-        icon: <SiScikitlearn />,
-    },
-    {
-        name: "TensorFlow",
-        icon: <SiTensorflow />,
-    },
-    {
-        name: "PyTorch",
-        icon: <SiPytorch />,
-    },
-    {
-        name: "Streamlit",
-        icon: <SiStreamlit />,
-    },
-    {
-        name: "C",
-        icon: <SiC />,
-    },
-    {
-        name: "C++",
-        icon: <SiCplusplus />,
-    },
-    {
-        name: "MySQL",
-        icon: <SiMysql />,
-    },
-    {
-        name: "PostgreSQL",
-        icon: <SiPostgresql />,
-    },
-    {
-        name: "MongoDB",
-        icon: <SiMongodb />,
-    },
-    {
-        name: "Redis",
-        icon: <SiRedis />
-    },
-    {
-        name: "Apache Spark",
-        icon: <SiApachespark />,
-    },
-    {
-        name: "JavaScript",
-        icon: <SiJavascript />,
-    },
-    {
-        name: "TypeScript",
-        icon: <SiTypescript />,
-    },
-    {
-        name: "Bootstrap",
-        icon: <SiBootstrap />,
-    },
-    {
-        name: "Tailwind CSS",
-        icon: <SiTailwindcss />,
-    },
-    {
-        name: "ShadCN UI",
-        icon: <SiShadcnui />,
-    },
-    {
-        name: "Next.js",
-        icon: <SiNextdotjs />,
-    },
-    {
-        name: "PHP",
-        icon: <SiPhp />,
-    },
-    {
-        name: "Laravel",
-        icon: <SiLaravel />,
-    },
-    {
-        name: "Git",
-        icon: <SiGit />,
-    },
-    {
-        name: "GitHub",
-        icon: <SiGithub />,
-    },
-    {
-        name: "Linux",
-        icon: <SiLinux />,
-    },
-    {
-        name: "GNU Bash",
-        icon: <SiGnubash />,
-    },
-    {
-        name: "Powershell",
-        icon: <SiPowershell />,
-    },
-    {
-        name: "Docker",
-        icon: <SiDocker />,
-    },
-    {
-        name: "Vercel",
-        icon: <SiVercel />,
-    },
-]
+    { name: "Python", icon: SiPython },
+    { name: "FastAPI", icon: SiFastapi },
+    { name: "Flask", icon: SiFlask },
+    { name: "Django", icon: SiDjango },
+    { name: "SciPy", icon: SiScipy },
+    { name: "Scikit Learn", icon: SiScikitlearn },
+    { name: "TensorFlow", icon: SiTensorflow },
+    { name: "PyTorch", icon: SiPytorch },
+    { name: "Streamlit", icon: SiStreamlit },
+    { name: "C", icon: SiC },
+    { name: "C++", icon: SiCplusplus },
+    { name: "MySQL", icon: SiMysql },
+    { name: "PostgreSQL", icon: SiPostgresql },
+    { name: "MongoDB", icon: SiMongodb },
+    { name: "Redis", icon: SiRedis },
+    { name: "Apache Spark", icon: SiApachespark },
+    { name: "JavaScript", icon: SiJavascript },
+    { name: "TypeScript", icon: SiTypescript },
+    { name: "Bootstrap", icon: SiBootstrap },
+    { name: "Tailwind CSS", icon: SiTailwindcss },
+    { name: "ShadCN UI", icon: SiShadcnui },
+    { name: "React.js", icon: SiReact },
+    { name: "Next.js", icon: SiNextdotjs },
+    { name: "Express.js", icon: SiExpress },
+    { name: "Node.js", icon: SiNodedotjs },
+    { name: "PHP", icon: SiPhp },
+    { name: "Laravel", icon: SiLaravel },
+    { name: "Git", icon: SiGit },
+    { name: "GitHub", icon: SiGithub },
+    { name: "Linux", icon: SiLinux },
+    { name: "GNU Bash", icon: SiGnubash },
+    { name: "Powershell", icon: SiPowershell },
+    { name: "Docker", icon: SiDocker },
+    { name: "Vercel", icon: SiVercel },
+];
 
 const socialLinks: SocialLink[] = [
     {
         name: "LinkedIn",
-        icon: <SiLinkedin className="inline-block" />,
+        icon: SiLinkedin,
         link: "https://www.linkedin.com/in/siddhesh-agarwal/"
     },
     {
         name: "Twitter",
-        icon: <SiTwitter className="inline-block" />,
+        icon: SiTwitter,
         link: "https://www.twitter.com/siddhesh0205/"
     },
     {
         name: "Email",
-        icon: <SiGmail className="inline-block" />,
+        icon: SiGmail,
         link: "mailto:siddhesh.agarwal@gmail.com",
     },
 ]
@@ -199,11 +114,11 @@ function SocialLinks() {
                                 passHref
                             >
                                 <motion.div
-                                    className="m-1 bg-blue-600 dark:bg-blue-500 rounded px-2 py-1 text-white text-md md:text-lg"
+                                    className="m-1 bg-blue-600 dark:bg-blue-500 rounded px-2 py-1 text-white text-md md:text-lg lg:text-xl w-fit cursor-pointer"
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
-                                    {link.icon}
+                                    <link.icon className="inline-block" />
                                     <p className="inline-block mx-2">
                                         {link.name}
                                     </p>
@@ -226,13 +141,13 @@ function Tools() {
                     (link: ToolLink, index: number) => {
                         return (
                             <motion.div
-                                className="m-2 text-blue-600 dark:text-blue-500 font-semibold inline-block text-lg md:text-xl lg:text-2xl w-fit cursor-pointer"
+                                className="m-2 text-blue-600 dark:text-blue-500 font-semibold inline-block text-md md:text-lg lg:text-xl w-fit cursor-pointer"
                                 whileHover={{ scale: 1.25 }}
                                 whileTap={{ scale: 0.8 }}
                                 key={index}
                                 title={link.name}
                             >
-                                {link.icon}
+                                <link.icon className="inline-block" />
                             </motion.div>
                         )
                     }
@@ -282,20 +197,35 @@ function Roles() {
 
 export const Intro: React.FC = () => {
     return (
-        <div className="container py-4 dark:text-white max-w-3xl">
-            <div className="my-5">
+        <div className="container py-4 dark:text-white max-w-4xl">
+            {/* <div className="my-5">
                 <div className="col-12 text-center">
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-normal">Hello, I&apos;m <span className="text-blue-600 dark:text-blue-500 font-bolder">Siddhesh</span></h1>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans">
                         <Roles />
                     </h2>
                 </div>
+            </div> */}
+
+            {/* Divide into 2 parts */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="my-5">
+                    <p className="text-justify">
+                        Hello! I am <b>Siddhesh Agarwal</b>, a passionate software engineering student with a focus on <b>algorithm optimization, problem-solving, and code efficiency</b>. My journey is marked by <b>hands-on experience</b> with complex coding problems, where I enjoy tackling time complexity challenges and finding creative ways to maximize performance. As I apply for SDE internships, I am excited to bring my drive for continuous improvement, deep understanding of coding fundamentals, and passion for technology to real-world projects that make an impact.
+                    </p>
+                </div>
+                <div className="my-5">
+                    <Image src={profilePic} alt="Siddhesh Agarwal" className="w-full"/>
+                    <div className="text-center text-muted-foreground">
+                        Me according to GPT-4o <code className="font-mono">UwU</code>
+                    </div>
+                </div>
             </div>
 
             {/* List things proficient in  */}
             <div className="my-5">
                 <div className="text-center">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl w-full mb-3">
+                    <h3 className="text-lg md:text-xl lg:text-2xl mb-3">
                         I&apos;m proficient in:
                     </h3>
                     <Tools />
@@ -305,7 +235,7 @@ export const Intro: React.FC = () => {
             {/* Ways to contact me */}
             <div className="my-5">
                 <div className="col-12 text-center">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl mb-3">You can contact me on:</h3>
+                    <h3 className="text-lg md:text-xl lg:text-2xl mb-3">You can contact me on:</h3>
                     <SocialLinks />
                 </div>
             </div>

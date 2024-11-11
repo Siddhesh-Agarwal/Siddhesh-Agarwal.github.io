@@ -20,52 +20,52 @@ import Link from "next/link";
 const socialLinks: SocialLink[] = [
     {
         name: "Dev.to",
-        icon: <SiDevdotto />,
+        icon: SiDevdotto,
         link: "https://www.dev.to/siddhesh_agarwal/"
     },
     {
         name: "GitHub",
-        icon: <SiGithub />,
+        icon: SiGithub,
         link: "https://www.github.com/siddhesh-agarwal/"
     },
     {
         name: "HackerEarth",
-        icon: <SiHackerearth />,
+        icon: SiHackerearth,
         link: "https://www.hackerearth.com/@siddhesh.agarwal/"
     },
     {
         name: "HackerRank",
-        icon: <SiHackerrank />,
+        icon: SiHackerrank,
         link: "https://www.hackerrank.com/Siddhesh_Agarwal/"
     },
     {
         name: "Hashnode",
-        icon: <SiHashnode />,
+        icon: SiHashnode,
         link: "https://siddhesh2003.hashnode.dev/"
     },
     {
         name: "Kaggle",
-        icon: <SiKaggle />,
+        icon: SiKaggle,
         link: "https://www.kaggle.com/siddheshagarwal/"
     },
     {
         name: "Leetcode",
-        icon: <SiLeetcode />,
+        icon: SiLeetcode,
         link: "https://leetcode.com/Siddhesh-Agarwal/"
     },
     {
         name: "LinkedIn",
-        icon: <SiLinkedin />,
+        icon: SiLinkedin,
         link: "https://www.linkedin.com/in/siddhesh-agarwal/"
     },
     {
         name: "StackOverflow",
-        icon: <SiStackoverflow />,
+        icon: SiStackoverflow,
         link: "https://stackoverflow.com/users/14257886/siddhesh-agarwal/"
     },
     {
         name: "X",
-        icon: <SiX />,
+        icon: SiX,
         link: "https://www.twitter.com/siddhesh0205/"
     },
 ]
@@ -128,7 +128,7 @@ export const Links: React.FC = () => {
                                                 whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.9 }}
                                             >
-                                                {link.icon}
+                                                <link.icon />
                                             </motion.div>
                                         </Link>
                                     )

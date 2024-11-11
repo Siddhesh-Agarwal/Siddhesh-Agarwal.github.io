@@ -6,7 +6,7 @@ export default function HomePage() {
     return (
         <main className="container-fluid p-0 min-h-screen w-full overflow-x-hidden">
             {/* Header - Fade in animation */}
-            <section className="container-fluid h-screen w-scree grid place-items-center dark:bg-gray-900">
+            <section className="container-fluid min-h-screen w-scree grid place-items-center dark:bg-gray-900">
                 <Intro />
             </section>
 
