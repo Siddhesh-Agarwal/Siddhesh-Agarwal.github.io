@@ -35,12 +35,12 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
                         />
                     }
                     {/* Title */}
-                    <div className="px-3 py-4">
+                    <div className="px-3 py-4 font-mono">
                         <h1 className="text-gray-900 dark:text-gray-100 font-semibold underline text-2xl tracking-wide">{props.title}</h1>
                     </div>
 
                     {/* Tags */}
-                    <div className="px-3 flex flex-wrap">
+                    <div className="px-3 flex flex-wrap font-mono">
                         {
                             props.tags.map(
                                 (tag: string, index: number) => (
@@ -53,13 +53,13 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
                     </div>
 
                     {/* Description */}
-                    <p className="px-3 flex flex-wrap mt-4 text-gray-700 dark:text-gray-300">
+                    <p className="px-3 flex flex-wrap mt-4 font-mono text-gray-700 dark:text-gray-300">
                         {props.description}
                     </p>
                 </div>
 
                 {/* Links */}
-                <div className="px-3 w-full flex flex-wrap mt-4 justify-start gap-2">
+                <div className="px-3 w-full flex flex-wrap mt-4 font-mono justify-start gap-2">
                     {
                         props.githubURL &&
                         <Link href={props.githubURL} rel="noreferrer noopener" target="_blank" passHref>

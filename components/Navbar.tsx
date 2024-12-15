@@ -25,7 +25,7 @@ function ModeToggle() {
 
 export default function Navbar() {
     return (
-        <NavigationMenu className="bg-gray-100 dark:bg-gray-800 text-black dark:text-gray-50 shadow-sm dark:shadow-none border-b border-gray-200 dark:border-gray-900 justify-between">
+        <NavigationMenu className="bg-gray-100 dark:bg-gray-800 text-black dark:text-gray-50 font-mono shadow-sm dark:shadow-none border-b border-gray-200 dark:border-gray-900 justify-between">
             <NavigationMenuList className="flex flex-row">
                 <NavigationMenuItem className="font-semibold">
                     <Link href={"/projects/"} prefetch={true} legacyBehavior passHref>

@@ -105,10 +105,10 @@ const socialLinks: SocialLink[] = [
 
 export const Intro: React.FC = () => {
     return (
-        <div className="container py-4 dark:text-white max-w-6xl">
+        <div className="container py-4 dark:text-white max-w-6xl font-mono">
             <div className="my-5">
                 <div className="text-center">
-                    <h1 className={`${textSize("4xl")} font-normal inline`}>
+                    <h1 className={`${textSize("4xl")} inline`}>
                         Hello, I&apos;m{' '}<span className="text-blue-600 dark:text-blue-500 font-bolder">Siddhesh</span>
                     </h1>
                 </div>

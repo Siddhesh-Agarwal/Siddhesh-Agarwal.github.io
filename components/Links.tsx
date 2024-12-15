@@ -87,7 +87,7 @@ export const Links: React.FC = () => {
     }
 
     return (
-        <motion.div className="bg-white py-5 px-3 md:px-8 md:rounded-lg shadow-lg hover:shadow-xl dark:bg-gray-800 dark:text-white"
+        <motion.div className="bg-white font-mono py-5 px-3 md:px-8 md:rounded-lg shadow-lg hover:shadow-xl dark:bg-gray-800 dark:text-white"
             style={{ maxWidth: "48rem", minHeight: "16rem" }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
