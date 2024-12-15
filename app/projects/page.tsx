@@ -1,6 +1,7 @@
 "use client";
 import ProjectCard from "@/components/ProjectCard"
 import { ProjectData } from "@/types/ProjectData"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const ReactProjects: ProjectData[] = [
     {
@@ -10,6 +11,15 @@ const ReactProjects: ProjectData[] = [
         githubURL: "https://github.com/Siddhesh-Agarwal/Pomofocus-Clone/",
         liveURL: "https://pomofocus-vite.vercel.app/",
         tags: ["React", "JavaScript", "SCSS"],
+        featured: true,
+    },
+    {
+        title: "LLM Price Calculator",
+        description: "A simple no-nonsense price calculator for LLM providers like OpenAI, Claude, and Google based on Input and Output Tokens.",
+        image: "https://github.com/user-attachments/assets/a6e4f7be-7382-4d8a-af25-4280210747e9",
+        githubURL: "https://github.com/Siddhesh-Agarwal/llm-price-calculator",
+        liveURL: "https://llm-price-calc.vercel.app/",
+        tags: ["Vite", "React", "TypeScript", "SWC"],
         featured: true,
     },
     {
@@ -70,18 +80,19 @@ const PythonProjects: ProjectData[] = [
         tags: ["Python", "PyPI Package", "Cyber Security"],
     },
     {
-        title: "Project Byomkesh",
-        description: "A project to analyse tweets using Python and Streamlit",
-        githubURL: "https://github.com/Siddhesh-Agarwal/Project-Byomkesh/",
-        tags: ["Python", "Streamlit", "OSINT"],
-    },
-    {
         title: "Newsful News",
         description: "A simple news extractor that extracts the news from the given url and displays it in a simple UI. It can bypass the paywalls and ad blocks to extract the news.",
         githubURL: "https://github.com/Siddhesh-Agarwal/news-extractor/",
         liveURL: "https://newsful-news.onrender.com/",
         tags: ["Python", "Flask", "Web Scraping"],
     },
+    {
+        title: "CGPA Calculator",
+        description: "A simple no-nonsense CGPA Calculator",
+        githubURL: "https://github.com/Siddhesh-Agarwal/CGPA-Calculator",
+        liveURL: "https://cgpa-calc.streamlit.app/",
+        tags: ["Python", "Streamlit"]
+    }
 ]
 
 const AIProjects: ProjectData[] = [
@@ -89,7 +100,7 @@ const AIProjects: ProjectData[] = [
         title: "Newsful",
         description: "Advanced Fake News Detection System",
         githubURL: "https://github.com/centille/Newsful/",
-        tags: ["FastAPI", "LangChain.py", "HTML", "Bootstrap", "GenAI"],
+        tags: ["Python", "FastAPI", "MongoDB", "Gen AI", "Browser Extension"],
         featured: true,
     },
     {
@@ -105,14 +116,14 @@ const AIProjects: ProjectData[] = [
         description: "An RAG Model based on Kenneth Reitz's StrainsDB.",
         githubURL: "https://github.com/Siddhesh-Agarwal/straindb-rag/",
         liveURL: "https://straindb.streamlit.app/",
-        tags: ["Python", "Streamlit", "LangChain.py", "GenAI"],
+        tags: ["Python", "Streamlit", "LangChain.py", "Gen AI"],
         featured: true,
     },
     {
         title: "ChatSKCET",
         description: "Chatbot for SKCET",
         githubURL: "https://github.com/Siddhesh-Agarwal/ChatSKCET/",
-        tags: ["LangChain.py", "TypeScript", "Next", "GenAI"],
+        tags: ["LangChain.py", "TypeScript", "Next", "Gen AI"],
     },
     {
         title: "Dementia Detection",
@@ -127,6 +138,12 @@ const AIProjects: ProjectData[] = [
         githubURL: "https://github.com/Siddhesh-Agarwal/Neural-Network-in-C/",
         tags: ["C", "Deep Learning", "Maths"],
     },
+    {
+        title: "URL-2-Chroma",
+        description: "A streamlit app to generate chroma DB locally",
+        githubURL: "https://github.com/Siddhesh-Agarwal/URL-2-Chroma/",
+        tags: ["Python", "Streamlit", "Chroma", "VectorDB", "Gen AI"],
+    },
 ]
 
 const MiscellaneousProjects: ProjectData[] = [
@@ -136,12 +153,6 @@ const MiscellaneousProjects: ProjectData[] = [
         githubURL: "https://github.com/lab-management-system/",
         tags: ["PHP", "Laravel", "Blade", "Python"],
         featured: true,
-    },
-    {
-        title: "URL-2-Chroma",
-        description: "A streamlit app to generate chroma DB locally",
-        githubURL: "https://github.com/Siddhesh-Agarwal/URL-2-Chroma/",
-        tags: ["Python", "Streamlit", "Chroma", "VectorDB"],
     },
     {
         title: "Scientific Computing with Python",
@@ -164,69 +175,67 @@ export default function ProjectsPage() {
                 Projects
             </h1>
 
-            {/* Python Projects */}
-            <section id="python">
-                <h2 className="text-2xl font-bold m-6 underline dark:text-gray-100">
-                    Python
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {
-                        PythonProjects.map(
-                            (project: ProjectData, index: number) => (
-                                <ProjectCard props={project} key={index} />
-                            )
-                        )
-                    }
-                </div>
-            </section>
+            <Tabs defaultValue="python w-full">
+                <TabsList>
+                    <TabsTrigger value="python">Python</TabsTrigger>
+                    <TabsTrigger value="frontend">Frontend</TabsTrigger>
+                    <TabsTrigger value="ai">AI/ML</TabsTrigger>
+                    <TabsTrigger value="miscellaneous">Miscellaneous</TabsTrigger>
+                </TabsList>
 
-            {/* React Projects */}
-            <section id="frontend">
-                <h2 className="text-2xl font-bold m-6 underline dark:text-gray-100">
-                    Frontend
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {
-                        ReactProjects.map(
-                            (project: ProjectData, index: number) => (
-                                <ProjectCard props={project} key={index} />
-                            )
-                        )
-                    }
-                </div>
-            </section>
 
-            {/* AI Projects */}
-            <section id="ai">
-                <h2 className="text-2xl font-bold m-6 underline dark:text-gray-100">
-                    AI
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {
-                        AIProjects.map(
-                            (project: ProjectData, index: number) => (
-                                <ProjectCard props={project} key={index} />
+                {/* Python Projects */}
+                <TabsContent value="python">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {
+                            PythonProjects.map(
+                                (project: ProjectData, index: number) => (
+                                    <ProjectCard props={project} key={index} />
+                                )
                             )
-                        )
-                    }
-                </div>
-            </section>
+                        }
+                    </div>
+                </TabsContent>
 
-            {/* Miscellaneous Projects */}
-            <section id="miscellaneous">
-                <h2 className="text-2xl font-bold m-6 underline dark:text-gray-100">
-                    Miscellaneous
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {
-                        MiscellaneousProjects.map(
-                            (project: ProjectData, index: number) => (
-                                <ProjectCard props={project} key={index} />
+                {/* React Projects */}
+                <TabsContent value="frontend">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {
+                            ReactProjects.map(
+                                (project: ProjectData, index: number) => (
+                                    <ProjectCard props={project} key={index} />
+                                )
                             )
-                        )
-                    }
-                </div>
-            </section>
+                        }
+                    </div>
+                </TabsContent>
+
+                {/* AI Projects */}
+                <TabsContent value="ai">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {
+                            AIProjects.map(
+                                (project: ProjectData, index: number) => (
+                                    <ProjectCard props={project} key={index} />
+                                )
+                            )
+                        }
+                    </div>
+                </TabsContent>
+
+                {/* Miscellaneous Projects */}
+                <TabsContent value="miscellaneous">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {
+                            MiscellaneousProjects.map(
+                                (project: ProjectData, index: number) => (
+                                    <ProjectCard props={project} key={index} />
+                                )
+                            )
+                        }
+                    </div>
+                </TabsContent>
+            </Tabs>
         </div>
     )
 }

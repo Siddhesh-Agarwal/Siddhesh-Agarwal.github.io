@@ -1,6 +1,6 @@
 "use client";
 
-import { FaFlaskVial, FaGithub, FaHashnode, FaMoon, FaSun } from "react-icons/fa6";
+import { FaFlaskVial, FaHouse, FaGithub, FaHashnode, FaMoon, FaSun } from "react-icons/fa6";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
@@ -28,6 +28,12 @@ export default function Navbar() {
         <NavigationMenu className="bg-gray-100 dark:bg-gray-800 text-black dark:text-gray-50 font-mono shadow-sm dark:shadow-none border-b border-gray-200 dark:border-gray-900 justify-between">
             <NavigationMenuList className="flex flex-row">
                 <NavigationMenuItem className="font-semibold">
+                    <Link href={"/"} prefetch legacyBehavior passHref>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            <FaHouse className="text-lg inline-block mr-2" />
+                            Home
+                        </NavigationMenuLink>
+                    </Link>
                     <Link href={"/projects/"} prefetch={true} legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             <FaFlaskVial className="text-lg inline-block mr-2" />
@@ -52,7 +58,7 @@ export default function Navbar() {
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             <FaGithub className="text-lg inline-block md:mr-2" />
                             <span className="hidden md:inline-block">
-                                Github
+                                GitHub
                             </span>
                         </NavigationMenuLink>
                     </Link>
