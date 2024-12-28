@@ -14,7 +14,7 @@ export default function ProjectCard({ key, props }: { key: number, props: Projec
         >
 
             {/* Space between Both divs */}
-            <div className="pb-3 md:pb-6 h-full flex flex-col justify-around dark:bg-gray-800/50 relative">
+            <div className="pb-3 md:pb-6 h-full flex flex-col justify-between dark:bg-gray-800/50 relative">
                 <div className="inline-block">
                     {
                         props?.featured &&
