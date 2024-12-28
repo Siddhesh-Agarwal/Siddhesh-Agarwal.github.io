@@ -3,7 +3,7 @@ import ProjectCard from "@/components/ProjectCard"
 import { ProjectData } from "@/types/ProjectData"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
-const ReactProjects: ProjectData[] = [
+const JavaScriptProjects: ProjectData[] = [
     {
         title: "Pomofocus clone",
         description: "A clone of the Pomofocus.io website. Helps you focus on your work by using the Pomodoro Technique",
@@ -18,12 +18,12 @@ const ReactProjects: ProjectData[] = [
         description: "A simple no-nonsense price calculator for LLM providers like OpenAI, Claude, and Google based on Input and Output Tokens.",
         image: "https://github.com/user-attachments/assets/a6e4f7be-7382-4d8a-af25-4280210747e9",
         githubURL: "https://github.com/Siddhesh-Agarwal/llm-price-calculator",
-        liveURL: "https://llm-price-calc.vercel.app/",
+        liveURL: "https://llm-price-calculator.pages.dev/",
         tags: ["Vite", "React", "TypeScript", "SWC"],
         featured: true,
     },
     {
-        title: "GitHub Wrapped",
+        title: "GitHub Summary",
         description: "A website that Displays the information of a GitHub User or an Organization in a beautiful way",
         image: "https://user-images.githubusercontent.com/68057995/222699221-8e1b319a-a83e-4498-aceb-02737d8437e5.png",
         githubURL: "https://github.com/Siddhesh-Agarwal/github-wrapped/",
@@ -38,6 +38,21 @@ const ReactProjects: ProjectData[] = [
         liveURL: "https://pokemon-mu-pied.vercel.app/",
         tags: ["React", "TypeScript", "Tailwind"],
     },
+    {
+        title: "Jokes API",
+        description: "A simple API to get jokes via a LLM",
+        githubURL: "https://github.com/Siddhesh-Agarwal/cf-ai-jokes",
+        liveURL: "https://sparkling-dust-9b63.siddhesh-agarwal.workers.dev/",
+        tags: ["JavaScript", "Cloudflare", "Gen AI"],
+    },
+    {
+        title: "Uploadid",
+        description: "Uploadid is a web application that helps colleges and universities keep track of their Faculty participation and achievements through an easy-to-understand Web User Interface.",
+        githubURL: "https://github.com/Siddhesh-Agarwal/uploadid",
+        liveURL: "https://uploadid.vercel.app/",
+        tags: ["Next.js", "TypeScript", "Supabase"],
+        featured: true,
+    },
 ]
 
 const PythonProjects: ProjectData[] = [
@@ -47,21 +62,6 @@ const PythonProjects: ProjectData[] = [
         githubURL: "https://github.com/Siddhesh-Agarwal/matmath/",
         liveURL: "https://pypi.org/project/matmath/",
         tags: ["Python", "PyPI Package", "Maths"],
-        featured: true,
-    },
-    {
-        title: "Secure-Spark",
-        description: "DevToys for cyber security",
-        githubURL: "https://github.com/Siddhesh-Agarwal/Secure-Spark/",
-        tags: ["Python", "Cyber Security"],
-        featured: true,
-    },
-    {
-        title: "IP Database",
-        description: "A Python API to get information about an IP address. Made using streamlit. Deployed on Streamlit Cloud.",
-        githubURL: "https://github.com/Siddhesh-Agarwal/IP-DB/",
-        liveURL: "https://ip-database.streamlit.app",
-        tags: ["Python", "Streamlit"],
         featured: true,
     },
     {
@@ -78,13 +78,22 @@ const PythonProjects: ProjectData[] = [
         githubURL: "https://github.com/Siddhesh-Agarwal/Cryptmoji/",
         liveURL: "https://pypi.org/project/cryptmoji/",
         tags: ["Python", "PyPI Package", "Cyber Security"],
+        featured: true,
     },
     {
-        title: "Newsful News",
-        description: "A simple news extractor that extracts the news from the given url and displays it in a simple UI. It can bypass the paywalls and ad blocks to extract the news.",
-        githubURL: "https://github.com/Siddhesh-Agarwal/news-extractor/",
-        liveURL: "https://newsful-news.onrender.com/",
-        tags: ["Python", "Flask", "Web Scraping"],
+        title: "Secure-Spark",
+        description: "DevToys for cyber security",
+        githubURL: "https://github.com/Siddhesh-Agarwal/Secure-Spark/",
+        tags: ["Python", "Cyber Security"],
+        featured: true,
+    },
+    {
+        title: "IP Database",
+        description: "A Python API to get information about an IP address. Made using streamlit. Deployed on Streamlit Cloud.",
+        githubURL: "https://github.com/Siddhesh-Agarwal/IP-DB/",
+        liveURL: "https://ip-database.streamlit.app",
+        tags: ["Python", "Streamlit"],
+        featured: true,
     },
     {
         title: "CGPA Calculator",
@@ -131,6 +140,7 @@ const AIProjects: ProjectData[] = [
         githubURL: "https://github.com/Siddhesh-Agarwal/Dementia-Detection/",
         liveURL: "https://dementia-detection.streamlit.app/",
         tags: ["Python", "TensorFlow", "Streamlit", "CNN"],
+        featured: true,
     },
     {
         title: "Neural Network in C",
@@ -168,6 +178,28 @@ const MiscellaneousProjects: ProjectData[] = [
     },
 ]
 
+function ProjectCards({ projects }: { projects: ProjectData[] }) {
+    // sort the projects by featured and then by title
+    projects.sort((a, b) => {
+        if (a.featured && !b.featured) return -1
+        if (!a.featured && b.featured) return 1
+        if (a.title < b.title) return -1
+        if (a.title > b.title) return 1
+        return 0
+    })
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {
+                projects.map(
+                    (project: ProjectData, index: number) => (
+                        <ProjectCard props={project} key={index} />
+                    )
+                )
+            }
+        </div>
+    )
+}
+
 export default function ProjectsPage() {
     return (
         <div className="container px-4 md:px-8 lg:px-12 min-w-full bg-white dark:bg-gray-900 py-6 md:pb-12">
@@ -175,65 +207,32 @@ export default function ProjectsPage() {
                 Projects
             </h1>
 
-            <Tabs defaultValue="python w-full">
-                <TabsList>
+            <Tabs defaultValue="python" className="w-full">
+                <TabsList className="w-full flex justify-center">
                     <TabsTrigger value="python">Python</TabsTrigger>
-                    <TabsTrigger value="frontend">Frontend</TabsTrigger>
+                    <TabsTrigger value="javascript">JavaScript</TabsTrigger>
                     <TabsTrigger value="ai">AI/ML</TabsTrigger>
                     <TabsTrigger value="miscellaneous">Miscellaneous</TabsTrigger>
                 </TabsList>
 
-
                 {/* Python Projects */}
                 <TabsContent value="python">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {
-                            PythonProjects.map(
-                                (project: ProjectData, index: number) => (
-                                    <ProjectCard props={project} key={index} />
-                                )
-                            )
-                        }
-                    </div>
+                    <ProjectCards projects={PythonProjects} />
                 </TabsContent>
 
                 {/* React Projects */}
-                <TabsContent value="frontend">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {
-                            ReactProjects.map(
-                                (project: ProjectData, index: number) => (
-                                    <ProjectCard props={project} key={index} />
-                                )
-                            )
-                        }
-                    </div>
+                <TabsContent value="javascript">
+                    <ProjectCards projects={JavaScriptProjects} />
                 </TabsContent>
 
                 {/* AI Projects */}
                 <TabsContent value="ai">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {
-                            AIProjects.map(
-                                (project: ProjectData, index: number) => (
-                                    <ProjectCard props={project} key={index} />
-                                )
-                            )
-                        }
-                    </div>
+                    <ProjectCards projects={AIProjects} />
                 </TabsContent>
 
                 {/* Miscellaneous Projects */}
                 <TabsContent value="miscellaneous">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {
-                            MiscellaneousProjects.map(
-                                (project: ProjectData, index: number) => (
-                                    <ProjectCard props={project} key={index} />
-                                )
-                            )
-                        }
-                    </div>
+                    <ProjectCards projects={MiscellaneousProjects} />
                 </TabsContent>
             </Tabs>
         </div>
