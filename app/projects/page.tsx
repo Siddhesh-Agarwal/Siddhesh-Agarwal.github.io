@@ -1,201 +1,182 @@
 "use client";
-import ProjectCard from "@/components/ProjectCard"
-import { ProjectData } from "@/types/ProjectData"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
-const JavaScriptProjects: ProjectData[] = [
+type CustomDate = {
+    year: number
+    month: number
+}
+
+type Link = {
+    name: string
+    url: string
+}
+
+type Tool = {
+    name: string
+    desc: string
+    links?: Link[]
+    date: CustomDate
+}
+
+
+const ProjectsorTools: Tool[] = [
     {
-        title: "Pomofocus clone",
-        description: "A clone of the Pomofocus.io website. Helps you focus on your work by using the Pomodoro Technique",
-        image: "https://user-images.githubusercontent.com/68057995/220324659-6ef5e3ac-6831-42e1-8190-f7936a111850.png",
-        githubURL: "https://github.com/Siddhesh-Agarwal/Pomofocus-Clone/",
-        liveURL: "https://pomofocus-vite.vercel.app/",
-        tags: ["React", "JavaScript", "SCSS"],
-        featured: true,
+        name: "LLMPrice.fyi",
+        desc: "A simple no-nonsense price calculator for various LLM providers.",
+        links: [
+            { name: "Frontend", url: "https://github.com/Siddhesh-Agarwal/llm-price-calculator" },
+            { name: "Backend", url: "https://github.com/Siddhesh-Agarwal/api-llm-price" },
+            { name: "Live", url: "https://llmprice.fyi/" }
+        ],
+        date: { year: 2024, month: 12 }
     },
     {
-        title: "LLM Price Calculator",
-        description: "A simple no-nonsense price calculator for LLM providers like OpenAI, Claude, and Google based on Input and Output Tokens.",
-        image: "https://github.com/user-attachments/assets/a6e4f7be-7382-4d8a-af25-4280210747e9",
-        githubURL: "https://github.com/Siddhesh-Agarwal/llm-price-calculator",
-        liveURL: "https://llm-price-calculator.pages.dev/",
-        tags: ["Vite", "React", "TypeScript", "SWC"],
-        featured: true,
+        name: "Jokes API",
+        desc: "A simple API to get jokes via a LLM",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/cf-ai-jokes" },
+            { name: "Live", url: "https://sparkling-dust-9b63.siddhesh-agarwal.workers.dev/" },
+        ],
+        date: { year: 2024, month: 11 }
     },
     {
-        title: "GitHub Summary",
-        description: "A website that Displays the information of a GitHub User or an Organization in a beautiful way",
-        image: "https://user-images.githubusercontent.com/68057995/222699221-8e1b319a-a83e-4498-aceb-02737d8437e5.png",
-        githubURL: "https://github.com/Siddhesh-Agarwal/github-wrapped/",
-        liveURL: "https://github-wrapped-five.vercel.app/",
-        tags: ["React", "TypeScript", "GitHub API", "Bootstrap"],
+        name: "Strains RAG",
+        desc: "An Basic RAG based on Kenneth Reitz's StrainsDB - A Database of Cannabis Strains.",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/straindb-rag/" },
+            { name: "Live", url: "https://straindb.streamlit.app/" }
+        ],
+        date: { year: 2024, month: 3 }
     },
     {
-        title: "Pokemon Mu",
-        description: "Pokemon Mu is an app that generates a random Pokemon Card",
-        image: "https://raw.githubusercontent.com/Siddhesh-Agarwal/pokemon/43d063e05fb48bd3252d87286041cca36b9e25a7/Seviper.jpeg",
-        githubURL: "https://github.com/Siddhesh-Agarwal/pokemon/",
-        liveURL: "https://pokemon-mu-pied.vercel.app/",
-        tags: ["React", "TypeScript", "Tailwind"],
+        name: "Uploadid",
+        desc: "Uploadid is a web application that helps colleges and universities keep track of their Faculty participation and achievements through an easy-to-understand Web User Interface.",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/uploadid" },
+            { name: "Live", url: "https://uploadid.vercel.app/" }
+        ],
+        date: { year: 2024, month: 2 }
     },
     {
-        title: "Jokes API",
-        description: "A simple API to get jokes via a LLM",
-        githubURL: "https://github.com/Siddhesh-Agarwal/cf-ai-jokes",
-        liveURL: "https://sparkling-dust-9b63.siddhesh-agarwal.workers.dev/",
-        tags: ["JavaScript", "Cloudflare", "Gen AI"],
+        name: "Newsful",
+        desc: "Advanced Fake News Detection System built for the Kavach Cybersecurity Hackathon 2023",
+        links: [
+            { name: "GitHub", url: "https://github.com/centille/Newsful/" }
+        ],
+        date: { year: 2023, month: 7 }
     },
     {
-        title: "Uploadid",
-        description: "Uploadid is a web application that helps colleges and universities keep track of their Faculty participation and achievements through an easy-to-understand Web User Interface.",
-        githubURL: "https://github.com/Siddhesh-Agarwal/uploadid",
-        liveURL: "https://uploadid.vercel.app/",
-        tags: ["Next.js", "TypeScript", "Supabase"],
-        featured: true,
+        name: "IP Database",
+        desc: "A Python API to get information about an IP address. Made using streamlit. Deployed on Streamlit Cloud.",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/IP-DB/" },
+            { name: "Live", url: "https://ip-database.streamlit.app" }
+        ],
+        date: { year: 2023, month: 4 }
+    },
+    {
+        name: "Dementia Detection",
+        desc: "Dementia Detection using CNN packaged as a Streamlit app",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/Dementia-Detection/" },
+            { name: "Live", url: "https://dementia-detection.streamlit.app/" }
+        ],
+        date: { year: 2023, month: 3 }
+    },
+    {
+        name: "CGPA Calculator",
+        desc: "A simple no-nonsense CGPA Calculator",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/CGPA-Calculator" },
+            { name: "Live", url: "https://cgpa-calc.streamlit.app/" }
+        ],
+        date: { year: 2023, month: 2 }
+    },
+    {
+        name: "Skin Cancer Detection",
+        desc: "Skin Cancer Detection using CNN packaged as a Streamlit app",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/Skin-Cancer-Detection/" },
+            { name: "Live", url: "https://skin-cancer-check.streamlit.app/" }
+        ],
+        date: { year: 2023, month: 1 }
+    },
+    {
+        name: "Cryptmoji",
+        desc: "A Python library to encrypt and decrypt messages using emojis. Published on PyPI.",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/Cryptmoji/" },
+            { name: "Live", url: "https://pypi.org/project/cryptmoji/" }
+        ],
+        date: { year: 2022, month: 9 }
+    },
+    {
+        name: "Secure-Spark",
+        desc: "DevToys for cyber security",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/Secure-Spark/" }
+        ],
+        date: { year: 2022, month: 8 }
+    },
+    {
+        name: "Sierra",
+        desc: "A Python library to write HTML and CSS in pure Python in a simple yet elegant manner using the DOM API. Take advantage of all of Python's powerful functionalities with Sierra. Published on PyPI.",
+        links: [
+            { name: "GitHub", url: "https://github.com/BrainStormYourWayIn/sierra/" },
+            { name: "Live", url: "https://pypi.org/project/sierra/" }
+        ],
+        date: { year: 2021, month: 6 }
+    },
+    {
+        name: "Matmath",
+        desc: "A Python library to perform matrix and Vector operations. Published on PyPI.",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/matmath/" },
+            { name: "Live", url: "https://pypi.org/project/matmath/" }
+        ],
+        date: { year: 2021, month: 6 }
     },
 ]
 
-const PythonProjects: ProjectData[] = [
-    {
-        title: "Matmath",
-        description: "A Python library to perform matrix and Vector operations. Published on PyPI.",
-        githubURL: "https://github.com/Siddhesh-Agarwal/matmath/",
-        liveURL: "https://pypi.org/project/matmath/",
-        tags: ["Python", "PyPI Package", "Maths"],
-        featured: true,
-    },
-    {
-        title: "Sierra",
-        description: "A Python library to write HTML and CSS in pure Python in a simple yet elegant manner using the DOM API. Take advantage of all of Python's powerful functionalities with Sierra. Published on PyPI.",
-        githubURL: "https://github.com/BrainStormYourWayIn/sierra/",
-        liveURL: "https://pypi.org/project/sierra/",
-        tags: ["Python", "PyPI Package", "HTML", "CSS"],
-        featured: true,
-    },
-    {
-        title: "Cryptmoji",
-        description: "A Python library to encrypt and decrypt messages using emojis. Published on PyPI.",
-        githubURL: "https://github.com/Siddhesh-Agarwal/Cryptmoji/",
-        liveURL: "https://pypi.org/project/cryptmoji/",
-        tags: ["Python", "PyPI Package", "Cyber Security"],
-        featured: true,
-    },
-    {
-        title: "Secure-Spark",
-        description: "DevToys for cyber security",
-        githubURL: "https://github.com/Siddhesh-Agarwal/Secure-Spark/",
-        tags: ["Python", "Cyber Security"],
-        featured: true,
-    },
-    {
-        title: "IP Database",
-        description: "A Python API to get information about an IP address. Made using streamlit. Deployed on Streamlit Cloud.",
-        githubURL: "https://github.com/Siddhesh-Agarwal/IP-DB/",
-        liveURL: "https://ip-database.streamlit.app",
-        tags: ["Python", "Streamlit"],
-        featured: true,
-    },
-    {
-        title: "CGPA Calculator",
-        description: "A simple no-nonsense CGPA Calculator",
-        githubURL: "https://github.com/Siddhesh-Agarwal/CGPA-Calculator",
-        liveURL: "https://cgpa-calc.streamlit.app/",
-        tags: ["Python", "Streamlit"]
-    }
-]
-
-const AIProjects: ProjectData[] = [
-    {
-        title: "Newsful",
-        description: "Advanced Fake News Detection System",
-        githubURL: "https://github.com/centille/Newsful/",
-        tags: ["Python", "FastAPI", "MongoDB", "Gen AI", "Browser Extension"],
-        featured: true,
-    },
-    {
-        title: "Skin Cancer Detection",
-        description: "Skin Cancer Detection using CNN",
-        githubURL: "https://github.com/Siddhesh-Agarwal/Skin-Cancer-Detection/",
-        liveURL: "https://skin-cancer-check.streamlit.app/",
-        tags: ["Python", "TensorFlow", "Streamlit", "CNN"],
-        featured: true,
-    },
-    {
-        title: "Strains RAG",
-        description: "An RAG Model based on Kenneth Reitz's StrainsDB.",
-        githubURL: "https://github.com/Siddhesh-Agarwal/straindb-rag/",
-        liveURL: "https://straindb.streamlit.app/",
-        tags: ["Python", "Streamlit", "LangChain.py", "Gen AI"],
-        featured: true,
-    },
-    {
-        title: "ChatSKCET",
-        description: "Chatbot for SKCET",
-        githubURL: "https://github.com/Siddhesh-Agarwal/ChatSKCET/",
-        tags: ["LangChain.py", "TypeScript", "Next", "Gen AI"],
-    },
-    {
-        title: "Dementia Detection",
-        description: "Dementia Detection using CNN",
-        githubURL: "https://github.com/Siddhesh-Agarwal/Dementia-Detection/",
-        liveURL: "https://dementia-detection.streamlit.app/",
-        tags: ["Python", "TensorFlow", "Streamlit", "CNN"],
-        featured: true,
-    },
-    {
-        title: "Neural Network in C",
-        description: "Implementation of sigmoid and relu layer along with various types of regressions in plain C",
-        githubURL: "https://github.com/Siddhesh-Agarwal/Neural-Network-in-C/",
-        tags: ["C", "Deep Learning", "Maths"],
-    },
-    {
-        title: "URL-2-Chroma",
-        description: "A streamlit app to generate chroma DB locally",
-        githubURL: "https://github.com/Siddhesh-Agarwal/URL-2-Chroma/",
-        tags: ["Python", "Streamlit", "Chroma", "VectorDB", "Gen AI"],
-    },
-]
-
-const MiscellaneousProjects: ProjectData[] = [
-    {
-        title: "Lab Management System",
-        description: "A project to manage lab resources and student allocation in SKCET Labs",
-        githubURL: "https://github.com/lab-management-system/",
-        tags: ["PHP", "Laravel", "Blade", "Python"],
-        featured: true,
-    },
-    {
-        title: "Scientific Computing with Python",
-        description: `Projects for FreeCodeCamp"s "Scientific Computing with Python" Certificate.`,
-        githubURL: "https://github.com/Siddhesh-Agarwal/FreeCodeCamp-Python-Challenges/",
-        tags: ["Python", "Scientific Computing", "FreeCodeCamp"],
-    },
-    {
-        title: "Data Analysis with Python",
-        description: `Projects for FreeCodeCamp"s "Data Analysis with Python" Certificate.`,
-        githubURL: "https://github.com/Siddhesh-Agarwal/Data-Analysis-with-Python/",
-        tags: ["Python", "Data Analysis", "FreeCodeCamp"],
-    },
-]
-
-function ProjectCards({ projects }: { projects: ProjectData[] }) {
-    // sort the projects by featured and then by title
-    projects.sort((a, b) => {
-        if (a.featured && !b.featured) return -1
-        if (!a.featured && b.featured) return 1
-        if (a.title < b.title) return -1
-        if (a.title > b.title) return 1
-        return 0
-    })
+function ToolCard({ data }: { data: Tool }) {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {
-                projects.map(
-                    (project: ProjectData, index: number) => (
-                        <ProjectCard props={project} key={index} />
-                    )
-                )
-            }
+        <div className="flex flex-row bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow-lg">
+            {/* Display dat in MM-YYYY format i.e. add padding to make 6-2023 to 06-2023 */}
+            <div className="text-gray-500 dark:text-gray-400 text-2xl mr-4">
+                {data.date.month < 10 ? `0${data.date.month}` : data.date.month}-{data.date.year}
+            </div>
+            <div>
+                <h2 className="text-2xl font-bold dark:text-gray-50">{data.name}</h2>
+                <p className="text-lg dark:text-gray-50 text-wrap text-justify">
+                    {data.desc}
+                </p>
+                <div className="flex gap-6 items-center mt-4">
+                    {
+                        data.links?.map((link, index) => (
+                            <a key={index} href={link.url} target="_blank" rel="noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline px-1">
+                                {`${link.name} =>`}
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function DisplayTools({ tools }: { tools: Tool[] }) {
+    // Sort the tools by date
+    tools.sort((a, b) => {
+        if (a.date.year === b.date.year) {
+            return b.date.month - a.date.month
+        }
+        return b.date.year - a.date.year
+    })
+
+    return (
+        <div className="flex flex-col gap-4 max-w-6xl mx-auto">
+            {tools.map((tool, index) => (
+                <ToolCard key={index} data={tool} />
+            ))}
         </div>
     )
 }
@@ -203,38 +184,10 @@ function ProjectCards({ projects }: { projects: ProjectData[] }) {
 export default function ProjectsPage() {
     return (
         <div className="container px-4 md:px-8 lg:px-12 min-w-full bg-white dark:bg-gray-900 py-6 md:pb-12">
-            <h1 className="text-4xl font-bold text-center mb-6 semibold underline dark:text-gray-50">
-                Projects
+            <h1 className="text-4xl font-bold mb-6 semibold dark:text-gray-50">
+                Projects/Tools I{"'"}ve Built:
             </h1>
-
-            <Tabs defaultValue="python" className="w-full">
-                <TabsList className="w-full flex justify-center">
-                    <TabsTrigger value="python">Python</TabsTrigger>
-                    <TabsTrigger value="javascript">JavaScript</TabsTrigger>
-                    <TabsTrigger value="ai">AI/ML</TabsTrigger>
-                    <TabsTrigger value="miscellaneous">Miscellaneous</TabsTrigger>
-                </TabsList>
-
-                {/* Python Projects */}
-                <TabsContent value="python">
-                    <ProjectCards projects={PythonProjects} />
-                </TabsContent>
-
-                {/* React Projects */}
-                <TabsContent value="javascript">
-                    <ProjectCards projects={JavaScriptProjects} />
-                </TabsContent>
-
-                {/* AI Projects */}
-                <TabsContent value="ai">
-                    <ProjectCards projects={AIProjects} />
-                </TabsContent>
-
-                {/* Miscellaneous Projects */}
-                <TabsContent value="miscellaneous">
-                    <ProjectCards projects={MiscellaneousProjects} />
-                </TabsContent>
-            </Tabs>
+            <DisplayTools tools={ProjectsorTools} />
         </div>
     )
 }
