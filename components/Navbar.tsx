@@ -23,23 +23,29 @@ function ModeToggle() {
     )
 }
 
-export default function Navbar() {
+export default function Navbar({ Hide }: { Hide?: string }) {
     return (
         <NavigationMenu className="bg-gray-100 dark:bg-gray-800 text-black dark:text-gray-50 shadow-sm dark:shadow-none border-b border-gray-200 dark:border-gray-900 justify-between">
             <NavigationMenuList className="flex flex-row">
                 <NavigationMenuItem className="font-semibold">
-                    <Link href={"/"} prefetch legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            <FaHouse className="text-lg inline-block mr-2" />
-                            Home
-                        </NavigationMenuLink>
-                    </Link>
-                    <Link href={"/projects"} prefetch={true} legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            <FaFlaskVial className="text-lg inline-block mr-2" />
-                            Projects
-                        </NavigationMenuLink>
-                    </Link>
+                    {
+                        Hide !== "home" &&
+                        <Link href={"/"} prefetch legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                <FaHouse className="text-lg inline-block mr-2" />
+                                Home
+                            </NavigationMenuLink>
+                        </Link>
+                    }
+                    {
+                        Hide !== "projects" &&
+                        <Link href={"/projects"} prefetch={true} legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                <FaFlaskVial className="text-lg inline-block mr-2" />
+                                Projects
+                            </NavigationMenuLink>
+                        </Link>
+                    }
                 </NavigationMenuItem>
             </NavigationMenuList>
             <NavigationMenuList className="flex flex-row">

@@ -1,5 +1,7 @@
 "use client";
 
+import Navbar from "@/components/Navbar";
+
 type CustomDate = {
     year: number
     month: number
@@ -146,14 +148,14 @@ function ToolCard({ data }: { data: Tool }) {
             </div>
             <div>
                 <h2 className="text-2xl font-bold dark:text-gray-50">{data.name}</h2>
-                <p className="text-lg dark:text-gray-50 text-wrap text-justify">
+                <p className="text-lg dark:text-gray-50 text-wrap md:text-justify">
                     {data.desc}
                 </p>
-                <div className="flex gap-6 items-center mt-4">
+                <div className="flex gap-3 md:gap-6 items-center mt-4 text-wrap">
                     {
                         data.links?.map((link, index) => (
-                            <a key={index} href={link.url} target="_blank" rel="noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline px-1">
-                                {`${link.name} =>`}
+                            <a key={index} href={link.url} target="_blank" rel="noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline px-0 md:px-1">
+                                {link.name}<span className="hidden md:inline-block">{" =>"}</span>
                             </a>
                         ))
                     }
@@ -183,11 +185,14 @@ function DisplayTools({ tools }: { tools: Tool[] }) {
 
 export default function ProjectsPage() {
     return (
-        <div className="container px-4 md:px-8 lg:px-12 min-w-full bg-white dark:bg-gray-900 py-6 md:pb-12">
-            <h1 className="text-4xl font-bold mb-6 semibold dark:text-gray-50">
-                Projects/Tools I{"'"}ve Built:
-            </h1>
-            <DisplayTools tools={ProjectsorTools} />
-        </div>
+        <>
+            <Navbar Hide="projects" />
+            <main className="container px-4 md:px-8 lg:px-12 min-w-full bg-white dark:bg-gray-900 py-6 md:pb-12">
+                <h1 className="text-4xl font-bold mb-6 semibold dark:text-gray-50">
+                    Projects/Tools I{"'"}ve Built:
+                </h1>
+                <DisplayTools tools={ProjectsorTools} />
+            </main>
+        </>
     )
 }
