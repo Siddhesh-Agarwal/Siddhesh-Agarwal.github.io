@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const font = JetBrains_Mono();
+const font = JetBrains_Mono({subsets: ["cyrillic"]});
 const site_config = {
   url: new URL("https://siddhesh-tech.vercel.app/"),
   title: "Siddhesh's Portfolio",
