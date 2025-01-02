@@ -45,6 +45,7 @@ import { ToolLink } from "@/types/ToolLink";
 import Image from "next/image";
 import profilePic from "@/public/me-according-to-chatgpt.webp"
 import { textSize } from "@/lib/utils";
+import HelloImage from "@/assets/hello.svg"
 
 const links: ToolLink[] = [
     { name: "Python", icon: SiPython },
@@ -105,24 +106,24 @@ const socialLinks: SocialLink[] = [
 
 export const Intro: React.FC = () => {
     return (
-        <div className="container py-4 dark:text-white max-w-6xl font-mono">
+        <div className="container py-4 dark:text-white max-w-6xl">
             <div className="my-5">
                 <div className="text-center">
                     <h1 className={`${textSize("4xl")} inline`}>
-                        Hello, I&apos;m{' '}<span className="text-blue-600 dark:text-blue-500 font-bolder">Siddhesh</span>
+                        Hello, I&apos;m{' '}<span className="text-blue-600 dark:text-blue-500 font-semibold underline">Siddhesh</span> <Image src={HelloImage} alt="Hello" className="inline-block w-12 h-12" />
                     </h1>
                 </div>
             </div>
 
             {/* Divide into 2 parts */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
                 <div className="my-5">
                     <p className="text-justify">
-                        Hello! I&apos;m <b>Siddhesh Agarwal</b>, a <b>passionate software engineering student</b> with a focus on <b>developing efficient, scalable solutions</b>. I have been programming for the past 5 years, since I was a high school student. Currently, I&apos;m working on honing my skills in <b>algorithm optimization, problem-solving, and code efficiency</b>, especially in preparation for Software Development Engineer (SDE) roles. My journey is marked by <b>hands-on experience with complex coding problems</b>, where I enjoy tackling time complexity challenges and finding creative ways to maximize performance. As I apply for SDE internships, I am excited to bring my drive for <b>continuous improvement, deep understanding of coding fundamentals, and passion for technology</b> to real-world projects. I look forward to contributing to innovative solutions that make an impact.
+                        Hello! I&apos;m <b>Siddhesh Agarwal</b>, a <b>passionate software engineering student</b> with a focus on <b>developing efficient, scalable solutions</b>. I have been programming for the past 5 years, since I was 16 yo. Currently, I&apos;m working on honing my skills in <b>Golang</b> and <b>React Native</b>.
                     </p>
                 </div>
-                <div className="my-5">
-                    <Image src={profilePic} alt="Siddhesh Agarwal" className="w-full h-auto rounded-md shadow-lg" />
+                <div className="my-5 place-items-center">
+                    <Image src={profilePic} alt="Siddhesh Agarwal" className="w-full max-w-2xl h-auto rounded-md shadow-lg" />
                     <div className="text-center text-muted-foreground">
                         Me according to GPT-4o and Dall-e
                     </div>

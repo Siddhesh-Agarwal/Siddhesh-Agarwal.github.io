@@ -1,40 +1,60 @@
 import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["cyrillic"] });
-const site_url = new URL("https://siddhesh-tech.vercel.app/");
-const site_title = "Siddhesh's Portfolio";
-const site_description = "Portfolio of Siddhesh Agarwal";
-const site_image = "https://github.com/siddhesh-agarwal.png";
-const site_author = "Siddhesh Agarwal";
+const font = JetBrains_Mono();
+const site_config = {
+  url: new URL("https://siddhesh-tech.vercel.app/"),
+  title: "Siddhesh's Portfolio",
+  description: "Portfolio of Siddhesh Agarwal",
+  image: "https://github.com/siddhesh-agarwal.png",
+  author: "Siddhesh Agarwal",
+  twitter_handle: "@Siddhesh0205",
+}
 
 export const metadata: Metadata = {
-  title: site_title,
-  description: site_description,
-  metadataBase: site_url,
+  title: site_config.title,
+  description: site_config.description,
+  metadataBase: site_config.url,
   authors: {
-    name: site_author,
-    url: site_url
+    name: site_config.author,
+    url: site_config.url
   },
   twitter: {
-    title: site_title,
-    description: site_description,
-    creator: site_author,
-    creatorId: "@Siddhesh0205",
+    title: site_config.title,
+    description: site_config.description,
+    creator: site_config.author,
+    creatorId: site_config.twitter_handle,
     card: "summary_large_image",
-    images: site_image
+    images: site_config.image
   },
   openGraph: {
-    siteName: site_title,
-    title: site_title,
-    description: site_description,
-    url: site_url,
-    images: site_image,
+    siteName: site_config.title,
+    title: site_config.title,
+    description: site_config.description,
+    url: site_config.url,
+    images: site_config.image,
   },
-  keywords: ["Siddhesh", "Siddhesh Agarwal", "Siddhesh Agarwal Portfolio", "Siddhesh Portfolio"],
+  keywords: [
+    "Siddhesh Agarwal",
+    "Siddhesh's Portfolio",
+    "Software Engineer",
+    "Web Developer",
+    "Full Stack Developer",
+    "Backend Developer",
+    "React",
+    "Next.js",
+    "Python" ,
+    "FastAPI",
+    "Gen AI",
+    "Tech Portfolio",
+    "Software Development",
+    "Coding Portfolio",
+    "Software Engineering Student",
+    "Tech Projects"
+  ],
   generator: "Next.js",
 };
 
@@ -48,7 +68,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.className} dark:bg-gray-900`}>
+      <body className={`${font.className} dark:bg-gray-900`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
