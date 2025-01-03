@@ -156,21 +156,22 @@ const ProjectsorTools: Tool[] = [
 
 function ToolCard({ data }: { data: Tool }) {
     return (
-        <div className="flex flex-row bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow-lg">
+        <div className="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow-lg overflow-x-hidden">
             {/* Display dat in MM-YYYY format i.e. add padding to make 6-2023 to 06-2023 */}
-            <div className="text-gray-500 dark:text-gray-400 text-2xl mr-4">
+            <div className="text-gray-500 dark:text-gray-400 text-lg md:text-2xl mr-4">
                 {data.date.month < 10 ? `0${data.date.month}` : data.date.month}-{data.date.year}
             </div>
             <div>
                 {/* Title */}
-                <h2 className="text-2xl font-bold dark:text-gray-50 mb-2">{data.name}</h2>
+                <h2 className="text-lg md:text-2xl font-bold dark:text-gray-50 mb-2">{data.name}</h2>
 
                 {/* Description */}
-                <p className="text-lg dark:text-gray-50 text-wrap md:text-justify">
+                <p className="text-md md:text-lg dark:text-gray-50 text-wrap md:text-justify">
                     {data.desc}
                 </p>
+
                 {/* Tags */}
-                <div className="flex gap-2 text-xs">
+                <div className="flex flex-row gap-2 text-xs flex-wrap">
                     {
                         data.tags.map((tag, index) => (
                             <span key={index} className="bg-gray-200 dark:bg-gray-700 text-white dark:text-gray-50 px-2 py-1 rounded-sm">
@@ -181,7 +182,7 @@ function ToolCard({ data }: { data: Tool }) {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-3 md:gap-6 items-center mt-2 text-wrap font-semibold">
+                <div className="flex gap-4 md:gap-6 items-center mt-2 text-wrap font-semibold">
                     {
                         data.links.map((linkObj, index) => (
                             <Link key={index} href={linkObj.url} target="_blank" rel="noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline px-0 md:px-1">
