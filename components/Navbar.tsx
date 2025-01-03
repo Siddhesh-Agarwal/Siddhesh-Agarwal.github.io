@@ -1,7 +1,6 @@
 "use client";
 
 import { FaFlaskVial, FaHouse, FaGithub, FaHashnode, FaMoon, FaSun } from "react-icons/fa6";
-import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
 import { Button } from "./ui/button";
@@ -30,44 +29,36 @@ export default function Navbar({ Hide }: { Hide?: string }) {
                 <NavigationMenuItem className="font-semibold">
                     {
                         Hide !== "home" &&
-                        <Link href={"/"} prefetch legacyBehavior passHref>
-                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                <FaHouse className="text-lg inline-block mr-2" />
-                                Home
-                            </NavigationMenuLink>
-                        </Link>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()} href={"/"}>
+                            <FaHouse className="text-lg inline-block mr-2" />
+                            Home
+                        </NavigationMenuLink>
                     }
                     {
                         Hide !== "projects" &&
-                        <Link href={"/projects"} prefetch={true} legacyBehavior passHref>
-                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                <FaFlaskVial className="text-lg inline-block mr-2" />
-                                Projects
-                            </NavigationMenuLink>
-                        </Link>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()} href={"/projects"}>
+                            <FaFlaskVial className="text-lg inline-block mr-2" />
+                            Projects
+                        </NavigationMenuLink>
                     }
                 </NavigationMenuItem>
             </NavigationMenuList>
             <NavigationMenuList className="flex flex-row">
                 <NavigationMenuItem className="font-semibold">
-                    <Link href={"https://siddhesh2003.hashnode.dev/"} target="_blank" passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            <FaHashnode className="text-lg inline-block md:mr-2" />
-                            <span className="hidden md:inline-block">
-                                Hashnode
-                            </span>
-                        </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()} href={"https://siddhesh2003.hashnode.dev/"} target="_blank">
+                        <FaHashnode className="text-lg inline-block md:mr-2" />
+                        <span className="hidden md:inline-block">
+                            Hashnode
+                        </span>
+                    </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="font-semibold">
-                    <Link href={"https://github.com/Siddhesh-Agarwal/"} target="_blank" passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            <FaGithub className="text-lg inline-block md:mr-2" />
-                            <span className="hidden md:inline-block">
-                                GitHub
-                            </span>
-                        </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()} href={"https://github.com/Siddhesh-Agarwal/"} target="_blank">
+                        <FaGithub className="text-lg inline-block md:mr-2" />
+                        <span className="hidden md:inline-block">
+                            GitHub
+                        </span>
+                    </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <ModeToggle />

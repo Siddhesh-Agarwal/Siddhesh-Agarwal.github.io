@@ -139,16 +139,16 @@ export const Intro: React.FC = () => {
                     <div className="inline-flex justify-center w-full md:max-w-xl lg:max-w-3xl flex-wrap px-4">
                         {
                             links.map(
-                                (link: ToolLink, index: number) => {
+                                (linkObj: ToolLink, index: number) => {
                                     return (
                                         <motion.div
                                             className={`m-2 text-blue-600 dark:text-blue-500 font-semibold inline-block ${textSize("xl")} w-fit cursor-pointer`}
                                             whileHover={{ scale: 1.25 }}
                                             whileTap={{ scale: 0.8 }}
                                             key={index}
-                                            title={link.name}
+                                            title={linkObj.name}
                                         >
-                                            <link.icon className="inline-block" />
+                                            <linkObj.icon className="inline-block" />
                                         </motion.div>
                                     )
                                 }
@@ -165,10 +165,10 @@ export const Intro: React.FC = () => {
                     <div className="row-auto">
                         <div className="col-span-12 flex flex-wrap justify-center">
                             {
-                                socialLinks.map((link, index) => {
+                                socialLinks.map((linkObj, index) => {
                                     return (
                                         <Link
-                                            href={link.link}
+                                            href={linkObj.link}
                                             key={index}
                                             rel="noreferrer noopener" target="_blank"
                                             passHref
@@ -178,9 +178,9 @@ export const Intro: React.FC = () => {
                                                 whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.9 }}
                                             >
-                                                <link.icon className="inline-block" />
+                                                <linkObj.icon className="inline-block" />
                                                 <p className="inline-block mx-2">
-                                                    {link.name}
+                                                    {linkObj.name}
                                                 </p>
                                             </motion.div>
                                         </Link>

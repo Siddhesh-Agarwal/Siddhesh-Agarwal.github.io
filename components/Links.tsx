@@ -113,13 +113,13 @@ export const Links: React.FC = () => {
                     <div className="inline-flex flex-wrap justify-center">
                         {
                             socialLinks.map(
-                                (link, index) => {
+                                (linkObj, index) => {
                                     return (
                                         <Link
-                                            href={link.link}
+                                            href={linkObj.link}
                                             rel="noreferrer noopener" target="_blank"
                                             key={index}
-                                            title={link.name}
+                                            title={linkObj.name}
                                             passHref
                                         >
                                             <motion.div
@@ -128,7 +128,7 @@ export const Links: React.FC = () => {
                                                 whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.9 }}
                                             >
-                                                <link.icon />
+                                                <linkObj.icon />
                                             </motion.div>
                                         </Link>
                                     )
