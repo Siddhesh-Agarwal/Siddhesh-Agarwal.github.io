@@ -123,7 +123,7 @@ export const Intro: React.FC = () => {
                     </p>
                 </div>
                 <div className="my-5 place-items-center">
-                    <Image src={profilePic} alt="Siddhesh Agarwal" className="w-full max-w-2xl h-auto rounded-md shadow-lg" />
+                    <Image src={profilePic} alt="Siddhesh Agarwal" className="w-full max-w-2xl h-auto rounded-md shadow-lg mx-auto" />
                     <div className="text-center text-muted-foreground">
                         Me according to GPT-4o and Dall-e
                     </div>
