@@ -1,13 +1,14 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 type CustomDate = {
     year: number
     month: number
 }
 
-type Link = {
+type LinkInfo = {
     name: string
     url: string
 }
@@ -15,7 +16,8 @@ type Link = {
 type Tool = {
     name: string
     desc: string
-    links?: Link[]
+    links: LinkInfo[]
+    tags: string[]
     date: CustomDate
 }
 
@@ -29,6 +31,7 @@ const ProjectsorTools: Tool[] = [
             { name: "Backend", url: "https://github.com/Siddhesh-Agarwal/api-llm-price" },
             { name: "Live", url: "https://llmprice.fyi/" }
         ],
+        tags: ["React", "TypeScript", "SWC", "Golang", "Cloudflare Workers"],
         date: { year: 2024, month: 12 }
     },
     {
@@ -38,6 +41,7 @@ const ProjectsorTools: Tool[] = [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/cf-ai-jokes" },
             { name: "Live", url: "https://sparkling-dust-9b63.siddhesh-agarwal.workers.dev/" },
         ],
+        tags: ["JavaScript", "Cloudflare Workers", "Gen AI"],
         date: { year: 2024, month: 11 }
     },
     {
@@ -47,6 +51,7 @@ const ProjectsorTools: Tool[] = [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/straindb-rag/" },
             { name: "Live", url: "https://straindb.streamlit.app/" }
         ],
+        tags: ["Python", "Streamlit", "Langchain"],
         date: { year: 2024, month: 3 }
     },
     {
@@ -56,6 +61,7 @@ const ProjectsorTools: Tool[] = [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/uploadid" },
             { name: "Live", url: "https://uploadid.vercel.app/" }
         ],
+        tags: ["Next", "TypeScript", "ShadCN UI", "Supabase", "Vercel"],
         date: { year: 2024, month: 2 }
     },
     {
@@ -64,6 +70,7 @@ const ProjectsorTools: Tool[] = [
         links: [
             { name: "GitHub", url: "https://github.com/centille/Newsful/" }
         ],
+        tags: ["Python", "FastAPI", "OpenAI", "AI Agents", "MongoDB"],
         date: { year: 2023, month: 7 }
     },
     {
@@ -73,6 +80,7 @@ const ProjectsorTools: Tool[] = [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/IP-DB/" },
             { name: "Live", url: "https://ip-database.streamlit.app" }
         ],
+        tags: ["Python", "Streamlit", "IP Geolocation"],
         date: { year: 2023, month: 4 }
     },
     {
@@ -82,6 +90,7 @@ const ProjectsorTools: Tool[] = [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/Dementia-Detection/" },
             { name: "Live", url: "https://dementia-detection.streamlit.app/" }
         ],
+        tags: ["Python", "Streamlit", "TensorFlow", "CNN"],
         date: { year: 2023, month: 3 }
     },
     {
@@ -91,6 +100,7 @@ const ProjectsorTools: Tool[] = [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/CGPA-Calculator" },
             { name: "Live", url: "https://cgpa-calc.streamlit.app/" }
         ],
+        tags: ["Python", "Streamlit"],
         date: { year: 2023, month: 2 }
     },
     {
@@ -100,6 +110,7 @@ const ProjectsorTools: Tool[] = [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/Skin-Cancer-Detection/" },
             { name: "Live", url: "https://skin-cancer-check.streamlit.app/" }
         ],
+        tags: ["Python", "Streamlit", "TensorFlow", "CNN"],
         date: { year: 2023, month: 1 }
     },
     {
@@ -109,6 +120,7 @@ const ProjectsorTools: Tool[] = [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/Cryptmoji/" },
             { name: "Live", url: "https://pypi.org/project/cryptmoji/" }
         ],
+        tags: ["Python", "PyPI", "Crytography"],
         date: { year: 2022, month: 9 }
     },
     {
@@ -117,6 +129,7 @@ const ProjectsorTools: Tool[] = [
         links: [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/Secure-Spark/" }
         ],
+        tags: ["Python", "Streamlit", "Cyber Security"],
         date: { year: 2022, month: 8 }
     },
     {
@@ -126,6 +139,7 @@ const ProjectsorTools: Tool[] = [
             { name: "GitHub", url: "https://github.com/BrainStormYourWayIn/sierra/" },
             { name: "Live", url: "https://pypi.org/project/sierra/" }
         ],
+        tags: ["Python", "PyPI", "HTML", "CSS", "JavaScript"],
         date: { year: 2021, month: 6 }
     },
     {
@@ -135,6 +149,7 @@ const ProjectsorTools: Tool[] = [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/matmath/" },
             { name: "Live", url: "https://pypi.org/project/matmath/" }
         ],
+        tags: ["Python", "PyPI", "Maths"],
         date: { year: 2021, month: 6 }
     },
 ]
@@ -147,16 +162,31 @@ function ToolCard({ data }: { data: Tool }) {
                 {data.date.month < 10 ? `0${data.date.month}` : data.date.month}-{data.date.year}
             </div>
             <div>
-                <h2 className="text-2xl font-bold dark:text-gray-50">{data.name}</h2>
+                {/* Title */}
+                <h2 className="text-2xl font-bold dark:text-gray-50 mb-2">{data.name}</h2>
+
+                {/* Description */}
                 <p className="text-lg dark:text-gray-50 text-wrap md:text-justify">
                     {data.desc}
                 </p>
-                <div className="flex gap-3 md:gap-6 items-center mt-4 text-wrap">
+                {/* Tags */}
+                <div className="flex gap-2 text-xs">
                     {
-                        data.links?.map((link, index) => (
-                            <a key={index} href={link.url} target="_blank" rel="noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline px-0 md:px-1">
-                                {link.name}<span className="hidden md:inline-block">{" =>"}</span>
-                            </a>
+                        data.tags.map((tag, index) => (
+                            <span key={index} className="bg-gray-200 dark:bg-gray-700 text-white dark:text-gray-50 px-2 py-1 rounded-sm">
+                                {tag}
+                            </span>
+                        ))
+                    }
+                </div>
+
+                {/* Links */}
+                <div className="flex gap-3 md:gap-6 items-center mt-2 text-wrap font-semibold">
+                    {
+                        data.links.map((linkObj, index) => (
+                            <Link key={index} href={linkObj.url} target="_blank" rel="noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline px-0 md:px-1">
+                                {linkObj.name}<span className="hidden md:inline-block">{"=>"}</span>
+                            </Link>
                         ))
                     }
                 </div>
