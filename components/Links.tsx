@@ -4,6 +4,7 @@ import {
 import {
     SiDevdotto,
     SiGithub,
+    SiGmail,
     SiHackerearth,
     SiHackerrank,
     SiHashnode,
@@ -27,6 +28,11 @@ const socialLinks: SocialLink[] = [
         name: "GitHub",
         icon: SiGithub,
         link: "https://www.github.com/siddhesh-agarwal/"
+    },
+    {
+        name: "Gmail",
+        icon: SiGmail,
+        link: "mailto:siddhesh.agarwal@gmail.com"
     },
     {
         name: "HackerEarth",
@@ -61,12 +67,12 @@ const socialLinks: SocialLink[] = [
     {
         name: "StackOverflow",
         icon: SiStackoverflow,
-        link: "https://stackoverflow.com/users/14257886/siddhesh-agarwal/"
+        link: "https://stackoverflow.com/users/14257886/"
     },
     {
         name: "X",
         icon: SiX,
-        link: "https://www.twitter.com/siddhesh0205/"
+        link: "https://x.com/siddhesh0205/"
     },
 ]
 
@@ -81,13 +87,9 @@ export const Links: React.FC = () => {
         }
     }
 
-    const item = {
-        hidden: { opacity: 0 },
-        show: { opacity: 1 }
-    }
-
     return (
-        <motion.div className="bg-white py-5 px-3 md:px-8 md:rounded-lg shadow-lg hover:shadow-xl dark:bg-gray-800 dark:text-white"
+        <motion.div
+            className="bg-white py-12 md:py-5 px-3 md:px-8 md:rounded-lg shadow-lg hover:shadow-xl dark:bg-gray-800 dark:text-white"
             style={{ maxWidth: "48rem", minHeight: "16rem" }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -99,8 +101,8 @@ export const Links: React.FC = () => {
                     <h1 className="text-3xl text-center font-bold">
                         Siddhesh Agarwal
                     </h1>
-                    <h2 className="text-xl text-center mt-2 font-semibold dark:text-gray-200">
-                        CSE Student
+                    <h2 className="text-lg md:text-xl text-center mt-2 font-semibold dark:text-gray-200">
+                        Just a Chill Guy
                     </h2>
                 </div>
                 {/* Animation to display social links one by one */}
@@ -124,7 +126,7 @@ export const Links: React.FC = () => {
                                         >
                                             <motion.div
                                                 className="m-2 p-2 rounded-2xl border border-black dark:border-gray-100 shadow-sm bg-white text-lg dark:bg-gray-800 dark:text-white"
-                                                variants={item}
+                                                variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }}
                                                 whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.9 }}
                                             >
