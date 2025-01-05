@@ -5,7 +5,7 @@ import "./globals.css";
 
 const font = JetBrains_Mono({subsets: ["cyrillic"]});
 const site_config = {
-  url: new URL("https://siddhesh-tech.vercel.app/"),
+  url: "https://siddhesh-tech.vercel.app/",
   title: "Siddhesh's Portfolio",
   description: "Portfolio of Siddhesh Agarwal",
   image: "https://github.com/siddhesh-agarwal.png",
@@ -16,7 +16,7 @@ const site_config = {
 export const metadata: Metadata = {
   title: site_config.title,
   description: site_config.description,
-  metadataBase: site_config.url,
+  metadataBase: new URL(site_config.url),
   authors: {
     name: site_config.author,
     url: site_config.url
@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/1F468-200D-1F4BB.svg" type="image/svg+xml" />
       </head>
       <body className={`${font.className} dark:bg-gray-900`}>
         <ThemeProvider
