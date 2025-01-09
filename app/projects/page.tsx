@@ -217,7 +217,7 @@ function DisplayTools({ tools }: { tools: Tool[] }) {
 export default function ProjectsPage() {
     return (
         <>
-            <Navbar Hide="projects" />
+            <Navbar hide="projects" />
             <main className="container px-4 md:px-8 lg:px-12 min-w-full bg-white dark:bg-gray-900 py-6 md:pb-12">
                 <h1 className="text-4xl font-bold mb-6 semibold dark:text-gray-50">
                     Projects/Tools I{"'"}ve Built:

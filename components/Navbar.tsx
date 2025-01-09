@@ -22,20 +22,20 @@ function ModeToggle() {
     )
 }
 
-export default function Navbar({ Hide }: { Hide?: string }) {
+export default function Navbar({ hide }: { hide?: string }) {
     return (
         <NavigationMenu className="bg-gray-100 dark:bg-gray-800 text-black dark:text-gray-50 shadow-sm dark:shadow-none border-b border-gray-200 dark:border-gray-900 justify-between">
             <NavigationMenuList className="flex flex-row">
                 <NavigationMenuItem className="font-semibold">
                     {
-                        Hide !== "home" &&
+                        hide !== "home" &&
                         <NavigationMenuLink className={navigationMenuTriggerStyle()} href={"/"}>
                             <FaHouse className="text-lg inline-block mr-2" />
                             Home
                         </NavigationMenuLink>
                     }
                     {
-                        Hide !== "projects" &&
+                        hide !== "projects" &&
                         <NavigationMenuLink className={navigationMenuTriggerStyle()} href={"/projects"}>
                             <FaFlaskVial className="text-lg inline-block mr-2" />
                             Projects

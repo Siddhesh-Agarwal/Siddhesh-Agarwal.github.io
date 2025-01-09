@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 export default function HomePage() {
     return (
         <>
-            <Navbar Hide="home" />
+            <Navbar hide="home" />
             <main className="container-fluid p-0 min-h-screen w-full overflow-x-hidden">
                 {/* Header - Fade in animation */}
                 <section className="container-fluid min-h-screen w-scree grid place-items-center dark:bg-gray-900">
