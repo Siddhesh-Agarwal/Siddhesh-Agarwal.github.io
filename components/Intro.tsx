@@ -103,7 +103,7 @@ export const Intro: React.FC = () => {
             <div className="grid grid-cols-1 gap-6 py-6">
                 <div className="mb-5">
                     <p className="text-left md:text-justify">
-                        My name is <strong>Siddhesh Agarwal</strong>, I am a <strong>Computer Science student</strong> and a <strong>Hobbyist Developer</strong> with a keen interest in <strong>Backend Development</strong> and <strong>DevOps</strong>. I have been programming for the past {new Date().getFullYear() - 2019} years, since I was 16 yo. Currently, I&apos;m working on honing my skills in <strong>Golang</strong> and <strong>React Native</strong>. I am also learning <strong>Machine Learning</strong> and <strong>Deep Learning</strong> to build AI-powered applications. I am a <strong>Full Stack Developer</strong>.
+                        My name is <strong>Siddhesh Agarwal</strong>, I am a <strong>Computer Science student</strong> and a <strong>Hobbyist Developer</strong> with a keen interest in <strong>Backend Development</strong> and <strong>DevOps</strong>. I have been programming for the past {new Date().getFullYear() - 2019} years, since I was 16 yo. Currently, I&apos;m working on honing my skills in <strong>Golang</strong> and <strong>React Native</strong>. I am also learning <strong>Machine Learning</strong> and <strong>Deep Learning</strong> to build AI-powered applications.
                     </p>
                 </div>
                 <div className="place-items-center">

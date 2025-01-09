@@ -16,7 +16,7 @@ type LinkInfo = {
 type Tool = {
     name: string
     desc: string
-    links: LinkInfo[]
+    links: [LinkInfo, ...LinkInfo[]] // Ensures at least one link and unique names
     tags: string[]
     date: CustomDate
 }
@@ -118,7 +118,7 @@ const ProjectsorTools: Tool[] = [
         desc: "A Python library to encrypt and decrypt messages using emojis. Published on PyPI.",
         links: [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/Cryptmoji/" },
-            { name: "Live", url: "https://pypi.org/project/cryptmoji/" }
+            { name: "PyPI", url: "https://pypi.org/project/cryptmoji/" }
         ],
         tags: ["Python", "PyPI", "Crytography"],
         date: { year: 2022, month: 9 }
@@ -134,10 +134,10 @@ const ProjectsorTools: Tool[] = [
     },
     {
         name: "Sierra",
-        desc: "A Python library to write HTML and CSS in pure Python in a simple yet elegant manner using the DOM API. Take advantage of all of Python's powerful functionalities with Sierra. Published on PyPI.",
+        desc: "A Python library to write HTML and CSS in pure Python in a simple yet elegant manner using the DOM API.",
         links: [
             { name: "GitHub", url: "https://github.com/BrainStormYourWayIn/sierra/" },
-            { name: "Live", url: "https://pypi.org/project/sierra/" }
+            { name: "PyPI", url: "https://pypi.org/project/sierra/" }
         ],
         tags: ["Python", "PyPI", "HTML", "CSS", "JavaScript"],
         date: { year: 2021, month: 6 }
@@ -147,12 +147,37 @@ const ProjectsorTools: Tool[] = [
         desc: "A Python library to perform matrix and Vector operations. Published on PyPI.",
         links: [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/matmath/" },
-            { name: "Live", url: "https://pypi.org/project/matmath/" }
+            { name: "PyPI", url: "https://pypi.org/project/matmath/" }
         ],
         tags: ["Python", "PyPI", "Maths"],
         date: { year: 2021, month: 6 }
     },
+    {
+        name: "Lab Management System",
+        desc: "A lab management system including student attendance, lab inventory management, bill management, and report generation. Currently in use across all the 11 CS/IT Labs in SKCET.",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/lab-management-system" }
+        ],
+        tags: ["PHP", "Laravel", "Blade", "Python", "Streamlit"],
+        date: { year: 2023, month: 3 }
+    }
 ]
+
+function ProjectTag({ tag }: { tag: string }) {
+    return (
+        <span className="bg-gray-200 dark:bg-gray-700 text-white dark:text-gray-50 px-2 py-1 rounded-sm">
+            {tag}
+        </span>
+    )
+}
+
+function ProjectLink({ linkObj }: { linkObj: LinkInfo }) {
+    return (
+        <Link href={linkObj.url} target="_blank" rel="noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline px-0 md:px-1">
+            {linkObj.name}<span className="hidden md:inline-block">{"=>"}</span>
+        </Link>
+    )
+}
 
 function ToolCard({ data }: { data: Tool }) {
     return (
@@ -161,9 +186,9 @@ function ToolCard({ data }: { data: Tool }) {
             <div className="text-gray-500 dark:text-gray-400 text-lg md:text-2xl mr-4">
                 {data.date.month < 10 ? `0${data.date.month}` : data.date.month}-{data.date.year}
             </div>
-            <div>
+            <div className="flex flex-col gap-2">
                 {/* Title */}
-                <h2 className="text-lg md:text-2xl font-bold dark:text-gray-50 mb-2">{data.name}</h2>
+                <h2 className="text-lg md:text-2xl font-bold dark:text-gray-50">{data.name}</h2>
 
                 {/* Description */}
                 <p className="text-md md:text-lg dark:text-gray-50 text-wrap md:text-justify">
@@ -174,20 +199,16 @@ function ToolCard({ data }: { data: Tool }) {
                 <div className="flex flex-row gap-2 text-xs flex-wrap">
                     {
                         data.tags.map((tag, index) => (
-                            <span key={index} className="bg-gray-200 dark:bg-gray-700 text-white dark:text-gray-50 px-2 py-1 rounded-sm">
-                                {tag}
-                            </span>
+                            <ProjectTag tag={tag} key={index} />
                         ))
                     }
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-4 md:gap-6 items-center mt-2 text-wrap font-semibold">
+                <div className="flex gap-4 md:gap-6 items-center text-wrap font-semibold">
                     {
                         data.links.map((linkObj, index) => (
-                            <Link key={index} href={linkObj.url} target="_blank" rel="noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline px-0 md:px-1">
-                                {linkObj.name}<span className="hidden md:inline-block">{"=>"}</span>
-                            </Link>
+                            <ProjectLink linkObj={linkObj} key={index} />
                         ))
                     }
                 </div>
@@ -207,6 +228,9 @@ function DisplayTools({ tools }: { tools: Tool[] }) {
 
     return (
         <div className="flex flex-col gap-4 max-w-6xl mx-auto">
+            <h1 className="text-4xl font-bold mb-6 semibold dark:text-gray-50">
+                Projects/Tools I{"'"}ve Built:
+            </h1>
             {tools.map((tool, index) => (
                 <ToolCard key={index} data={tool} />
             ))}
@@ -219,9 +243,6 @@ export default function ProjectsPage() {
         <>
             <Navbar hide="projects" />
             <main className="container px-4 md:px-8 lg:px-12 min-w-full bg-white dark:bg-gray-900 py-6 md:pb-12">
-                <h1 className="text-4xl font-bold mb-6 semibold dark:text-gray-50">
-                    Projects/Tools I{"'"}ve Built:
-                </h1>
                 <DisplayTools tools={ProjectsorTools} />
             </main>
         </>
