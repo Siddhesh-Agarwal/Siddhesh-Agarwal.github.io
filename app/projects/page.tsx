@@ -1,28 +1,12 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
+import { Project } from "@/types/Project";
+import { LinkInfo } from "@/types/Utils";
 import Link from "next/link";
 
-type CustomDate = {
-    year: number
-    month: number
-}
 
-type LinkInfo = {
-    name: string
-    url: string
-}
-
-type Tool = {
-    name: string
-    desc: string
-    links: [LinkInfo, ...LinkInfo[]] // Ensures at least one link and unique names
-    tags: string[]
-    date: CustomDate
-}
-
-
-const ProjectsorTools: Tool[] = [
+const ProjectsOrTools: Project[] = [
     {
         name: "LLMPrice.fyi",
         desc: "A simple no-nonsense price calculator for various LLM providers.",
@@ -179,7 +163,7 @@ function ProjectLink({ linkObj }: { linkObj: LinkInfo }) {
     )
 }
 
-function ToolCard({ data }: { data: Tool }) {
+function ToolCard({ data }: { data: Project }) {
     return (
         <div className="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow-lg overflow-x-hidden">
             {/* Display dat in MM-YYYY format i.e. add padding to make 6-2023 to 06-2023 */}
@@ -198,7 +182,7 @@ function ToolCard({ data }: { data: Tool }) {
                 {/* Tags */}
                 <div className="flex flex-row gap-2 text-xs flex-wrap">
                     {
-                        data.tags.map((tag, index) => (
+                        data.tags.map((tag: string, index: number) => (
                             <ProjectTag tag={tag} key={index} />
                         ))
                     }
@@ -207,7 +191,7 @@ function ToolCard({ data }: { data: Tool }) {
                 {/* Links */}
                 <div className="flex gap-4 md:gap-6 items-center text-wrap font-semibold">
                     {
-                        data.links.map((linkObj, index) => (
+                        data.links.map((linkObj: LinkInfo, index: number) => (
                             <ProjectLink linkObj={linkObj} key={index} />
                         ))
                     }
@@ -217,7 +201,7 @@ function ToolCard({ data }: { data: Tool }) {
     )
 }
 
-function DisplayTools({ tools }: { tools: Tool[] }) {
+function DisplayTools({ tools }: { tools: Project[] }) {
     // Sort the tools by date
     tools.sort((a, b) => {
         if (a.date.year === b.date.year) {
@@ -231,7 +215,7 @@ function DisplayTools({ tools }: { tools: Tool[] }) {
             <h1 className="text-4xl font-bold mb-6 semibold dark:text-gray-50">
                 Projects/Tools I{"'"}ve Built:
             </h1>
-            {tools.map((tool, index) => (
+            {tools.map((tool: Project, index: number) => (
                 <ToolCard key={index} data={tool} />
             ))}
         </div>
@@ -242,8 +226,8 @@ export default function ProjectsPage() {
     return (
         <>
             <Navbar hide="projects" />
-            <main className="container px-4 md:px-8 lg:px-12 min-w-full bg-white dark:bg-gray-900 py-6 md:pb-12">
-                <DisplayTools tools={ProjectsorTools} />
+            <main className="container px-4 md:px-8 lg:px-12 min-w-full py-6 md:pb-12">
+                <DisplayTools tools={ProjectsOrTools} />
             </main>
         </>
     )

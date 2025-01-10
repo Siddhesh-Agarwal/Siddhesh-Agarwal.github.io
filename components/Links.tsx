@@ -17,6 +17,7 @@ import {
 import { motion } from "framer-motion";
 import { SocialLink } from "@/types/SocialLink";
 import Link from "next/link";
+import HyperText from "./ui/hyper-text";
 
 const socialLinks: SocialLink[] = [
     {
@@ -98,9 +99,9 @@ export const Links: React.FC = () => {
         >
             <div className="row">
                 <div className="col-12">
-                    <h1 className="text-3xl text-center font-bold">
+                    <HyperText className="text-3xl text-center font-bold">
                         Siddhesh Agarwal
-                    </h1>
+                    </HyperText>
                     <h2 className="text-lg md:text-xl text-center mt-2 font-semibold dark:text-gray-200">
                         Just a Chill Guy
                     </h2>
