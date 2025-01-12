@@ -2,7 +2,7 @@
 
 import {
     SiApachespark,
-    SiAmazonaws,
+    SiAmazonwebservices,
     SiBootstrap,
     SiC,
     SiCloudflare,
@@ -30,7 +30,6 @@ import {
     SiNodedotjs,
     SiPhp,
     SiPostgresql,
-    SiPowershell,
     SiPython,
     SiPytorch,
     SiReact,
@@ -266,7 +265,6 @@ const introLinks: ToolLink[][] = [
         { name: "PHP", icon: SiPhp },
         { name: "Go", icon: SiGo },
         { name: "GNU Bash", icon: SiGnubash },
-        { name: "Powershell", icon: SiPowershell },
         { name: "HTML5", icon: SiHtml5 },
         { name: "CSS3", icon: SiCss3 },
     ],
@@ -292,7 +290,7 @@ const introLinks: ToolLink[][] = [
         { name: "GitHub", icon: SiGithub },
         { name: "Linux", icon: SiLinux },
         { name: "Docker", icon: SiDocker },
-        { name: "AWS", icon: SiAmazonaws },
+        { name: "AWS", icon: SiAmazonwebservices },
         { name: "Cloudflare", icon: SiCloudflare },
         { name: "Vercel", icon: SiVercel },
     ]
@@ -342,4 +340,3 @@ export default function HomePage() {
         </main>
     )
 }
-
