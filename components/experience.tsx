@@ -7,28 +7,26 @@ function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
     return (
 
         <ShineBorder
-            className="flex flex-col md:flex-row p-0 w-full"
+            className="flex flex-row p-0 w-full"
             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
         >
-            <div className="w-full">
-                <div className="bg-card dark:text-white p-4 rounded shadow-lg">
-                    <h3 className="font-bold mb-3 text-lg">{detail.position}</h3>
-                    <div className="flex py-1">
-                        <FaBuilding className="mr-1" />
-                        <p className="text-sm">
-                            {detail.company}
-                        </p>
-                    </div>
-                    <div className="flex py-1">
-                        <FaCalendar className="mr-1" />
-                        <p className="text-xs text-gray-700 dark:text-gray-200">
-                            {formatDate(detail.startDate)} - {formatDate(detail.endDate)}
-                        </p>
-                    </div>
-                    <div className="flex py-1">
-                        <FaLocationDot className="mr-1" />
-                        <p className="text-sm text-gray-700 dark:text-gray-200">{detail.location}</p>
-                    </div>
+            <div className="dark:text-white p-4 rounded shadow-lg bg-card w-full">
+                <h3 className="font-bold mb-3 text-lg">{detail.position}</h3>
+                <div className="flex py-1">
+                    <FaBuilding className="mr-1" />
+                    <p className="text-sm">
+                        {detail.company}
+                    </p>
+                </div>
+                <div className="flex py-1">
+                    <FaCalendar className="mr-1" />
+                    <p className="text-xs text-gray-700 dark:text-gray-200">
+                        {formatDate(detail.startDate)} - {formatDate(detail.endDate)}
+                    </p>
+                </div>
+                <div className="flex py-1">
+                    <FaLocationDot className="mr-1" />
+                    <p className="text-sm text-gray-700 dark:text-gray-200">{detail.location}</p>
                 </div>
             </div>
         </ShineBorder>
