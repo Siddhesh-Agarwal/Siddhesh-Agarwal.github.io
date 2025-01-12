@@ -5,7 +5,7 @@ import { FaBuilding, FaCalendar, FaLocationDot } from "react-icons/fa6"
 function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
     return (
         <div className="w-full">
-            <div className="bg-card text-white p-4 rounded shadow-lg">
+            <div className="bg-card dark:text-white p-4 rounded shadow-lg">
                 <h3 className="font-bold mb-3 text-lg">{detail.position}</h3>
                 <div className="flex py-1">
                     <FaBuilding className="mr-1" />
@@ -15,13 +15,13 @@ function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
                 </div>
                 <div className="flex py-1">
                     <FaCalendar className="mr-1" />
-                    <p className="text-xs text-gray-200">
+                    <p className="text-xs text-gray-700 dark:text-gray-200">
                         {formatDate(detail.startDate)} - {formatDate(detail.endDate)}
                     </p>
                 </div>
                 <div className="flex py-1">
                     <FaLocationDot className="mr-1" />
-                    <p className="text-sm">{detail.location}</p>
+                    <p className="text-sm text-gray-700 dark:text-gray-200">{detail.location}</p>
                 </div>
             </div>
         </div>

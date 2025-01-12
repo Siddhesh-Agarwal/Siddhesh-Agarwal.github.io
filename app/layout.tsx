@@ -65,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} bg-background`}>
+      <body className={font.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
