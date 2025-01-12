@@ -1,3 +1,4 @@
+import { CustomDate } from "@/types/utils"
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -13,4 +14,9 @@ export function textSize(size: string) {
     throw "Invalid text size"
   }
   return `text-${size} md:text-${sizes[index + 1]} lg:text-${sizes[index + 2]}`
+}
+
+export function formatDate(date: CustomDate): string {
+  const month = (date.month < 10) ? `0${date.month}` : `${date.month}`
+  return `${month}/${date.year}`
 }
