@@ -1,139 +1,69 @@
-import {
-    SiApachespark,
-    SiAmazonaws,
-    SiBootstrap,
-    SiC,
-    SiCloudflare,
-    SiCplusplus,
-    SiDeno,
-    SiDjango,
-    SiDocker,
-    SiExpress,
-    SiFastapi,
-    SiFlask,
-    SiGit,
-    SiGithub,
-    SiGnubash,
-    SiGo,
-    SiJavascript,
-    SiLaravel,
-    SiLinux,
-    SiMongodb,
-    SiMysql,
-    SiNeo4J,
-    SiNextdotjs,
-    SiNodedotjs,
-    SiPhp,
-    SiPostgresql,
-    SiPowershell,
-    SiPython,
-    SiPytorch,
-    SiReact,
-    SiRedis,
-    SiScikitlearn,
-    SiScipy,
-    SiShadcnui,
-    SiStreamlit,
-    SiTailwindcss,
-    SiTensorflow,
-    SiTypescript,
-    SiVercel,
-} from "react-icons/si";
-import { motion } from "framer-motion";
-import { ToolLink } from "@/types/ToolLink";
+import { ToolLink } from "@/types/utils";
+import { OrbitingCircles } from "./ui/orbiting-circles";
 import Image from "next/image";
-import profilePic from "@/public/me-according-to-chatgpt.webp"
-import { textSize } from "@/lib/utils";
-import HelloImage from "@/assets/hello.svg"
+import MyPic from "@/assets/me.jpg"
 
-const links: ToolLink[] = [
-    { name: "Python", icon: SiPython },
-    { name: "FastAPI", icon: SiFastapi },
-    { name: "Flask", icon: SiFlask },
-    { name: "Django", icon: SiDjango },
-    { name: "SciPy", icon: SiScipy },
-    { name: "PyTorch", icon: SiPytorch },
-    { name: "Scikit Learn", icon: SiScikitlearn },
-    { name: "TensorFlow", icon: SiTensorflow },
-    { name: "Streamlit", icon: SiStreamlit },
-    { name: "C", icon: SiC },
-    { name: "C++", icon: SiCplusplus },
-    { name: "JavaScript", icon: SiJavascript },
-    { name: "TypeScript", icon: SiTypescript },
-    { name: "Bootstrap", icon: SiBootstrap },
-    { name: "Tailwind CSS", icon: SiTailwindcss },
-    { name: "ShadCN UI", icon: SiShadcnui },
-    { name: "React.js", icon: SiReact },
-    { name: "Next.js", icon: SiNextdotjs },
-    { name: "Express.js", icon: SiExpress },
-    { name: "Node.js", icon: SiNodedotjs },
-    { name: "Deno", icon: SiDeno },
-    { name: "PHP", icon: SiPhp },
-    { name: "Laravel", icon: SiLaravel },
-    { name: "Go", icon: SiGo },
-    { name: "MySQL", icon: SiMysql },
-    { name: "PostgreSQL", icon: SiPostgresql },
-    { name: "MongoDB", icon: SiMongodb },
-    { name: "Neo4j", icon: SiNeo4J },
-    { name: "Redis", icon: SiRedis },
-    { name: "Apache Spark", icon: SiApachespark },
-    { name: "Git", icon: SiGit },
-    { name: "GitHub", icon: SiGithub },
-    { name: "Linux", icon: SiLinux },
-    { name: "GNU Bash", icon: SiGnubash },
-    { name: "Powershell", icon: SiPowershell },
-    { name: "Docker", icon: SiDocker },
-    { name: "AWS", icon: SiAmazonaws },
-    { name: "Cloudflare", icon: SiCloudflare },
-    { name: "Vercel", icon: SiVercel },
-];
 
-export const Intro: React.FC = () => {
+function ConcentricCircle({ similarLinks, reverse, radius, speed }: { similarLinks: ToolLink[], reverse: boolean, radius: number, speed: number }) {
     return (
-        <section className="container py-4 dark:text-white max-w-6xl text-center">
-            <div className="my-5">
-                <div className="text-center">
-                    <h1 className={`${textSize("4xl")} inline text-center`}>
-                        Hello, I&apos;m{' '}<span className="text-blue-600 dark:text-blue-500 font-semibold underline">Siddhesh</span> <Image src={HelloImage} alt="Hello" className="inline-block w-12 h-12" />
-                    </h1>
-                </div>
-            </div>
+        <OrbitingCircles reverse={reverse} radius={radius} speed={speed} path>
+            {
+                similarLinks.map((similarLink, index) => (
+                    // <similarLink.icon key={indexInner} />
+                    <div
+                        className="m-2 text-primary font-semibold inline-block text-2xl w-fit cursor-pointer"
+                        key={index}
+                        title={similarLink.name}
+                    >
+                        <similarLink.icon className="inline-block" />
+                    </div>
+                ))
+            }
+        </OrbitingCircles>
+    )
+}
 
-            {/* Divide into 2 parts */}
-            <div className="grid grid-cols-1 gap-6 py-6">
-                <div className="mb-5">
-                    <p className="text-left md:text-justify">
-                        My name is <strong>Siddhesh Agarwal</strong>, I am a <strong>Computer Science student</strong> and a <strong>Hobbyist Developer</strong> with a keen interest in <strong>Backend Development</strong> and <strong>DevOps</strong>. I have been programming for the past {new Date().getFullYear() - 2019} years, since I was 16 yo. Currently, I&apos;m working on honing my skills in <strong>Golang</strong> and <strong>React Native</strong>. I am also learning <strong>Machine Learning</strong> and <strong>Deep Learning</strong> to build AI-powered applications.
-                    </p>
-                </div>
-                <div className="place-items-center">
-                    <Image src={profilePic} alt="Siddhesh Agarwal" className="w-full max-w-2xl h-auto rounded-md shadow-lg mx-auto" />
-                    <div className="text-center text-muted-foreground">
-                        Me according to GPT-4o and Dall-e
+function ConcentricCircles({ text, links }: { text: string, links: ToolLink[][] }) {
+    return (
+        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+                {text}
+            </span>
+            {
+                links.map((similarLinks, index) => {
+                    const reverse: boolean = index % 2 === 0;
+                    const radius: number = 60 * (1 + index);
+                    const speed: number = 0.5 * (2 + index);
+                    return (
+                        <ConcentricCircle key={index} similarLinks={similarLinks} reverse={reverse} radius={radius} speed={speed} />
+                    )
+                })
+            }
+        </div>
+    )
+}
+
+export default function IntroSection({ links }: { links: ToolLink[][] }) {
+    return (
+        <section className="container py-4 dark:text-white max-w-6xl">
+            <div className="flex">
+                <div className="font-sans">
+                    <h1 className="text-5xl inline">
+                        Hi, I&apos;m Siddhesh 👋🏻
+                    </h1>
+
+                    {/* Divide into 2 parts */}
+                    <div className="grid grid-cols-1 gap-6 py-6 pr-8">
+                        <p className="text-left md:text-justify">
+                            I am a <strong>Hobbyist Developer</strong> with a keen interest in <strong>Backend Development</strong> and <strong>DevOps</strong>. I have been programming for the past {new Date().getFullYear() - 2019} years, i.e. since I was 16. Currently, I&apos;m working on honing my skills in <strong>Golang</strong> and <strong>React Native</strong>. Always in search of fun projects.
+                        </p>
                     </div>
                 </div>
+                <Image src={MyPic} alt="A picture of Me" className="rounded-full w-48 h-48" />
             </div>
 
             {/* List things proficient in  */}
-            <div className="inline-flex justify-center w-full md:max-w-2xl lg:max-w-4xl flex-wrap px-4">
-                {
-                    links.map(
-                        (linkObj: ToolLink, index: number) => {
-                            return (
-                                <motion.div
-                                    className="m-2 text-blue-600 dark:text-blue-500 font-semibold inline-block text-2xl w-fit cursor-pointer"
-                                    whileHover={{ scale: 1.25 }}
-                                    whileTap={{ scale: 0.8 }}
-                                    key={index}
-                                    title={linkObj.name}
-                                >
-                                    <linkObj.icon className="inline-block" />
-                                </motion.div>
-                            )
-                        }
-                    )
-                }
-            </div>
+            <ConcentricCircles text="My Tech Stack" links={links} />
         </section>
     )
 }

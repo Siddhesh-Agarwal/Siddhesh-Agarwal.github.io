@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
-const font = JetBrains_Mono({subsets: ["cyrillic"]});
+const font = JetBrains_Mono({ subsets: ["cyrillic"] });
 const site_config = {
   url: "https://siddhesh-tech.vercel.app/",
   title: "Siddhesh's Portfolio",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     "Backend Developer",
     "React",
     "Next.js",
-    "Python" ,
+    "Python",
     "FastAPI",
     "Gen AI",
     "Tech Portfolio",
@@ -64,17 +65,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/assets/1F468-200D-1F4BB.svg" type="image/svg+xml" />
-      </head>
-      <body className={`${font.className} dark:bg-gray-900`}>
+      <body className={`${font.className} bg-background`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <TooltipProvider delayDuration={0}>
+            {children}
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
