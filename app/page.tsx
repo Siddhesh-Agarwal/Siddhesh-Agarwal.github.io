@@ -46,7 +46,7 @@ import {
     SiCss3,
     SiPypy,
 } from "react-icons/si";
-import { ExperienceDetail, Project, SocialLink, ToolLink } from "@/types/utils";
+import { ExperienceDetail, Project, SocialLink, ToolLink } from "@/types/Utils";
 import ProjectsSection from "@/components/project";
 import ExperienceSection from "@/components/experience";
 import DockNav from "@/components/dockNav";

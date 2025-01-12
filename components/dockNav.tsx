@@ -4,7 +4,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 import ModeToggle from "./mode";
-import { SocialLink } from "@/types/utils";
+import { SocialLink } from "@/types/Utils";
 
 function DocNavLinkButton({ link, target }: { link: SocialLink, target: "_self" | "_blank" }) {
     return (

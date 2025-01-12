@@ -1,27 +1,27 @@
 import { IconType } from "react-icons/lib"
 
-export type CustomDate = {
+type CustomDate = {
     year: number
     month: number
 }
 
-export type LinkInfo = {
+type LinkInfo = {
     name: string
     url: string
 }
 
-export type ToolLink = {
+type ToolLink = {
     name: string,
     icon: IconType
 }
 
-export type SocialLink = {
+type SocialLink = {
     name: string
     icon: IconType,
     link: string
 }
 
-export type Project = {
+type Project = {
     name: string
     desc: string
     links: [LinkInfo, ...LinkInfo[]] // Ensures at least one link and unique names
@@ -29,7 +29,7 @@ export type Project = {
     date: CustomDate
 }
 
-export type ExperienceDetail = {
+type ExperienceDetail = {
     startDate: CustomDate
     endDate: CustomDate
     company: string
@@ -38,3 +38,4 @@ export type ExperienceDetail = {
     location: string | "remote"
 }
 
+export type { CustomDate, LinkInfo, ToolLink, SocialLink, Project, ExperienceDetail }

@@ -1,5 +1,5 @@
 import { cn, formatDate } from "@/lib/utils";
-import { ExperienceDetail } from "@/types/utils"
+import { ExperienceDetail } from "@/types/Utils";
 import { FaBuilding, FaCalendar, FaLocationDot } from "react-icons/fa6"
 
 function ExperienceCard({ detail }: { detail: ExperienceDetail }) {

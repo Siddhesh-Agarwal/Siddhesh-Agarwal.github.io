@@ -1,4 +1,4 @@
-import { CustomDate } from "@/types/utils"
+import { CustomDate } from "@/types/Utils";
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 

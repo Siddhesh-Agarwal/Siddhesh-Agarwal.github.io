@@ -1,4 +1,4 @@
-import { ToolLink } from "@/types/utils";
+import { ToolLink } from "@/types/Utils";
 import { OrbitingCircles } from "./ui/orbiting-circles";
 import Image from "next/image";
 import MyPic from "@/assets/me.jpg"

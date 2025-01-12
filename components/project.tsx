@@ -1,5 +1,5 @@
 import { formatDate } from "@/lib/utils"
-import { LinkInfo, Project } from "@/types/utils"
+import { LinkInfo, Project } from "@/types/Utils";
 import { LayoutGroup, motion } from "motion/react"
 import Link from "next/link"
 
