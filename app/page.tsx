@@ -47,11 +47,11 @@ import {
     SiPypy,
 } from "react-icons/si";
 import { ExperienceDetail, Project, SocialLink, ToolLink } from "@/types/utils";
-import { ProjectsSection } from "@/components/project";
+import ProjectsSection from "@/components/project";
 import ExperienceSection from "@/components/experience";
-import { FaBriefcase, FaCircleInfo, FaFlask } from "react-icons/fa6";
 import DockNav from "@/components/dockNav";
-import IntroSection from "@/components/intro";
+import IntroSection from "@/components/Intro";
+import { FaBriefcase, FaCircleInfo, FaFlask } from "react-icons/fa6";
 
 
 // Data

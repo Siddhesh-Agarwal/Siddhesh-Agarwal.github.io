@@ -61,7 +61,7 @@ function ProjectCard({ data }: { data: Project }) {
     )
 }
 
-export function ProjectsSection({ details }: { details: Project[] }) {
+export default function ProjectsSection({ details }: { details: Project[] }) {
     // Sort the tools by date
     details.sort((a, b) => {
         if (a.date.year === b.date.year) {
