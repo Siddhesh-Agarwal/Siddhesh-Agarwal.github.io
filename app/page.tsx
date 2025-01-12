@@ -318,19 +318,19 @@ const sectionNav: SocialLink[] = [
 export default function HomePage() {
     return (
         <main className="container-fluid p-0 min-h-screen w-full overflow-x-hidden">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-0 md:mx-auto">
                 {/* Intro Section */}
-                <section className="container min-h-screen w-full grid place-items-center" id="intro">
+                <section className="container min-h-screen w-full px-0 grid place-items-center" id="intro">
                     <IntroSection links={introLinks} />
                 </section>
 
                 {/* Experience Section */}
-                <section className="container min-h-screen min-w-full py-6 md:pb-12" id="experience">
-                    {ExperienceDetails.length > 0 && <ExperienceSection details={ExperienceDetails} />}
+                <section className="container min-h-screen min-w-full px-0 py-6 md:pb-12" id="experience">
+                    <ExperienceSection details={ExperienceDetails} />
                 </section>
 
                 {/* Projects Section */}
-                <section className="container min-h-screen min-w-full py-6 md:pb-12" id="projects">
+                <section className="container min-h-screen min-w-full px-0 py-6 md:pb-12" id="projects">
                     <ProjectsSection details={ProjectsOrTools} />
                 </section>
             </div>

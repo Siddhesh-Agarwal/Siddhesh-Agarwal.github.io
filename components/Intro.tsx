@@ -47,7 +47,7 @@ function ConcentricCircles({ text, links }: { text: string, links: ToolLink[][] 
 export default function IntroSection({ links }: { links: ToolLink[][] }) {
     return (
         <section className="container py-4 dark:text-white max-w-6xl">
-            <div className="flex items-center">
+            <div className="flex flex-col md:flex-row items-center">
                 <div className="font-sans">
                     <h1 className="text-5xl inline">
                         <TypingAnimation>

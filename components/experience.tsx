@@ -43,17 +43,15 @@ function ExperienceTimeline({ details }: { details: ExperienceDetail[] }) {
     })
 
     return (
-        <div className="relative wrap overflow-hidden p-10 h-full">
+        <div className="relative wrap overflow-hidden p-4 md:p-10 h-full">
             {/* Vertical timeline line */}
-            <div className="absolute border-2 border-gray-300 h-full transform"></div>
+            <div className="absolute border-2 border-gray-300 h-0 md:h-full px-0 transform"></div>
 
             {
                 details.map((detail, index) => (
                     <div key={index} className="mb-10 flex justify-between w-full">
                         {/* Marker */}
-                        <div className="z-20 flex bg-primary w-8 h-8 rounded-full -translate-x-4" />
-                        {/* You can add an icon here */}
-                        {/* </div> */}
+                        <div className="z-20 flex bg-primary md:w-8 md:h-8 rounded-full -translate-x-4" />
                         {/* Card */}
                         <ExperienceCard detail={detail} />
                     </div>

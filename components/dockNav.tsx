@@ -8,10 +8,10 @@ import { SocialLink } from "@/types/Utils";
 
 function DocNavLinkButton({ link, target }: { link: SocialLink, target: "_self" | "_blank" }) {
     return (
-        <DockIcon>
+        <DockIcon className="px-0">
             <Tooltip>
-                <TooltipTrigger asChild>
-                    <Link href={link.link} className="size-12" target={target}>
+                <TooltipTrigger asChild className="px-0">
+                    <Link href={link.link} className="size-6 px-0 md:size-12" target={target}>
                         <Button variant={"ghost"} size={"icon"}>
                             <link.icon className="text-black dark:text-white" />
                         </Button>
