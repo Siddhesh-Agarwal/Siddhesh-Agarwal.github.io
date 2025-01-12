@@ -2,6 +2,7 @@ import { ToolLink } from "@/types/Utils";
 import { OrbitingCircles } from "./ui/orbiting-circles";
 import Image from "next/image";
 import MyPic from "@/assets/me.jpg"
+import TypingAnimation from "./ui/typing-animation";
 
 
 function ConcentricCircle({ similarLinks, reverse, radius, speed }: { similarLinks: ToolLink[], reverse: boolean, radius: number, speed: number }) {
@@ -11,7 +12,7 @@ function ConcentricCircle({ similarLinks, reverse, radius, speed }: { similarLin
                 similarLinks.map((similarLink, index) => (
                     // <similarLink.icon key={indexInner} />
                     <div
-                        className="m-2 text-primary font-semibold inline-block text-2xl w-fit cursor-pointer"
+                        className="m-2 text-primary font-semibold inline-block text-xl w-fit cursor-pointer"
                         key={index}
                         title={similarLink.name}
                     >
@@ -32,7 +33,7 @@ function ConcentricCircles({ text, links }: { text: string, links: ToolLink[][] 
             {
                 links.map((similarLinks, index) => {
                     const reverse: boolean = index % 2 === 0;
-                    const radius: number = 60 * (1 + index);
+                    const radius: number = 64 * (1 + index);
                     const speed: number = 0.5 * (2 + index);
                     return (
                         <ConcentricCircle key={index} similarLinks={similarLinks} reverse={reverse} radius={radius} speed={speed} />
@@ -46,10 +47,12 @@ function ConcentricCircles({ text, links }: { text: string, links: ToolLink[][] 
 export default function IntroSection({ links }: { links: ToolLink[][] }) {
     return (
         <section className="container py-4 dark:text-white max-w-6xl">
-            <div className="flex">
+            <div className="flex items-center">
                 <div className="font-sans">
                     <h1 className="text-5xl inline">
-                        Hi, I&apos;m Siddhesh 👋🏻
+                        <TypingAnimation>
+                            Hi, I&apos;m Siddhesh 👋🏻
+                        </TypingAnimation>
                     </h1>
 
                     {/* Divide into 2 parts */}
@@ -59,7 +62,7 @@ export default function IntroSection({ links }: { links: ToolLink[][] }) {
                         </p>
                     </div>
                 </div>
-                <Image src={MyPic} alt="A picture of Me" className="rounded-full w-48 h-48" />
+                <Image src={MyPic} alt="A picture of Me" className="rounded-full w-48 h-48 p-1 border-2" />
             </div>
 
             {/* List things proficient in  */}

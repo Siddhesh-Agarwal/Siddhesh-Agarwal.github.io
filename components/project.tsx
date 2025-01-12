@@ -24,7 +24,7 @@ function ProjectCard({ data }: { data: Project }) {
     return (
         <motion.div
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-col md:flex-row bg-card rounded-lg border border-gray-950 p-4 shadow-lg overflow-x-hidden"
+            className="flex flex-col md:flex-row w-full bg-card rounded-lg border border-gray-950 p-4 shadow-lg overflow-x-hidden"
         >
             {/* Display dat in MM-YYYY format i.e. add padding to make 6-2023 to 06-2023 */}
             <div className="text-gray-500 dark:text-gray-400 text-lg md:text-2xl mr-4">
