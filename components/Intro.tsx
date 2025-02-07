@@ -10,7 +10,6 @@ function ConcentricCircle({ similarLinks, reverse, radius, speed }: { similarLin
         <OrbitingCircles reverse={reverse} radius={radius} speed={speed} path>
             {
                 similarLinks.map((similarLink, index) => (
-                    // <similarLink.icon key={indexInner} />
                     <div
                         className="m-2 text-primary font-semibold inline-block text-xl w-fit cursor-pointer"
                         key={index}

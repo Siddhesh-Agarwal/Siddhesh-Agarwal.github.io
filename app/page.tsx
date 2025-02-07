@@ -111,7 +111,7 @@ const ProjectsOrTools: Project[] = [
         desc: "A Python API to get information about an IP address. Made using streamlit. Deployed on Streamlit Cloud.",
         links: [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/IP-DB/" },
-            { name: "Live", url: "https://ip-database.streamlit.app" }
+            // { name: "Live", url: "https://ip-database.streamlit.app" }
         ],
         tags: ["Python", "Streamlit", "IP Geolocation"],
         date: { year: 2023, month: 4 }
@@ -121,7 +121,7 @@ const ProjectsOrTools: Project[] = [
         desc: "Dementia Detection using CNN packaged as a Streamlit app",
         links: [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/Dementia-Detection/" },
-            { name: "Live", url: "https://dementia-detection.streamlit.app/" }
+            // { name: "Live", url: "https://dementia-detection.streamlit.app/" }
         ],
         tags: ["Python", "Streamlit", "TensorFlow", "CNN"],
         date: { year: 2023, month: 3 }
@@ -141,7 +141,7 @@ const ProjectsOrTools: Project[] = [
         desc: "Skin Cancer Detection using CNN packaged as a Streamlit app",
         links: [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/Skin-Cancer-Detection/" },
-            { name: "Live", url: "https://skin-cancer-check.streamlit.app/" }
+            // { name: "Live", url: "https://skin-cancer-check.streamlit.app/" }
         ],
         tags: ["Python", "Streamlit", "TensorFlow", "CNN"],
         date: { year: 2023, month: 1 }
@@ -227,9 +227,6 @@ const ExperienceDetails: ExperienceDetail[] = [
         position: "Junior WebOps Developer",
         location: "remote"
     },
-    // {
-
-    // },
     {
         startDate: { month: 3, year: 2023 },
         endDate: { month: 4, year: 2024 },

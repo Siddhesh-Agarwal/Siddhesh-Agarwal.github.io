@@ -1,4 +1,4 @@
-import { cn, formatDate } from "@/lib/utils";
+import { formatDate } from "@/lib/utils";
 import { ExperienceDetail } from "@/types/Utils";
 import { FaBuilding, FaCalendar, FaLocationDot } from "react-icons/fa6"
 import ShineBorder from "./ui/shine-border";
@@ -7,7 +7,7 @@ function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
     return (
 
         <ShineBorder
-            className="flex flex-row p-0 w-full"
+            className="flex flex-row p-0 w-full rounded"
             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
         >
             <div className="dark:text-white p-4 rounded shadow-lg bg-card w-full">
