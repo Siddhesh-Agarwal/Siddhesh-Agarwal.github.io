@@ -225,7 +225,7 @@ const ExperienceDetails: ExperienceDetail[] = [
         endDate: { month: 10, year: 2022 },
         company: "IIT Madras",
         position: "Junior WebOps Developer",
-        location: "remote"
+        location: "Remote"
     },
     {
         startDate: { month: 3, year: 2023 },
@@ -241,6 +241,13 @@ const ExperienceDetails: ExperienceDetail[] = [
         position: "Data Engineer Intern",
         location: "Bengaluru, India"
     },
+    {
+        startDate: { month: 2, year: 2025 },
+        endDate: "Current",
+        company: "RipeHouse Advisory",
+        position: "Contract",
+        location: "Remote"
+    }
 ]
 
 const introLinks: ToolLink[][] = [

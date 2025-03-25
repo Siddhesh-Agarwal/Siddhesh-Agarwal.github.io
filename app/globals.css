@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
+    --background: #fafdff;
     --foreground: hsl(222.2 84% 4.9%);
     --card: #f3f4f6;
     --card-foreground: hsl(222.2 84% 4.9%);
@@ -27,7 +27,7 @@
   }
 
   .dark {
-    --background: #0F0F0F;
+    --background: #0a0d0f;
     --foreground: hsl(210 40% 98%);
     --card: #000;
     --card-foreground: hsl(210 40% 98%);
@@ -39,7 +39,7 @@
     --secondary-foreground: hsl(210 40% 98%);
     --muted: hsl(217.2 32.6% 17.5%);
     --muted-foreground: hsl(215 20.2% 65.1%);
-    --accent: #3b82f6;
+    --accent: #00b171;
     --accent-foreground: #f8fafc;
     --border: #1e293b;
     --input: #1e293b;

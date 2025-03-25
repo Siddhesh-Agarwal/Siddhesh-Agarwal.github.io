@@ -31,7 +31,7 @@ type Project = {
 
 type ExperienceDetail = {
     startDate: CustomDate
-    endDate: CustomDate
+    endDate: CustomDate | "Current"
     company: string
     position: string
     desc?: string
