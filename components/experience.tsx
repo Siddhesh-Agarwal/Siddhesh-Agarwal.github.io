@@ -2,11 +2,10 @@ import { formatDate } from "@/lib/utils";
 import { ExperienceDetail } from "@/types/Utils";
 import { FaBuilding, FaCalendar, FaLocationDot } from "react-icons/fa6"
 import ShineBorder from "./ui/shine-border";
-import { Timeline } from "./ui/timeline";
+import Timeline from "./timeline";
 
 function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
     return (
-
         <ShineBorder
             className="flex flex-row p-0 w-full rounded"
             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
@@ -36,22 +35,17 @@ function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
 
 function ExperienceTimeline({ details }: { details: ExperienceDetail[] }) {
     // Sort the array
-    const newDetails = details.toSorted((a, b) => {
+    const elements: JSX.Element[] = details.toSorted((a, b) => {
         if (a.startDate.year === b.startDate.year) {
             return b.startDate.month - a.startDate.month
         }
         return b.startDate.year - a.startDate.year
-    }).map((value) => {
-        return {
-            title: value.company,
-            content: (<ExperienceCard detail={value} />),
-        }
-    })
+    }).map((detail, index) => <ExperienceCard detail={detail} key={index} />)
 
     return (
         <div className="relative wrap overflow-hidden p-4 md:p-10 h-full">
             {/* Vertical timeline line */}
-            <Timeline data={newDetails} />
+            <Timeline elements={elements} />
         </div>
     );
 }

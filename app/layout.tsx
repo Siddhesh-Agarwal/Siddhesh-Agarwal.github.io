@@ -8,8 +8,8 @@ const font = JetBrains_Mono({ subsets: ["cyrillic"] });
 const site_config = {
   url: "https://siddhesh-tech.vercel.app/",
   title: "Siddhesh's Portfolio",
-  description: "Portfolio of Siddhesh Agarwal",
-  image: "https://github.com/siddhesh-agarwal.png",
+  description: "Portfolio website of Siddhesh Agarwal",
+  image: "/Siddhesh.webp",
   author: "Siddhesh Agarwal",
   twitter_handle: "@Siddhesh0205",
 }
@@ -55,7 +55,6 @@ export const metadata: Metadata = {
     "Software Engineering Student",
     "Tech Projects"
   ],
-  generator: "Next.js",
 };
 
 export default function RootLayout({
@@ -64,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={font.className}>
         <ThemeProvider
           attribute="class"
