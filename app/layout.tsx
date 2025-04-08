@@ -9,7 +9,7 @@ const site_config = {
   url: "https://siddhesh-tech.vercel.app/",
   title: "Siddhesh's Portfolio",
   description: "Portfolio website of Siddhesh Agarwal",
-  image: "/Siddhesh.webp",
+  image: "/Siddhesh.png",
   author: "Siddhesh Agarwal",
   twitter_handle: "@Siddhesh0205",
 }
