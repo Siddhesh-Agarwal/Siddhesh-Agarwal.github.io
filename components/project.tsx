@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function ProjectTag({ tag }: { tag: string }) {
     return (
-        <span className="bg-gray-200 dark:bg-slate-800 font-mono text-gray-950 dark:text-gray-50 px-2 py-1 rounded-sm border">
+        <span className="bg-muted font-mono text-gray-950 dark:text-gray-50 px-2 py-1 rounded-sm border border-border">
             {tag}
         </span>
     )

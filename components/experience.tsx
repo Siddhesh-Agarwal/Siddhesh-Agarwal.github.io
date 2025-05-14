@@ -28,6 +28,15 @@ function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
                     <FaLocationDot className="mr-1" />
                     <p className="text-sm text-gray-700 dark:text-gray-200">{detail.location}</p>
                 </div>
+                {
+                    detail.desc && (
+                        <div className="flex py-1 px-4 mt-2">
+                            <p className="text-sm text-gray-700 dark:text-gray-200 w-full text-wrap">
+                                {detail.desc}
+                            </p>
+                        </div>
+                    )
+                }
             </div>
         </ShineBorder>
     )

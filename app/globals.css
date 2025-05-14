@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: #fafdff;
+    --background: #f6fff9;
     --foreground: hsl(222.2 84% 4.9%);
     --card: #f3f4f6;
     --card-foreground: hsl(222.2 84% 4.9%);
@@ -18,7 +18,7 @@
     --secondary-foreground: hsl(222.2 47.4% 11.2%);
     --muted: hsl(210 40% 96.1%);
     --muted-foreground: hsl(215.4 16.3% 46.9%);
-    --accent: #2563eb;
+    --accent: #008f5a;
     --accent-foreground: hsl(222.2 47.4% 11.2%);
     --border: hsl(214.3 31.8% 91.4%);
     --input: hsl(214.3 31.8% 91.4%);
@@ -27,9 +27,9 @@
   }
 
   .dark {
-    --background: #0a0d0f;
+    --background: #000e05;
     --foreground: hsl(210 40% 98%);
-    --card: #000;
+    --card: #000301;
     --card-foreground: hsl(210 40% 98%);
     --popover: hsl(222.2 84% 4.9%);
     --popover-foreground: hsl(210 40% 98%);

@@ -193,6 +193,15 @@ const ProjectsOrTools: Project[] = [
         ],
         tags: ["PHP", "Laravel", "Blade", "Python", "Streamlit"],
         date: { year: 2023, month: 3 }
+    },
+    {
+        name: "envctl",
+        desc: "A CLI tool to manage environment variables. Made in golang and cobra.",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/envctl" }
+        ],
+        tags: ["Golang", "CLI", "Cobra"],
+        date: {year: 2025, month: 2},
     }
 ]
 
@@ -225,28 +234,32 @@ const ExperienceDetails: ExperienceDetail[] = [
         endDate: { month: 10, year: 2022 },
         company: "IIT Madras",
         position: "Junior WebOps Developer",
-        location: "Remote"
+        location: "Remote",
+        desc: "Worked in a team of 10 contributors to made the Backend API for issuing certificates to students participating in Shastra'23. Made using Python 3, FastAPI, SQLAlchemy and PIL."
     },
     {
         startDate: { month: 3, year: 2023 },
         endDate: { month: 4, year: 2024 },
         company: "SKCET",
         position: "Full Stack Developer Intern",
-        location: "Coimbatore, India"
+        location: "Coimbatore, India",
+        desc: "Worked in a team of 4 to develop a Lab Management System that contains features for student attendance, lab inventory management, bill management and report generation. The system is currently used in 11 CS/IT Labs at SKCET."
     },
     {
         startDate: { month: 6, year: 2024 },
         endDate: { month: 1, year: 2025 },
         company: "HyperVerge",
         position: "Data Engineer Intern",
-        location: "Bengaluru, India"
+        location: "Bengaluru, India",
+        desc: "Prepared Data and fine-tuned multiple LLMs for specific and general field-extraction use cases. Developed an LLM - based error - tagging pipeline using OpenAI and Python, automating the process to reduce time by 97%."
     },
     {
         startDate: { month: 2, year: 2025 },
-        endDate: "Current",
+        endDate: { month: 4, year: 2025 },
         company: "RipeHouse Advisory",
         position: "Contract",
-        location: "Remote"
+        location: "Remote",
+        desc: "Made a CRM System with real-time chat and notification system. Used JavaScript, Express.js, React.js, Node, AWS S3, and Supabase."
     }
 ]
 

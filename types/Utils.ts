@@ -34,7 +34,7 @@ type ExperienceDetail = {
     endDate: CustomDate | "Current"
     company: string
     position: string
-    desc?: string
+    desc: string
     location: string | "remote"
 }
 

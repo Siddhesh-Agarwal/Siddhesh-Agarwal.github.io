@@ -57,7 +57,7 @@ export default function IntroSection({ links }: { links: ToolLink[][] }) {
                     {/* Divide into 2 parts */}
                     <div className="grid grid-cols-1 gap-6 py-6 pr-8">
                         <p className="text-left md:text-justify">
-                            I am a <strong>Hobbyist Developer</strong> with a keen interest in <strong>Backend Development</strong> and <strong>DevOps</strong>. I have been programming for the past {new Date().getFullYear() - 2019} years, i.e. since I was 16. Currently, I&apos;m working on honing my skills in <strong>Golang</strong> and <strong>React Native</strong>. Always in search of fun projects.
+                            I am a <strong>Hobbyist Developer</strong> with a keen interest in <strong>Web Development, DevOps and Gen AI</strong>. I have been programming for the past {new Date().getFullYear() - 2019} years, i.e. since I was 16. Currently, I&apos;m working on honing my skills in <strong>Golang</strong> and <strong>React Native</strong>. Always in search of fun projects.
                         </p>
                     </div>
                 </div>
