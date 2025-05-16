@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { FaLink } from "react-icons/fa6";

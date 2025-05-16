@@ -1,3 +1,5 @@
+"use client";
+
 import { useTheme } from "next-themes"
 import { Button, buttonVariants } from "./ui/button"
 import { useEffect } from "react"

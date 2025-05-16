@@ -1,3 +1,5 @@
+"use client";
+
 import { formatDate } from "@/lib/utils"
 import { LinkInfo, Project } from "@/types/Utils";
 import { LayoutGroup, motion } from "motion/react"
