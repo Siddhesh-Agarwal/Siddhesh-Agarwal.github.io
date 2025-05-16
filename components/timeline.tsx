@@ -15,7 +15,6 @@ export default function Timeline({ elements }: { elements: JSX.Element[] }) {
             const windowHeight = window.innerHeight;
 
             // Calculate how much of the timeline is visible
-            const visibleHeight = Math.min(windowHeight - top, height);
             const scrollPercentage = Math.max(0, Math.min(1,
                 (windowHeight - top) / (height + windowHeight)
             ));

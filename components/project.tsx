@@ -73,7 +73,7 @@ export default function ProjectsSection({ details }: { details: Project[] }) {
     })
 
     return (
-        <div className="flex flex-col gap-4 w-full mx-auto">
+        <div className="flex flex-col gap-4 w-full mx-auto px-4">
             <h1 className="text-4xl font-bold mb-6 semibold text-center dark:text-gray-50">
                 Check out my latest work
             </h1>
