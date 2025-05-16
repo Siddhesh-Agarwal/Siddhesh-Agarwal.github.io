@@ -11,13 +11,13 @@ type LinkInfo = {
 }
 
 type ToolLink = {
-    name: string,
+    name: string
     icon: IconType
 }
 
 type SocialLink = {
     name: string
-    icon: IconType,
+    icon: IconType
     link: string
 }
 
@@ -29,6 +29,15 @@ type Project = {
     date: CustomDate
 }
 
+type EducationDetails = {
+    instituteName: string
+    instituteLocation: string
+    instituteUrl: string
+    degree: string
+    startDate: CustomDate
+    endDate: CustomDate
+}
+
 type ExperienceDetail = {
     startDate: CustomDate
     endDate: CustomDate | "Current"
@@ -38,4 +47,4 @@ type ExperienceDetail = {
     location: string | "remote"
 }
 
-export type { CustomDate, LinkInfo, ToolLink, SocialLink, Project, ExperienceDetail }
+export type { CustomDate, LinkInfo, ToolLink, SocialLink, Project, EducationDetails, ExperienceDetail }

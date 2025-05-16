@@ -46,12 +46,13 @@ import {
     SiCss3,
     SiPypy,
 } from "react-icons/si";
-import { ExperienceDetail, Project, SocialLink, ToolLink } from "@/types/Utils";
+import { EducationDetails, ExperienceDetail, Project, SocialLink, ToolLink } from "@/types/Utils";
 import ProjectsSection from "@/components/project";
 import ExperienceSection from "@/components/experience";
+import EducationSection from "@/components/education";
 import DockNav from "@/components/dockNav";
 import IntroSection from "@/components/Intro";
-import { FaBriefcase, FaCircleInfo, FaFlask } from "react-icons/fa6";
+import { FaBriefcase, FaCircleInfo, FaFlask, FaGraduationCap } from "react-icons/fa6";
 
 
 // Data
@@ -201,7 +202,7 @@ const ProjectsOrTools: Project[] = [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/envctl" }
         ],
         tags: ["Golang", "CLI", "Cobra"],
-        date: {year: 2025, month: 2},
+        date: { year: 2025, month: 2 },
     }
 ]
 
@@ -228,7 +229,7 @@ const socialLinks: SocialLink[] = [
     },
 ]
 
-const ExperienceDetails: ExperienceDetail[] = [
+const experienceDetails: ExperienceDetail[] = [
     {
         startDate: { month: 4, year: 2022 },
         endDate: { month: 10, year: 2022 },
@@ -260,6 +261,25 @@ const ExperienceDetails: ExperienceDetail[] = [
         position: "Contract",
         location: "Remote",
         desc: "Made a CRM System with real-time chat and notification system. Used JavaScript, Express.js, React.js, Node, AWS S3, and Supabase."
+    }
+]
+
+const educationDetails: EducationDetails[] = [
+    {
+        instituteName: "PSBB Sr. Sec. School",
+        instituteLocation: "Chennai, Tamil Nadu, India",
+        instituteUrl: "https://www.psbbschools.ac.in/",
+        degree: "10th and 12th std.",
+        startDate: { month: 6, year: 2006 },
+        endDate: { month: 5, year: 2021 },
+    },
+    {
+        instituteName: "Sri Krishna College of Engineering and Technology",
+        instituteLocation: "Coimbatore, Tamil Nadu, India",
+        instituteUrl: "https://www.skcet.ac.in/",
+        degree: "B.E. (CSE)",
+        startDate: { month: 9, year: 2021 },
+        endDate: { month: 6, year: 2025 },
     }
 ]
 
@@ -325,6 +345,11 @@ const sectionNav: SocialLink[] = [
         icon: FaBriefcase
     },
     {
+        name: "Education",
+        link: "#education",
+        icon: FaGraduationCap
+    },
+    {
         name: "Projects",
         link: "#projects",
         icon: FaFlask,
@@ -343,7 +368,12 @@ export default function HomePage() {
 
                 {/* Experience Section */}
                 <section className="container min-h-screen min-w-full px-0 py-6 md:pb-12" id="experience">
-                    <ExperienceSection details={ExperienceDetails} />
+                    <ExperienceSection details={experienceDetails} />
+                </section>
+
+                {/* Education Section */}
+                <section className="container min-h-screen min-w-full px-0 py-6 md:pb-12" id="education">
+                    <EducationSection details={educationDetails} />
                 </section>
 
                 {/* Projects Section */}
