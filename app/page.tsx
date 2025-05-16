@@ -201,7 +201,17 @@ const ProjectsOrTools: Project[] = [
         ],
         tags: ["Golang", "CLI", "Cobra"],
         date: { year: 2025, month: 2 },
-    }
+    },
+    {
+        name: "Invoice Generator",
+        desc: "A simple invoice generator for any business.",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/invoice-generator" },
+            { name: "Live", url: "https://invoice-magic.vercel.app/" }
+        ],
+        tags: ["Vite", "TypeScript"],
+        date: { year: 2025, month: 4 },
+    },
 ]
 
 const socialLinks: SocialLink[] = [
