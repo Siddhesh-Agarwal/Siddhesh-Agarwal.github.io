@@ -379,7 +379,7 @@ export default function HomePage() {
                     <ProjectsSection details={ProjectsOrTools} />
                 </section>
             </div>
-            <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto flex origin-bottom h-full max-h-14 mb-16">
+            <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto hidden md:flex origin-bottom h-full max-h-14 mb-16">
                 <DockNav sectionNav={sectionNav} socialLinks={socialLinks} />
             </div>
         </main>
