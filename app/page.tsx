@@ -47,7 +47,7 @@ import {
 import { EducationDetails, ExperienceDetail, Project, SocialLink, ToolLink } from "@/types/Utils";
 import ProjectsSection from "@/components/project";
 import ExperienceSection from "@/components/experience";
-import EducationSection from "@/components/education";
+// import EducationSection from "@/components/education";
 import DockNav from "@/components/dockNav";
 import IntroSection from "@/components/Intro";
 import { FaBriefcase, FaCircleInfo, FaFlask, FaGraduationCap } from "react-icons/fa6";
@@ -272,24 +272,24 @@ const experienceDetails: ExperienceDetail[] = [
     }
 ]
 
-const educationDetails: EducationDetails[] = [
-    {
-        instituteName: "PSBB Sr. Sec. School",
-        instituteLocation: "Chennai, Tamil Nadu, India",
-        instituteUrl: "https://www.psbbschools.ac.in/",
-        degree: "10th and 12th std.",
-        startDate: { month: 6, year: 2006 },
-        endDate: { month: 5, year: 2021 },
-    },
-    {
-        instituteName: "Sri Krishna College of Engineering and Technology",
-        instituteLocation: "Coimbatore, Tamil Nadu, India",
-        instituteUrl: "https://www.skcet.ac.in/",
-        degree: "B.E. (CSE)",
-        startDate: { month: 9, year: 2021 },
-        endDate: { month: 6, year: 2025 },
-    }
-]
+// const educationDetails: EducationDetails[] = [
+//     {
+//         instituteName: "PSBB Sr. Sec. School",
+//         instituteLocation: "Chennai, Tamil Nadu, India",
+//         instituteUrl: "https://www.psbbschools.ac.in/",
+//         degree: "10th and 12th std.",
+//         startDate: { month: 6, year: 2006 },
+//         endDate: { month: 5, year: 2021 },
+//     },
+//     {
+//         instituteName: "Sri Krishna College of Engineering and Technology",
+//         instituteLocation: "Coimbatore, Tamil Nadu, India",
+//         instituteUrl: "https://www.skcet.ac.in/",
+//         degree: "B.E. (CSE)",
+//         startDate: { month: 9, year: 2021 },
+//         endDate: { month: 6, year: 2025 },
+//     }
+// ]
 
 const introLinks: ToolLink[][] = [
     [
@@ -352,11 +352,11 @@ const sectionNav: SocialLink[] = [
         link: "#experience",
         icon: FaBriefcase
     },
-    {
-        name: "Education",
-        link: "#education",
-        icon: FaGraduationCap
-    },
+    // {
+    //     name: "Education",
+    //     link: "#education",
+    //     icon: FaGraduationCap
+    // },
     {
         name: "Projects",
         link: "#projects",
@@ -380,9 +380,9 @@ export default function HomePage() {
                 </section>
 
                 {/* Education Section */}
-                <section className="container min-h-screen min-w-full px-0 py-6 md:pb-12" id="education">
+                {/* <section className="container min-h-screen min-w-full px-0 py-6 md:pb-12" id="education">
                     <EducationSection details={educationDetails} />
-                </section>
+                </section> */}
 
                 {/* Projects Section */}
                 <section className="container min-h-screen min-w-full px-0 py-6 md:pb-12" id="projects">
