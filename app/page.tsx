@@ -57,10 +57,9 @@ import { FaBriefcase, FaCircleInfo, FaFlask, FaGraduationCap } from "react-icons
 const ProjectsOrTools: Project[] = [
     {
         name: "LLMPrice.fyi",
-        desc: "A simple no-nonsense price calculator for various LLM providers.",
+        desc: "A no-nonsense price calculator for various LLM providers.",
         links: [
-            { name: "Frontend", url: "https://github.com/Siddhesh-Agarwal/llm-price-calculator" },
-            { name: "Backend", url: "https://github.com/Siddhesh-Agarwal/api-llm-price" },
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/llm-price-calculator" },
             { name: "Live", url: "https://llmprice.fyi/" }
         ],
         tags: ["React", "TypeScript", "SWC", "Golang", "Cloudflare Workers"],
@@ -127,7 +126,7 @@ const ProjectsOrTools: Project[] = [
     },
     {
         name: "CGPA Calculator",
-        desc: "A simple no-nonsense CGPA Calculator",
+        desc: "A no-nonsense CGPA Calculator",
         links: [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/CGPA-Calculator" },
             { name: "Live", url: "https://cgpa-calc.streamlit.app/" }
@@ -204,7 +203,7 @@ const ProjectsOrTools: Project[] = [
     },
     {
         name: "Invoice Generator",
-        desc: "A simple invoice generator for any business.",
+        desc: "A no-nonsense invoice generator for any business.",
         links: [
             { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/invoice-generator" },
             { name: "Live", url: "https://invoice-magic.vercel.app/" }
@@ -212,6 +211,26 @@ const ProjectsOrTools: Project[] = [
         tags: ["Vite", "TypeScript"],
         date: { year: 2025, month: 4 },
     },
+    {
+        name: "ChatSKCET",
+        desc: "A chat app for SKCET.",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/ChatSKCET" },
+            { name: "Live", url: "https://chat-skcet.vercel.app/" }
+        ],
+        tags: ["TypeScript", "GenAI", "Chatbot"],
+        date: { year: 2025, month: 5 },
+    },
+    {
+        name: "Image Compressor",
+        desc: "A no-nonsense image compression tool.",
+        links: [
+            { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/image-comp" },
+            { name: "Live", url: "https://image-comp-nine.vercel.app/" },
+        ],
+        tags: ["TypeScript", "Vite", "SWC"],
+        date: { year: 2025, month: 6 },
+    }
 ]
 
 const socialLinks: SocialLink[] = [
