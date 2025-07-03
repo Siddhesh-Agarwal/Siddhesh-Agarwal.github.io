@@ -27,7 +27,7 @@
   }
 
   .dark {
-    --background: #000e05;
+    --background: #080005;
     --foreground: hsl(210 40% 98%);
     --card: #000301;
     --card-foreground: hsl(210 40% 98%);
