@@ -288,7 +288,15 @@ const experienceDetails: ExperienceDetail[] = [
         position: "Contract",
         location: "Remote",
         desc: "Made a CRM System with real-time chat and notification system. Used JavaScript, Express.js, React.js, Node, AWS S3, and Supabase."
-    }
+    },
+    {
+        startDate: { month: 4, year: 2025 },
+        endDate: { month: 6, year: 2025 },
+        company: "Venture Group",
+        position: "Contract",
+        location: "Remote",
+        desc: "Made a cross platform mobile app to facilitate the management of properties, contracts and customers. Made using FLutter and firebase."
+    },
 ]
 
 // const educationDetails: EducationDetails[] = [
