@@ -38,8 +38,10 @@ export const metadata: Metadata = {
     images: site_config.image,
   },
   keywords: [
+    "Siddhesh", 
     "Siddhesh Agarwal",
-    "Siddhesh's Portfolio",
+    "Portfolio",
+    "Tech",
     "Software Engineer",
     "Web Developer",
     "Full Stack Developer",
@@ -49,11 +51,6 @@ export const metadata: Metadata = {
     "Python",
     "FastAPI",
     "Gen AI",
-    "Tech Portfolio",
-    "Software Development",
-    "Coding Portfolio",
-    "Software Engineering Student",
-    "Tech Projects"
   ],
 };
 

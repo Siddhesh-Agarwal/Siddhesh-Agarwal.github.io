@@ -7,10 +7,10 @@ import Timeline from "./timeline";
 function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
     return (
         <ShineBorder
-            className="flex flex-row p-0 w-full rounded"
+            className="flex flex-row p-0 w-full rounded shadow-lg"
             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
         >
-            <div className="p-4 rounded shadow-lg bg-card w-full">
+            <div className="p-4 rounded bg-card w-full">
                 <h3 className="font-bold mb-3 text-lg">{detail.position}</h3>
                 <div className="flex py-1">
                     <FaBuilding className="mr-2" />
