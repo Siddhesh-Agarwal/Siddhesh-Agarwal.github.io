@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { JetBrains_Mono } from "next/font/google";
-import "./globals.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import "./globals.css";
 
 const font = JetBrains_Mono({ subsets: ["cyrillic"] });
 const site_config = {
-  url: "https://siddhesh-tech.vercel.app/",
+  url: "https://siddhesh.cc/",
   title: "Siddhesh's Portfolio",
   description: "Portfolio website of Siddhesh Agarwal",
   image: "/Siddhesh.png",
