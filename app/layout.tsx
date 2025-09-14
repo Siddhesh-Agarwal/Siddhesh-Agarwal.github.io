@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import { JetBrains_Mono } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 
@@ -12,7 +12,7 @@ const site_config = {
   image: "/Siddhesh.png",
   author: "Siddhesh Agarwal",
   twitter_handle: "@Siddhesh0205",
-}
+};
 
 export const metadata: Metadata = {
   title: site_config.title,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site_config.url),
   authors: {
     name: site_config.author,
-    url: site_config.url
+    url: site_config.url,
   },
   twitter: {
     title: site_config.title,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     creator: site_config.author,
     creatorId: site_config.twitter_handle,
     card: "summary_large_image",
-    images: site_config.image
+    images: site_config.image,
   },
   openGraph: {
     siteName: site_config.title,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     images: site_config.image,
   },
   keywords: [
-    "Siddhesh", 
+    "Siddhesh",
     "Siddhesh Agarwal",
     "Portfolio",
     "Tech",
@@ -68,9 +68,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <TooltipProvider delayDuration={0}>
-            {children}
-          </TooltipProvider>
+          <TooltipProvider delayDuration={0}>{children}</TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

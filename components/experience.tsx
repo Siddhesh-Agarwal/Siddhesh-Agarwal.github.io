@@ -1,63 +1,75 @@
+import { FaBuilding, FaCalendar, FaLocationDot } from "react-icons/fa6";
 import { formatDate } from "@/lib/utils";
-import { ExperienceDetail } from "@/types/Utils";
-import { FaBuilding, FaCalendar, FaLocationDot } from "react-icons/fa6"
-import ShineBorder from "./ui/shine-border";
+import type { ExperienceDetail } from "@/types/Utils";
 import Timeline from "./timeline";
+import ShineBorder from "./ui/shine-border";
 
 function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
-    return (
-        <ShineBorder
-            className="flex flex-row p-0 w-full rounded shadow-lg"
-            color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-        >
-            <div className="p-4 rounded bg-card w-full">
-                <h3 className="font-bold mb-3 text-lg">{detail.position}</h3>
-                <div className="flex py-1">
-                    <FaBuilding className="mr-2" />
-                    <p className="text-xs text-gray-800 dark:text-gray-100">
-                        {detail.company}
-                    </p>
-                </div>
-                <div className="flex py-1">
-                    <FaCalendar className="mr-2" />
-                    <p className="text-xs text-gray-700 dark:text-gray-200">
-                        {formatDate(detail.startDate)} - {detail.endDate === "Current" ? "Current" : formatDate(detail.endDate)}
-                    </p>
-                </div>
-                <div className="flex py-1">
-                    <FaLocationDot className="mr-2" />
-                    <p className="text-sm text-gray-700 dark:text-gray-200">{detail.location}</p>
-                </div>
-                {
-                    detail.desc && (
-                        <div className="flex py-1 pl-6 mt-2">
-                            <p className="text-sm text-gray-700 dark:text-gray-200 w-full text-wrap">
-                                {detail.desc}
-                            </p>
-                        </div>
-                    )
-                }
-            </div>
-        </ShineBorder>
-    )
+  return (
+    <ShineBorder
+      className="flex flex-row p-0 w-full rounded shadow-lg"
+      color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+    >
+      <div className="p-4 rounded bg-card w-full flex flex-col gap-3">
+        <h3 className="font-bold text-lg">{detail.position}</h3>
+        <div className="flex flex-col gap-2">
+          <a href={detail.company?.website} className="flex">
+            <FaBuilding className="mr-2" />
+            <p className="text-xs text-muted-foreground">
+              {detail.company.name}
+            </p>
+          </a>
+          <div className="flex">
+            <FaCalendar className="mr-2" />
+            <p className="text-xs text-muted-foreground">
+              {formatDate(detail.startDate)} -{" "}
+              {detail.endDate === "Current"
+                ? "Current"
+                : formatDate(detail.endDate)}
+            </p>
+          </div>
+          <div className="flex">
+            <FaLocationDot className="mr-2" />
+            <p className="text-xs text-muted-foreground">{detail.location}</p>
+          </div>
+        </div>
+        {detail.desc && (
+          <p className="text-sm text-card-foreground text-justify">
+            {detail.desc}
+          </p>
+        )}
+      </div>
+    </ShineBorder>
+  );
 }
 
-export default function ExperienceSection({ details }: { details: ExperienceDetail[] }) {
-    const elements: JSX.Element[] = details.toSorted((a, b) => {
-        if (a.startDate.year === b.startDate.year) {
-            return b.startDate.month - a.startDate.month
-        }
-        return b.startDate.year - a.startDate.year
-    }).map((detail, index) => <ExperienceCard detail={detail} key={index} />)
-    return (
-        <div className="flex flex-col gap-4 w-full mx-auto">
-            <h1 className="text-5xl font-sans text-center font-bold mb-6 semibold">
-                My Experience
-            </h1>
-            <div className="relative wrap overflow-hidden p-4 md:p-10 h-full">
-                {/* Vertical timeline line */}
-                <Timeline elements={elements} />
-            </div>
-        </div>
-    )
+export default function ExperienceSection({
+  details,
+}: {
+  details: ExperienceDetail[];
+}) {
+  const elements: JSX.Element[] = details
+    .toSorted((a, b) => {
+      if (a.startDate.year === b.startDate.year) {
+        return b.startDate.month - a.startDate.month;
+      }
+      return b.startDate.year - a.startDate.year;
+    })
+    .map((detail) => (
+      <ExperienceCard
+        detail={detail}
+        key={`${detail.company}-${detail.position}-${detail.startDate.year}`}
+      />
+    ));
+  return (
+    <div className="flex flex-col gap-4 w-full mx-auto">
+      <h1 className="text-5xl font-sans text-center font-bold mb-6 semibold">
+        My Experience
+      </h1>
+      <div className="relative wrap overflow-hidden p-4 md:p-10 h-full">
+        {/* Vertical timeline line */}
+        <Timeline elements={elements} />
+      </div>
+    </div>
+  );
 }
