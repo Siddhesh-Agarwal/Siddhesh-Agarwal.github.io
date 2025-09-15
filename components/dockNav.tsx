@@ -19,7 +19,7 @@ function DocNavLinkButton({
         <TooltipTrigger asChild>
           <Link href={link.link} target={target}>
             <Button variant={"ghost"} size={"icon"}>
-              <link.icon className="text-black dark:text-white size-3 md:size-4" />
+              <link.icon className="text-foreground size-3 md:size-4" />
             </Button>
           </Link>
         </TooltipTrigger>
