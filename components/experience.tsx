@@ -67,7 +67,6 @@ export default function ExperienceSection({
         My Experience
       </h1>
       <div className="relative wrap overflow-hidden p-4 md:p-10 h-full">
-        {/* Vertical timeline line */}
         <Timeline elements={elements} />
       </div>
     </div>

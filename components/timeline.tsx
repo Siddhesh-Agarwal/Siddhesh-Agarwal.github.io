@@ -13,14 +13,10 @@ export default function Timeline({ elements }: { elements: JSX.Element[] }) {
       const timelineElement = timelineRef.current;
       const rect = timelineElement.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-
-      // Calculate how much of the timeline is visible
       const timelineTop = rect.top;
       const timelineHeight = rect.height;
 
-      // Calculate progress (0 to 1)
       let progress = 0;
-
       if (timelineTop < windowHeight) {
         const visibleHeight = Math.min(
           windowHeight - timelineTop,
@@ -29,9 +25,7 @@ export default function Timeline({ elements }: { elements: JSX.Element[] }) {
         progress = Math.max(0, visibleHeight / timelineHeight);
       }
 
-      // Ensure progress doesn't exceed 1
       progress = Math.min(progress, 1);
-
       setScrollProgress(progress);
     };
 
@@ -50,13 +44,11 @@ export default function Timeline({ elements }: { elements: JSX.Element[] }) {
 
   return (
     <div ref={timelineRef} className="relative">
-      {/* Static timeline line */}
       <div
         className="absolute left-4 top-4 w-0.5 bg-border"
         style={{ height: `calc(100% - 2rem)` }}
       />
 
-      {/* Dynamic progress line that follows scroll */}
       <div
         className="absolute left-4 top-4 w-0.5 bg-primary transition-all duration-150 ease-out z-10"
         style={{
@@ -83,8 +75,6 @@ export default function Timeline({ elements }: { elements: JSX.Element[] }) {
               }`}
             />
           </div>
-
-          {/* Content */}
           <div className="ml-6 pb-8 flex-1 min-w-0">{item}</div>
         </div>
       ))}

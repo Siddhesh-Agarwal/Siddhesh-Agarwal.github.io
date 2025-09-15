@@ -68,8 +68,6 @@ export default function IntroSection({ links }: { links: ToolLink[][] }) {
           <h1 className="text-5xl inline">
             <TypingAnimation>Hi, I&apos;m Siddhesh 👋🏻</TypingAnimation>
           </h1>
-
-          {/* Divide into 2 parts */}
           <div className="grid grid-cols-1 gap-6 py-6 pr-8">
             <p className="text-left md:text-justify">
               I am a <strong>Hobbyist Developer</strong> with a keen interest in{" "}
@@ -87,8 +85,6 @@ export default function IntroSection({ links }: { links: ToolLink[][] }) {
           className="rounded-full w-48 h-48 p-1 border-2"
         />
       </div>
-
-      {/* List things proficient in  */}
       <ConcentricCircles text="My Tech Stack" links={links} />
     </section>
   );

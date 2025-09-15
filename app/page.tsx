@@ -135,7 +135,6 @@ const ProjectsOrTools: Project[] = [
         name: "GitHub",
         url: "https://github.com/Siddhesh-Agarwal/Dementia-Detection/",
       },
-      // { name: "Live", url: "https://dementia-detection.streamlit.app/" }
     ],
     tags: ["Python", "Streamlit", "TensorFlow", "CNN"],
     date: { year: 2023, month: 3 },
@@ -430,23 +429,18 @@ export default function HomePage() {
   return (
     <main className="container-fluid p-0 min-h-screen w-full overflow-x-hidden">
       <div className="max-w-4xl mx-0 md:mx-auto">
-        {/* Intro Section */}
         <section
           className="container min-h-screen w-full px-0 grid place-items-center"
           id={"intro"}
         >
           <IntroSection links={introLinks} />
         </section>
-
-        {/* Experience Section */}
         <section
           className="container min-h-screen min-w-full px-0 py-6 md:pb-12"
           id={"experience"}
         >
           <ExperienceSection details={experienceDetails} />
         </section>
-
-        {/* Projects Section */}
         <section
           className="container min-h-screen min-w-full px-0 py-6 md:pb-12"
           id={"projects"}
