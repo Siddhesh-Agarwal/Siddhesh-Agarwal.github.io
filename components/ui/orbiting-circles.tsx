@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import React from "react";
+import { cn } from "@/lib/utils";
 
 export interface OrbitingCirclesProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -34,6 +34,7 @@ export function OrbitingCircles({
           version="1.1"
           className="pointer-events-none absolute inset-0 size-full"
         >
+          <title className="sr-only">Accentric Circles</title>
           <circle
             className="stroke-black/10 stroke-1 dark:stroke-white/10"
             cx="50%"

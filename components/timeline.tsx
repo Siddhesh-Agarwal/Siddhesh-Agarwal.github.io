@@ -58,8 +58,10 @@ export default function Timeline({ elements }: { elements: JSX.Element[] }) {
       />
 
       {elements.map((item, index) => (
-        <div key={index} className="relative flex items-start group">
-          {/* Timeline dot */}
+        <div
+          key={`${index}-${item.key}`}
+          className="relative flex items-start group"
+        >
           <div
             className={`relative z-20 flex items-center justify-center w-8 h-8 bg-background border-2 rounded-full shrink-0 transition-colors duration-300 ${
               scrollProgress > (index + 0.5) / elements.length

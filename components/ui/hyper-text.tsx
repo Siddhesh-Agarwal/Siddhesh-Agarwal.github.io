@@ -1,8 +1,8 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, MotionProps } from "motion/react";
+import { AnimatePresence, type MotionProps, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 
 type CharacterSet = string[] | readonly string[];
 
@@ -126,7 +126,7 @@ export default function HyperText({
       <AnimatePresence>
         {displayText.map((letter, index) => (
           <motion.span
-            key={index}
+            key={`${index}-${letter}`}
             className={cn("font-mono", letter === " " ? "w-3" : "")}
           >
             {letter.toUpperCase()}
