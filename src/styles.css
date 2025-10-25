@@ -14,9 +14,20 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-    font-family:
-        source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/Inter-VariableFont_opsz,wght.ttf")
+        format("truetype");
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrainsMono";
+    src: url("/assets/fonts/JetBrainsMono-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 100 900;
+    font-display: swap;
 }
 
 :root {
@@ -52,9 +63,6 @@ code {
     --sidebar-accent-foreground: oklch(0.3394 0.0441 1.7583);
     --sidebar-border: oklch(0.8719 0.0198 302.169);
     --sidebar-ring: oklch(0.6104 0.0767 299.7335);
-    --font-sans: Geist, sans-serif;
-    --font-serif: "Lora", Georgia, serif;
-    --font-mono: "Fira Code", "Courier New", monospace;
     --radius: 0.5rem;
     --shadow-x: 1px;
     --shadow-y: 2px;
@@ -113,9 +121,6 @@ code {
     --sidebar-accent-foreground: oklch(0.8391 0.0692 2.6681);
     --sidebar-border: oklch(0.2847 0.0346 291.2726);
     --sidebar-ring: oklch(0.7058 0.0777 302.0489);
-    --font-sans: Geist, sans-serif;
-    --font-serif: "Lora", Georgia, serif;
-    --font-mono: "Fira Code", "Courier New", monospace;
     --radius: 0.5rem;
     --shadow-x: 1px;
     --shadow-y: 2px;
@@ -173,9 +178,9 @@ code {
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
 
-    --font-sans: var(--font-sans);
-    --font-mono: var(--font-mono);
-    --font-serif: var(--font-serif);
+    --font-sans: "Inter", sans-serif;
+    --font-mono: "JetBrainsMono", monospace;
+    --font-serif: "Lora", Georgia, serif;
 
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
