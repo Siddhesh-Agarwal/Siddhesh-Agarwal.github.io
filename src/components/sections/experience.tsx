@@ -1,8 +1,8 @@
 import { FaBuilding, FaCalendar, FaLocationDot } from "react-icons/fa6";
-import { formatDate } from "@/lib/date";
-import type { ExperienceDetail } from "@/types";
 import Timeline from "@/components/timeline";
 import ShineBorder from "@/components/ui/shine-border";
+import { formatDate } from "@/lib/date";
+import type { ExperienceDetail } from "@/types";
 
 function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
   return (

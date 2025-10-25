@@ -1,5 +1,6 @@
-import type { SocialLink } from "@/types";
 import { SiGithub, SiGmail, SiHashnode, SiLinkedin } from "react-icons/si";
+import type { SocialLink } from "@/types";
+
 export const socialLinks: SocialLink[] = [
   {
     name: "GitHub",

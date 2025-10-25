@@ -1,9 +1,9 @@
 import type { SocialLink } from "@/types";
+import { ThemeToggle } from "./theme-toggle";
 import { Button } from "./ui/button";
 import { Dock, DockIcon } from "./ui/dock";
 import { Separator } from "./ui/separator";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
-import { ThemeToggle } from "./theme-toggle";
 
 function DocNavLinkButton({
   link,

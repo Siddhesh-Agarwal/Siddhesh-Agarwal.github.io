@@ -1,4 +1,3 @@
-import type { ToolLink } from "@/types";
 import {
   SiAmazonwebservices,
   SiApachespark,
@@ -41,6 +40,7 @@ import {
   SiTensorflow,
   SiTypescript,
 } from "react-icons/si";
+import type { ToolLink } from "@/types";
 
 export const toolsKnown: ToolLink[][] = [
   [

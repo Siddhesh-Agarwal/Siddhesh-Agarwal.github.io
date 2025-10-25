@@ -1,9 +1,9 @@
+import { ExternalLink } from "lucide-react";
 import { LayoutGroup, motion } from "motion/react";
+import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/lib/date";
 import type { LinkInfo, Project } from "@/types";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "../ui/button";
-import { ExternalLink } from "lucide-react";
 
 function ProjectTag({ tag }: { tag: string }) {
   return <Badge className="rounded-sm font-mono font-semibold">{tag}</Badge>;

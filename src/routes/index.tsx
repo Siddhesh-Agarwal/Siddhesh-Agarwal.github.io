@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { toolsKnown } from "@/data/intro";
-import IntroSection from "@/components/sections/intro";
-import ExperienceSection from "@/components/sections/experience";
-import ProjectsSection from "@/components/sections/project";
-import { experienceDetails } from "@/data/experience";
-import { projectsOrTools } from "@/data/projects";
-import { socialLinks } from "@/data/socials";
-import DockNav from "@/components/dock-nav";
 import { Briefcase, FlaskConical, Info } from "lucide-react";
 import { useId } from "react";
+import DockNav from "@/components/dock-nav";
+import ExperienceSection from "@/components/sections/experience";
+import IntroSection from "@/components/sections/intro";
+import ProjectsSection from "@/components/sections/project";
+import { experienceDetails } from "@/data/experience";
+import { toolsKnown } from "@/data/intro";
+import { projectsOrTools } from "@/data/projects";
+import { socialLinks } from "@/data/socials";
 
 export const Route = createFileRoute("/")({
   component: App,

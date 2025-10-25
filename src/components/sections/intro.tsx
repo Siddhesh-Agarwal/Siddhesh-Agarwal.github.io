@@ -1,8 +1,8 @@
 import { Image } from "@unpic/react";
 import MyPic from "@/assets/me.webp";
-import type { ToolLink } from "@/types";
 import { OrbitingCircles } from "@/components/ui/orbiting-circle";
 import TypingAnimation from "@/components/ui/typing-animation";
+import type { ToolLink } from "@/types";
 
 function ConcentricCircle({
   similarLinks,
