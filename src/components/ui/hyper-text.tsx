@@ -1,5 +1,6 @@
-import { AnimatePresence, type MotionProps, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, type MotionProps } from "motion/react";
+
 import { cn } from "@/lib/utils";
 
 type CharacterSet = string[] | readonly string[];
@@ -29,7 +30,7 @@ const DEFAULT_CHARACTER_SET = Object.freeze(
 
 const getRandomInt = (max: number): number => Math.floor(Math.random() * max);
 
-export default function HyperText({
+export function HyperText({
   children,
   className,
   duration = 800,
@@ -90,28 +91,36 @@ export default function HyperText({
   useEffect(() => {
     if (!isAnimating) return;
 
-    const intervalDuration = duration / (children.length * 10);
     const maxIterations = children.length;
+    const startTime = performance.now();
+    let animationFrameId: number;
 
-    const interval = setInterval(() => {
-      if (iterationCount.current < maxIterations) {
-        setDisplayText((currentText) =>
-          currentText.map((letter, index) =>
-            letter === " "
-              ? letter
-              : index <= iterationCount.current
-                ? children[index]
-                : characterSet[getRandomInt(characterSet.length)],
-          ),
-        );
-        iterationCount.current = iterationCount.current + 0.1;
+    const animate = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      iterationCount.current = progress * maxIterations;
+
+      setDisplayText((currentText) =>
+        currentText.map((letter, index) =>
+          letter === " "
+            ? letter
+            : index <= iterationCount.current
+              ? children[index]
+              : characterSet[getRandomInt(characterSet.length)],
+        ),
+      );
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(animate);
       } else {
         setIsAnimating(false);
-        clearInterval(interval);
       }
-    }, intervalDuration);
+    };
 
-    return () => clearInterval(interval);
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrameId);
   }, [children, duration, isAnimating, characterSet]);
 
   return (
@@ -124,7 +133,7 @@ export default function HyperText({
       <AnimatePresence>
         {displayText.map((letter, index) => (
           <motion.span
-            key={`${index}-${letter}`}
+            key={index}
             className={cn("font-mono", letter === " " ? "w-3" : "")}
           >
             {letter.toUpperCase()}

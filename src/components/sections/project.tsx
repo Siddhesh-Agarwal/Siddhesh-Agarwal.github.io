@@ -1,51 +1,64 @@
 import { ExternalLink } from "lucide-react";
-import { LayoutGroup, motion } from "motion/react";
 import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/lib/date";
 import type { LinkInfo, Project } from "@/types";
-import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "../ui/card";
+import { cn } from "@/lib/utils";
 
 function ProjectTag({ tag }: { tag: string }) {
-  return <Badge className="rounded-sm font-mono font-semibold">{tag}</Badge>;
+  return (
+    <Badge variant={"secondary"} className="rounded-sm font-mono font-semibold">
+      {tag}
+    </Badge>
+  );
 }
 
 function ProjectLink({ link }: { link: LinkInfo }) {
   return (
-    <a href={link.url} target="_blank" rel="noreferrer noopener">
-      <Button variant={"link"} className="px-0 md:px-1">
-        {link.name}
-        <ExternalLink />
-      </Button>
+    <a
+      href={link.url}
+      target="_blank"
+      rel="noreferrer noopener"
+      className={cn(buttonVariants({ variant: "link" }), "px-0 mx-0")}
+    >
+      {link.name}
+      <ExternalLink />
     </a>
   );
 }
 
 function ProjectCard({ data }: { data: Project }) {
   return (
-    <motion.div
-      transition={{ duration: 0.5, delay: 0.5 }}
-      className="flex flex-col md:flex-row w-full bg-card md:rounded-lg border p-4 shadow-lg overflow-x-hidden"
-    >
-      <div className="text-muted-foreground text-lg md:text-2xl mr-4">
-        {formatDate(data.date)}
-      </div>
-      <div className="flex flex-col gap-2">
-        <h2 className="text-lg md:text-2xl font-bold">{data.name}</h2>
-        <p className="text-md md:text-lg text-wrap md:text-justify">
-          {data.desc}
-        </p>
-        <div className="flex flex-row gap-2 text-xs flex-wrap">
-          {data.tags.map((tag: string) => (
-            <ProjectTag tag={tag} key={tag} />
-          ))}
+    <Card>
+      <CardContent>
+        <div className="text-muted-foreground text-lg md:text-2xl mr-4">
+          {formatDate(data.date)}
         </div>
-        <div className="flex gap-6 items-center text-wrap font-semibold">
-          {data.links.map((linkObj: LinkInfo) => (
-            <ProjectLink link={linkObj} key={linkObj.name} />
-          ))}
+        <div className="flex flex-col gap-2">
+          <CardTitle className="text-xl">{data.name}</CardTitle>
+          <CardDescription className="text-lg">{data.desc}</CardDescription>
+          <div className="flex flex-row gap-2 text-xs flex-wrap">
+            {data.tags.map((tag: string) => (
+              <ProjectTag tag={tag} key={tag} />
+            ))}
+          </div>
+          <div className="flex gap-6 items-center text-wrap font-semibold">
+            {data.links.map((linkObj: LinkInfo) => (
+              <CardAction>
+                <ProjectLink link={linkObj} key={linkObj.name} />
+              </CardAction>
+            ))}
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </CardContent>
+    </Card>
   );
 }
 
@@ -66,11 +79,11 @@ export default function ProjectsSection({ details }: { details: Project[] }) {
         I have worked on a variety of projects ranging over different tech
         stacks and topics. Here are few of my favorites.
       </h2>
-      <LayoutGroup>
+      <div className="flex flex-col gap-4">
         {details.map((tool: Project) => (
           <ProjectCard key={tool.name} data={tool} />
         ))}
-      </LayoutGroup>
+      </div>
     </div>
   );
 }

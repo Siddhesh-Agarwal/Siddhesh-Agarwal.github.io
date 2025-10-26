@@ -1,7 +1,7 @@
 import { Image } from "@unpic/react";
 import MyPic from "@/assets/me.webp";
+import { HyperText } from "@/components/ui/hyper-text";
 import { OrbitingCircles } from "@/components/ui/orbiting-circle";
-import TypingAnimation from "@/components/ui/typing-animation";
 import type { ToolLink } from "@/types";
 
 function ConcentricCircle({
@@ -39,7 +39,7 @@ function ConcentricCircles({
 }) {
   return (
     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
-      <span className="pointer-events-none whitespace-pre-wrap bg-linear-to-b from-black to-gray-300 bg-clip-text text-center text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+      <span className="pointer-events-none whitespace-pre-wrap bg-linear-to-b from-foreground to-background bg-clip-text text-center text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
         {text}
       </span>
       {links.map((similarLinks, index) => {
@@ -66,7 +66,7 @@ export default function IntroSection({ links }: { links: ToolLink[][] }) {
       <div className="flex flex-col md:flex-row items-center">
         <div className="font-sans px-4">
           <h1 className="text-5xl inline">
-            <TypingAnimation>Hi, I&apos;m Siddhesh 👋🏻</TypingAnimation>
+            <HyperText>Hi, I&apos;m Siddhesh 👋🏻</HyperText>
           </h1>
           <div className="grid grid-cols-1 gap-6 py-6 pr-8">
             <p className="text-justify">

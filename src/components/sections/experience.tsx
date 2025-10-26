@@ -1,26 +1,25 @@
 import { FaBuilding, FaCalendar, FaLocationDot } from "react-icons/fa6";
 import Timeline from "@/components/timeline";
-import ShineBorder from "@/components/ui/shine-border";
 import { formatDate } from "@/lib/date";
 import type { ExperienceDetail } from "@/types";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { ShineBorder } from "../ui/shine-border";
 
 function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
   return (
-    <ShineBorder
-      className="flex flex-row p-0 w-full rounded shadow-lg"
-      color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-    >
-      <div className="p-4 rounded bg-card w-full flex flex-col gap-3">
-        <h3 className="font-bold text-lg">{detail.position}</h3>
+    <Card className="relative">
+      <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+      <CardContent className="flex flex-col gap-3">
+        <CardTitle>{detail.position}</CardTitle>
         <div className="flex flex-col gap-2">
-          <a href={detail.company?.website} className="flex">
-            <FaBuilding className="mr-2" />
+          <a href={detail.company?.website || "#"} className="flex gap-2">
+            <FaBuilding />
             <p className="text-xs text-muted-foreground">
               {detail.company.name}
             </p>
           </a>
-          <div className="flex">
-            <FaCalendar className="mr-2" />
+          <div className="flex gap-2">
+            <FaCalendar />
             <p className="text-xs text-muted-foreground">
               {formatDate(detail.startDate)} -{" "}
               {detail.endDate === "Current"
@@ -28,8 +27,8 @@ function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
                 : formatDate(detail.endDate)}
             </p>
           </div>
-          <div className="flex">
-            <FaLocationDot className="mr-2" />
+          <div className="flex gap-2">
+            <FaLocationDot />
             <p className="text-xs text-muted-foreground">{detail.location}</p>
           </div>
         </div>
@@ -38,8 +37,8 @@ function ExperienceCard({ detail }: { detail: ExperienceDetail }) {
             {detail.desc}
           </p>
         )}
-      </div>
-    </ShineBorder>
+      </CardContent>
+    </Card>
   );
 }
 
