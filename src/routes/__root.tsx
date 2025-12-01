@@ -6,12 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const Route = createRootRoute({
   component: () => (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
       <TooltipProvider delayDuration={0}>
         <Outlet />
       </TooltipProvider>
