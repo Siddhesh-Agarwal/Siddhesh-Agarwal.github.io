@@ -5,7 +5,7 @@ import { HyperText } from "@/components/ui/hyper-text";
 import { OrbitingCircles } from "@/components/ui/orbiting-circle";
 import { cn } from "@/lib/utils";
 import type { ToolLink } from "@/types";
-import { Badge, badgeVariants } from "../ui/badge";
+import { badgeVariants } from "../ui/badge";
 
 function ConcentricCircle({
   similarLinks,
