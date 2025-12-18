@@ -9,7 +9,7 @@ export const projectsOrTools: Project[] = [
         name: "GitHub",
         url: "https://github.com/Siddhesh-Agarwal/llm-price-calculator",
       },
-      { name: "Live", url: "https://llmprice.fyi/" },
+      { name: "Live", url: "https://llmprice.siddhesh.cc/" },
     ],
     tags: ["React", "TypeScript", "SWC", "Golang", "Cloudflare Workers"],
     date: { year: 2024, month: 12 },
@@ -151,7 +151,7 @@ export const projectsOrTools: Project[] = [
   },
   {
     name: "Lab Management System",
-    desc: "A lab management system including student attendance, lab inventory management, bill management, and report generation. Currently in use across all the 11 CS/IT Labs in SKCET.",
+    desc: "A lab management system including student attendance, lab inventory management, bill management, and report generation. Currently deployed across all the 11 CS/IT Labs in SKCET.",
     links: [
       {
         name: "GitHub",
@@ -163,14 +163,14 @@ export const projectsOrTools: Project[] = [
   },
   {
     name: "envctl",
-    desc: "A CLI tool to manage environment variables. Made in golang and cobra.",
+    desc: "A CLI tool to manage variables/secrets. Stores the secrets with AES encryption. Made in golang and cobra.",
     links: [{ name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/envctl" }],
     tags: ["Golang", "CLI", "Cobra"],
     date: { year: 2025, month: 2 },
   },
   {
     name: "Invoice Generator",
-    desc: "A no-nonsense invoice generator for any business.",
+    desc: "A simple no-nonsense invoice generator for any business. Made using Next.js and TypeScript.",
     links: [
       {
         name: "GitHub",
@@ -183,7 +183,7 @@ export const projectsOrTools: Project[] = [
   },
   {
     name: "ChatSKCET",
-    desc: "A chat app for SKCET.",
+    desc: "A chat app for SKCET. Made using TypeScript and Vite without any other external AI libraries. Uses Google search API to fetch relevant information.",
     links: [
       { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/ChatSKCET" },
       { name: "Live", url: "https://chat-skcet.vercel.app/" },
@@ -192,18 +192,8 @@ export const projectsOrTools: Project[] = [
     date: { year: 2025, month: 5 },
   },
   {
-    name: "Image Compressor",
-    desc: "A no-nonsense image compression tool.",
-    links: [
-      { name: "GitHub", url: "https://github.com/Siddhesh-Agarwal/image-comp" },
-      { name: "Live", url: "https://image-comp-nine.vercel.app/" },
-    ],
-    tags: ["TypeScript", "Vite", "SWC"],
-    date: { year: 2025, month: 6 },
-  },
-  {
     name: "Mandala.AI",
-    desc: "An AI-Powered Kolam/Rangoli/Mandala Generator that uses Cloudflare AI to generate images, R2 to store them and D1 to keep a record",
+    desc: "An AI-Powered Kolam/Rangoli/Mandala Generator that uses Cloudflare AI to generate images, R2 to store them and D1 to keep a track of them.",
     links: [
       {
         name: "GitHub",
