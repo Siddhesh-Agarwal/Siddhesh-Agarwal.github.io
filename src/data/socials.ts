@@ -27,6 +27,6 @@ export const socialLinks: SocialLink[] = [
   {
     name: "Resume",
     icon: FileTextIcon,
-    link: "https://resume.siddhesh.cc",
+    link: "https://resume.siddhesh.cc/",
   },
 ];

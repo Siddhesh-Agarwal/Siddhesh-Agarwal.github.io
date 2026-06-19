@@ -2,7 +2,7 @@ import type { Project } from "@/types";
 
 export const projectsOrTools: Project[] = [
   {
-    name: "PDFKit",
+    name: "TradingView News Feed",
     desc: "Python client for TradingView's news feed API.",
     links: [
       {
