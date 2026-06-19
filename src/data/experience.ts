@@ -80,7 +80,7 @@ export const experienceDetails: ExperienceDetail[] = [
       name: "SERVFIV International pvt. ltd.",
       website: "https://app.eateszy.com/",
     },
-    position: "Software Engineer",
+    position: "Freelance Software Engineer",
     location: "Remote",
     desc: [
       "Developed eaTesZy, a multi-tenant food court management platform enabling malls to manage kitchens and operations, kitchens to handle menus, orders, branding, and payouts, and customers to place and track multi - kitchen orders with billing history support.",
@@ -109,9 +109,7 @@ export const experienceDetails: ExperienceDetail[] = [
     position: "Software Developer I",
     location: "Bengaluru, India",
     desc: [
-      "Building backend services and web features using Django and Vue, focusing on scalable application development with Docker.",
-      "Refactoring tightly coupled trading infrastructure using abstract classes to support multiple broker integrations, including Zerodha and AliceBlue, improving modularity and extensibility.",
-      "Working with PostgreSQL and Redis for data storage, caching, and performance optimization.",
+      "Building backend services and web features using Django, Vue.js, PostgreSQL and Redis focusing on scalable application development with Docker.",
     ],
   },
 ];
